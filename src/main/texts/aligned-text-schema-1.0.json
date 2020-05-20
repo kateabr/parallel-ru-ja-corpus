@@ -1,0 +1,71 @@
+{
+  "$id": "https://kateabr.github.io/parallel-ru-ja-corpus-aligned-text-1.0.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Parallel Russian-Japanese Corpus: Aligned Text",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Text id"
+    },
+    "title": {
+      "type": "object",
+      "description": "Text title",
+      "properties": {
+        "russian": {
+          "type": "string",
+          "description": "Russian title"
+        },
+        "japanese": {
+          "type": "string",
+          "description": "Japanese title"
+        }
+      }
+    },
+    "url": {
+      "description": "Source URL",
+      "type": "object",
+      "properties": {
+        "russian": {
+          "type": "string",
+          "description": "Russian source URL"
+        },
+        "japanese": {
+          "type": "string",
+          "description": "Japanese source URL"
+        }
+      }
+    },
+    "sentences": {
+      "description": "List of aligned sentences",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/sentencePair"
+      }
+    }
+  },
+  "definitions": {
+    "sentencePair": {
+      "type": "object",
+      "required": [
+        "id",
+        "russian",
+        "japanese"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Sentence id"
+        },
+        "russian": {
+          "type": "string",
+          "description": "Russian sentence"
+        },
+        "japanese": {
+          "type": "string",
+          "description": "Japanese sentence"
+        }
+      }
+    }
+  }
+}

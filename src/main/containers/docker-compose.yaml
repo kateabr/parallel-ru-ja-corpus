@@ -1,0 +1,57 @@
+version: "3.8"
+
+services:
+  database:
+    image: ktbr/basexhttp-dba:9.3.2
+    expose:
+      - 1984
+      - 8984
+    ports:
+      - 1984:1984
+      - 8984:8984
+    environment:
+      - JAVA_OPTIONS="-XX:+UseG1GC -XX:+UseStringDeduplication -Xms64m -Xmx512m"
+    volumes:
+      - parallel-ru-ja-corpus-data:/srv/basex/data
+      - parallel-ru-ja-corpus-repo:/srv/basex/repo
+    networks:
+      backend:
+        aliases:
+          - database
+
+  backend:
+    image: ktbr/parallel-ru-ja-corpus-backend:latest
+    depends_on:
+      - database
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    networks:
+      backend:
+        aliases:
+          - backend
+      frontend:
+        aliases:
+          - backend
+
+  frontend:
+    image: ktbr/parallel-ru-ja-corpus-frontend:latest
+    depends_on:
+      - backend
+    expose:
+      - 8081
+    ports:
+      - 8081:8081
+    networks:
+      frontend:
+        aliases:
+          - frontend
+
+volumes:
+  parallel-ru-ja-corpus-data:
+  parallel-ru-ja-corpus-repo:
+
+networks:
+  frontend:
+  backend:

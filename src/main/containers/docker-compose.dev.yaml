@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  database:
+    image: ktbr/basexhttp-dba:9.3.2
+    expose:
+      - 1984
+      - 8984
+    ports:
+      - 1984:1984
+      - 8984:8984
+    environment:
+      - JAVA_OPTIONS="-XX:+UseG1GC -XX:+UseStringDeduplication -Xms64m -Xmx512m"
+    volumes:
+      - basex-data:/srv/basex/data
+      - basex-repo:/srv/basex/repo
+
+volumes:
+  basex-data:
+  basex-repo:

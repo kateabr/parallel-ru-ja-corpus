@@ -1,0 +1,13 @@
+<package xmlns="http://expath.org/ns/pkg"
+         name="http://parallel-ru-ja-corpus.com"
+         abbrev="corpus"
+         version="1.0"
+         spec="1.0">
+
+    <title>Parallel Russian-Japanese Corpus Library</title>
+
+    <xquery>
+        <namespace>http://parallel-ru-ja-corpus.com</namespace>
+        <file>corpus.xqm</file>
+    </xquery>
+</package>
