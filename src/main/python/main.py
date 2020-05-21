@@ -6,6 +6,7 @@ from pyknp import KNP
 from pymystem3 import Mystem
 
 from src.main.python.aligned_text import AlignedText
+from src.main.python.corpus_annotator import annotate_russian_text
 from src.main.python.corpus_model import Entry
 
 
@@ -23,7 +24,7 @@ def annotate_texts():
     kakasi.setMode("r", "Hepburn")
     converter = kakasi.getConverter()
 
-    for text in texts[:1]:
+    for text in texts[36:]:
         print(f"Processing {text.id}")
         entry = text.to_annotated(mystem, maru_analyzer, knp, kakasi)
 
@@ -34,41 +35,39 @@ def annotate_texts():
         print(f"Saved {text.id}!")
 
 
-def align_texts():
-    # for i in range(4,8):
-    #     with open(f'../texts/raw/ru/{i}.txt') as f:
-    #         ru_text = f.readlines()
-    #     with open(f'../texts/translated/ja/{i}.txt') as f:
-    #         ja_text = f.readlines()
-    #
-    #     mystem = Mystem(generate_all=True, use_english_names=True, weight=True)
-    #     maru_analyzer = maru.get_analyzer(tagger='rnn', lemmatizer='dummy')
-    #
-    #     align(i, ru_text, ja_text, mystem, maru_analyzer)
+def get_align_info(indices):
+    mystem = Mystem(generate_all=True, use_english_names=True, weight=True)
+    maru_analyzer = maru.get_analyzer(tagger='rnn', lemmatizer='dummy')
 
-    entry = Entry.from_xml(Path("../texts/translated/1.xml"))
+    pos = ['VERB', 'NOUN', 'ADJECTIVE']
+    pos2 = ['Verb', 'Noun', 'Adjective']
 
-    # knp = KNP()
-    # kakasi = pykakasi.kakasi()
-    # kakasi.setMode("H", "a")
-    # kakasi.setMode("K", "a")
-    # kakasi.setMode("r", "Hepburn")
-    # converter = kakasi.getConverter()
+    for i in indices:
+        entry = Entry.from_xml(Path(f'../texts/annotated/{i}.xml'))
 
-    # ru_lines_annotated = [annotate_russian_text(mystem, maru_analyzer, line) for line in ru_text[2:]]
-    # ja_lines_annotated = [annotate_japanese_text(knp, converter, line) for line in ja_text[2:]]
+        for ps in pos:
+            with open(f"../texts/annotated/align_data/{i}_ru_{ps}.txt", 'w+') as file:
+                for line in entry.sentence_pairs:
+                    ppp = [word.lexeme for word in line.russian if word.lexeme and word.get_attr_value('pos') == ps]
+                    file.write(','.join(ppp) + '\n')
 
-    # with open('../texts/raw/ru/1_annotated.txt', 'w', encoding='utf-8') as f:
-    #     json = jsonpickle.encode(ru_lines_annotated)
-    #     f.write(json)
+        for pos_idx, ps in enumerate(pos):
+            with open(f"../texts/annotated/align_data/{i}_ja_{ps}.txt", 'w+') as file:
+                for line in entry.sentence_pairs:
+                    ppp = sum(
+                        [annotate_russian_text(mystem, maru_analyzer, word.translation) for word in line.japanese if
+                         word.attributes and word.translation and word.get_attr_value('pos') == pos2[pos_idx]], [])
+                    ppp = [w.lexeme.lower() for w in ppp if w.lexeme and w.get_attr_value('pos') == ps]
+                    file.write(','.join(ppp) + '\n')
 
-    # with open('../texts/raw/ru/1_annotated.txt', 'r', encoding='utf-8') as f:
-    #     ru_text = jsonpickle.decode(f.read())
-    #
-    # with open('../texts/raw/ja/1_annotated.txt', 'r', encoding='utf-8') as f:
-    #     ja_text = jsonpickle.decode(f.read())
+        # with open(f"../texts/annotated/align_data/{i}_ja_ru.txt", 'w+') as file:
+        #     for line in entry.sentence_pairs:
+        #         file.write('〇\n' + line.japanese_source + '\n●\n')
+        #         file.write(line.russian_source + '\n◎\n\n')
 
 
 if __name__ == '__main__':
+    # get_align_info([1,11,12,13,14,15,16,17,18,19,20,21])
     # align_texts()
-    annotate_texts()
+    # annotate_texts()
+    pass

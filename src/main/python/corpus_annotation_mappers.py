@@ -198,6 +198,7 @@ juman_semantic_info_mapper = {
     '略称': 'Abbr',
     '旧称': 'Former_name',
     '地名': 'Toponym',
+    '正規化代表表記': 'normal_writing_representation',
     '代表表記': 'writing_representation',
     '疑似代表表記': 'suspected_writing_representation',
     '読み不明': 'unknown_reading',
@@ -205,8 +206,7 @@ juman_semantic_info_mapper = {
     '自他動詞': 'transitivity',
     '自': 'Intransitive',
     '他': 'Transitive',
-    '同形': 'same_form',
-    'Wikipediaリダイレクト': 'wiki_redirected',
+    '同形': 'Both',
     '可能動詞': 'Potential',
     '住所末尾': ['Ender', 'Address'],  # for addresses
     '地名末尾': ['Ender', 'Toponym'],  # for toponyms; coming in the end

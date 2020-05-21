@@ -84,6 +84,12 @@ def scrap_translation(token: JapaneseToken, lexeme_reading: str, ref_value: str)
                 reading += 'ou'
             elif symbol == 'ū':
                 reading += 'uu'
+            elif symbol == 'ē':
+                reading += 'ee'
+            elif symbol == 'ā':
+                reading += 'aa'
+            elif symbol == 'ī':
+                reading += 'ii'
             elif symbol == 'd' and src_reading.text[id + 1] == 'u':
                 reading += 'z'
             elif symbol in ['-', '(', ')', ' ']:

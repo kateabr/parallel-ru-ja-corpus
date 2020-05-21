@@ -71,23 +71,26 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
     result: List[JapaneseToken] = []
     item: Morpheme
     for pos, item in enumerate(blist.mrph_list(), 1):
-        text_src = item.midasi
-
-        text = item.midasi
-
         hinsi = juman_hinsi_mapper[item.hinsi]
         if hinsi[0] == "Special" or item.midasi in ['～', '・'] or item.midasi in string.punctuation:
-            result.append(JapaneseToken(pos, text))
+            result.append(JapaneseToken(pos, item.midasi))
             continue
 
-        try:
-            if unicodedata.normalize('NFKC', item.midasi).isnumeric():
-                text, reading = convert_to_japanese(unicodedata.normalize('NFKC', item.midasi))
-                item = knp.parse(text).mrph_list()[0]
-                item.midasi = unicodedata.normalize('NFKC', text_src)
-                item.yomi = reading
-        except:
-            pass
+        lexeme_reading = ''
+        lexeme = item.genkei
+        reading = item.yomi
+
+        if len(item.repname.split('/')) > 1 and item.repname.split('/')[1][-1] != 'a':
+            lexeme, lexeme_reading = lexeme_with_reading(item.repname)
+        elif 'ひらがな' in item.fstring:
+            lexeme_reading = item.genkei
+
+        if unicodedata.normalize('NFKC', item.midasi).isnumeric():
+            item.midasi = unicodedata.normalize('NFKC', item.midasi)
+            try:
+                lexeme, reading = convert_to_japanese(item.midasi)
+            except:
+                pass
 
         tags: List[Attribute] = []
         extra_tags: List[str] = []
@@ -95,7 +98,7 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
 
         bunrui = juman_bunrui_mapper[item.bunrui]
         if bunrui:
-            if bunrui[0] == 'Numeral' or unicodedata.normalize('NFKC', text_src).isnumeric():
+            if bunrui[0] == 'Numeral' or unicodedata.normalize('NFKC', item.midasi).isnumeric():
                 tags.append(Attribute('pos', 'Numeral'))
             else:
                 tags.append(Attribute('type', bunrui[0]))
@@ -113,8 +116,8 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
             tags.append(Attribute('row', extra_tags[row[0][0]].split('_')[0]))
             extra_tags.remove(row[0][1])
 
-        if hinsi[0] == 'Adjective' or (
-                hinsi[0] in ['Suffix', 'Prefix'] and bunrui and bunrui[0] == 'Adjectival'):
+        if hinsi[0] in ['Adjective', 'Verb'] or (
+                hinsi[0] in ['Suffix', 'Prefix'] and bunrui and bunrui[0] in ['Adjectival']):
             type = [(i, item) for i, item in enumerate(extra_tags) if item.endswith('_adjective')]
             if type:
                 if hinsi[0] == 'Adjective':
@@ -147,24 +150,13 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                 tags.append(Attribute('type', extra_tags[type[0][0]].split('_')[0]))
                 extra_tags.remove(type[0][1])
 
-        lexeme_reading = ''
-
-        lexeme = item.genkei
-        reading = kakasi_converter.do(item.yomi)
-        if len(item.repname.split('/')) > 1 and item.repname.split('/')[1][-1] != 'a':
-            lexeme, lexeme_reading = lexeme_with_reading(item.repname)
-        elif 'ひらがな' in item.fstring:
-            lexeme_reading = item.genkei
-
         score = None
 
-        if item.imis != 'NIL':
-            split_sem_info = [it.split(':') for it in item.imis.split()]
+        if item.fstring:
+            split_sem_info = [it.split(':') for it in item.fstring[1:-1].split('><')]
             for sem_it in split_sem_info:
                 if sem_it[0] not in juman_semantic_info_mapper.keys():
                     unsorted.append(':'.join(sem_it))
-                elif juman_semantic_info_mapper[sem_it[0]] == 'writing_representation':
-                    lexeme, lexeme_reading = lexeme_with_reading(sem_it[1])
                 elif juman_semantic_info_mapper[sem_it[0]] == 'category':
                     tags.append(Attribute('category', [juman_category_mapper[c] for c in sem_it[1].split(';')]))
                 elif juman_semantic_info_mapper[sem_it[0]] == 'domain':
@@ -187,6 +179,9 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                     elif juman_semantic_info_mapper[sem_it[1]] == "Intransitive":
                         tags.append(Attribute('transitivity', "Transitive"))
                         tags.append(Attribute('intransitive_form', sem_it[2].split('/')[0]))
+                    elif juman_semantic_info_mapper[sem_it[1]] == "Both":
+                        tags.append(Attribute('transitivity', "Both"))
+                        tags.append(Attribute('intransitive_form', lexeme))
                 elif juman_semantic_info_mapper[sem_it[0]][0] == 'Derivation':
                     extra_tags.append('Derivative')
                     tags.append(Attribute('derivation_type', juman_semantic_info_mapper[sem_it[0]][1]))
@@ -204,9 +199,12 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                     lexeme, lexeme_reading = lexeme_with_reading(sem_it[1])
                 elif juman_semantic_info_mapper[sem_it[0]] == 'Human_name_or_family_name':
                     if not sem_it[0].startswith('Wikipedia'):
-                        if juman_semantic_info_mapper[sem_it[1]] == "japanese":
+                        if juman_semantic_info_mapper[sem_it[1]] == "japanese" and sem_it[2] in juman_semantic_info_mapper.keys():
                             extra_tags.append(juman_semantic_info_mapper[sem_it[2]])
-                            score = float(sem_it[4])
+                            if len(sem_it) > 4:
+                                score = float(sem_it[4])
+                            else:
+                                score = float(0)
                         else:
                             extra_tags.append(juman_semantic_info_mapper[sem_it[0]])
                             extra_tags.append(juman_semantic_info_mapper[sem_it[1]])
@@ -217,19 +215,24 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                     extra_tags.extend(juman_semantic_info_mapper[sem_it[0]])
                 elif juman_semantic_info_mapper[sem_it[0]][0] == 'reading_type':
                     tags.append(Attribute('reading_type', juman_semantic_info_mapper[sem_it[0]][1]))
+                elif juman_semantic_info_mapper[sem_it[0]] == 'normal_writing_representation' and \
+                        bunrui and bunrui[0] != 'Numeral' \
+                        and 'Abbr' not in extra_tags:
+                    lexeme, lexeme_reading = lexeme_with_reading(sem_it[1])
+                elif sem_it[0] != '自動獲得':
+                    for it in sem_it:
+                        if juman_semantic_info_mapper[it] in ['normal_writing_representation',
+                                                              'writing_representation',
+                                                              'suspected_writing_representation']:
+                            break
+                        extra_tags.append(juman_semantic_info_mapper[it])
                 else:
-                    if isinstance(sem_it, List):
-                        for it in sem_it:
-                            if it in juman_semantic_info_mapper.keys():
-                                extra_tags.append(juman_semantic_info_mapper[it])
-                            else:
-                                unsorted.append(it)
-                    elif sem_it[0] != 'Wikipedia':
-                        extra_tags.append(juman_semantic_info_mapper[sem_it])
+                    unsorted.append(':'.join(sem_it))
+
         if 'unrecognized_symbols' in extra_tags:
             if not 'Digits' in extra_tags:
                 lexeme = None
-            if "Katakana" not in extra_tags and 'Digits' not in extra_tags and not text.isalpha():
+            if "Katakana" not in extra_tags and 'Digits' not in extra_tags and not item.midasi.isalpha():
                 reading = None
         if [tag.value for tag in tags if tag.name == 'pos'][0] == 'Human_name':
             if 'Human_name_or_family_name' in extra_tags:
@@ -247,11 +250,12 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                 extra_tags.append('Passive')
 
         if reading is not None:
-            tags.append(Attribute('romaji_reading', reading))
-            hiragana_reading = item.yomi
-        else:
-            hiragana_reading = None
-        new_token = JapaneseToken(pos, text, lexeme, hiragana_reading, None, tags, extra_tags,
+            tags.append(Attribute('romaji_reading', kakasi_converter.do(reading)))
+
+        # if item.fstring:
+        #     extra_tags.extend(item.fstring[1:-1].split('><'))
+
+        new_token = JapaneseToken(pos, item.midasi, lexeme, reading, None, tags, list(set(extra_tags)),
                                   score, unsorted)
 
         ref_value = new_token.lexeme
@@ -265,11 +269,10 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                 ref_value = ref_value[:-1]
 
         if new_token.has_attr('pos', 'Numeral'):
-            if unicodedata.normalize('NFKC', text_src).isnumeric():
+            if item.midasi.isnumeric():
                 translation = None
-                new_token.text = unicodedata.normalize('NFKC', text_src)
             else:
-                translation = kanjiConvert(text)
+                translation = kanjiConvert(item.midasi)
             if new_token.has_attr('suspected_writing_representation'):
                 new_token.extra_attributes.remove('suspected_writing_representation')
             reading_type = None
