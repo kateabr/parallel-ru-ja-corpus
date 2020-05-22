@@ -71,6 +71,10 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
     result: List[JapaneseToken] = []
     item: Morpheme
     for pos, item in enumerate(blist.mrph_list(), 1):
+
+        if unicodedata.normalize('NFKC', item.midasi).isnumeric() or unicodedata.normalize('NFKC', item.midasi).isalpha():
+            item.midasi = unicodedata.normalize('NFKC', item.midasi)
+
         hinsi = juman_hinsi_mapper[item.hinsi]
         if hinsi[0] == "Special" or item.midasi in ['～', '・'] or item.midasi in string.punctuation:
             result.append(JapaneseToken(pos, item.midasi))
