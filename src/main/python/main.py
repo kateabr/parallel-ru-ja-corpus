@@ -1,4 +1,5 @@
 from pathlib import Path
+from statistics import mean
 from typing import Optional
 
 import jsonpickle
@@ -76,12 +77,23 @@ class MetricsValuesPos:
     total_cnt: float
     addition_size: int
 
+    def copy(self, src):
+        self.out_cnt = src.out_cnt
+        self.in_cnt = src.in_cnt
+        self.total_cnt = src.total_cnt
+        self.addition_size = src.addition_size
+
 
 @dataclass
 class MetricsValues:
     verb: MetricsValuesPos
     noun: MetricsValuesPos
     lang: str
+
+    def copy(self, src):
+        self.verb.copy(src.verb)
+        self.noun.copy(src.noun)
+        self.lang = src.lang
 
     def greater_1(self, target):
         return self.get_value_1() > target.get_value_1()
@@ -182,31 +194,40 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         res = []
         if current_addition == 'ru':
             for ps in ['VERB', 'NOUN']:
-                candidates_old = list(set([item for item in list(set(sum(ru[ps][ru_base:ru_bnd-1], []))) if item != '']))
-                candidates_new = list(set([item for item in list(set(sum(ru[ps][ru_bnd-1:ru_bnd], []))) if item != '' and
-                                           not item in candidates_old]))
-                in_cnt = len([item for item in candidates_old + candidates_new if item in sum(ja[ps][ja_base:ja_bnd], [])])
+                candidates_old = list(
+                    set([item for item in list(set(sum(ru[ps][ru_base:ru_bnd - 1], []))) if item != '']))
+                candidates_new = list(
+                    set([item for item in list(set(sum(ru[ps][ru_bnd - 1:ru_bnd], []))) if item != '' and
+                         not item in candidates_old]))
+                in_cnt = len(
+                    [item for item in candidates_old + candidates_new if item in sum(ja[ps][ja_base:ja_bnd], [])])
                 out_cnt = len(list(set([item for item in candidates_old + candidates_new if item != '' and \
                                         item not in list(set(sum(ja[ps][ja_base:ja_bnd], [])))])))
-                res.append(MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1, total_cnt=len(candidates_old + candidates_new),
+                res.append(MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1,
+                                            total_cnt=len(candidates_old + candidates_new),
                                             addition_size=len(candidates_new)))
-                print(f'RU:{ps} {in_cnt}/{out_cnt} | {[item for item in candidates_old if item in sum(ja[ps][ja_base:ja_bnd], [])]}'
-                      f' + {[item for item in candidates_new if item in sum(ja[ps][ja_base:ja_bnd], [])]}')
+                print(
+                    f'RU:{ps} {in_cnt}/{out_cnt} | {[item for item in candidates_old if item in sum(ja[ps][ja_base:ja_bnd], [])]}'
+                    f' + {[item for item in candidates_new if item in sum(ja[ps][ja_base:ja_bnd], [])]}')
         elif current_addition == 'ja':
             for ps in pos:
-                candidates_old = list(set([item for item in list(set(sum(ja[ps][ja_base:ja_bnd-1], []))) if item != '']))
-                candidates_new = list(set([item for item in list(set(sum(ja[ps][ja_bnd-1:ja_bnd], []))) if item != '' and
-                                           not item in candidates_old]))
-                in_cnt = len([item for item in sum(ru[ps][ru_base:ru_bnd], []) if item in candidates_old + candidates_new])
-                out_cnt = len(list(set([item for item in candidates_old + candidates_new if item != '' and\
+                candidates_old = list(
+                    set([item for item in list(set(sum(ja[ps][ja_base:ja_bnd - 1], []))) if item != '']))
+                candidates_new = list(
+                    set([item for item in list(set(sum(ja[ps][ja_bnd - 1:ja_bnd], []))) if item != '' and
+                         not item in candidates_old]))
+                in_cnt = len(
+                    [item for item in sum(ru[ps][ru_base:ru_bnd], []) if item in candidates_old + candidates_new])
+                out_cnt = len(list(set([item for item in candidates_old + candidates_new if item != '' and \
                                         item not in list(set(sum(ru[ps][ru_base:ru_bnd], [])))])))
-                res.append(MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1, total_cnt=len(candidates_old + candidates_new),
+                res.append(MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1,
+                                            total_cnt=len(candidates_old + candidates_new),
                                             addition_size=len(candidates_new)))
-                print(f'JA:{ps} {in_cnt}/{out_cnt} | {[item for item in candidates_old if item in sum(ru[ps][ru_base:ru_bnd], [])]}'
-                      f' + {[item for item in candidates_new if item in sum(ru[ps][ru_base:ru_bnd], [])]}')
+                print(
+                    f'JA:{ps} {in_cnt}/{out_cnt} | {[item for item in candidates_old if item in sum(ru[ps][ru_base:ru_bnd], [])]}'
+                    f' + {[item for item in candidates_new if item in sum(ru[ps][ru_base:ru_bnd], [])]}')
 
         return MetricsValues(verb=res[0], noun=res[1], lang=current_addition)
-
 
         #     out_cnt = len(list(set(sum(ja['VERB'][ja_base:ja_bnd], [])))) - in_cnt
         #     addition_size = len([it for it in ja['VERB'][ja_bnd - 1:ja_bnd] if it != '' and
@@ -270,10 +291,10 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
             print(f'{score[-1][2][1].get_value_1()} vs {new_metrics.get_value_1()}')
             # print(' ',' '.join(ru_src[ru_baseline:score[-1][1] + 2]), '\n',
             #       ' '.join(ja_src[ja_baseline:score[-1][0] + 1]))
-            #cmp = [score[-1][2][1].greater_1(new_metrics), score[-1][2][1].greater_2(new_metrics), score[-1][2][1].greater_3(new_metrics)]
+            # cmp = [score[-1][2][1].greater_1(new_metrics), score[-1][2][1].greater_2(new_metrics), score[-1][2][1].greater_3(new_metrics)]
             if score[-1][2][1].greater_1(new_metrics):
-                score[-1][2][1] = new_metrics
-                score[-1][2][0] = metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ja')
+                score[-1][2][1].copy(new_metrics)
+                score[-1][2][0].copy(metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ja'))
                 score[-1][1] += 1
                 ja_break_first = False
                 ja_break_last = False
@@ -290,8 +311,8 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
             #       ' '.join(ja_src[ja_baseline:score[-1][0] + 2]))
             # cmp = [score[-1][2][0].greater_1(new_metrics), score[-1][2][0].greater_2(new_metrics), score[-1][2][0].greater_3(new_metrics)]
             if score[-1][2][0].greater_1(new_metrics):
-                score[-1][2][0] = new_metrics
-                score[-1][2][1] = metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ru')
+                score[-1][2][0].copy(new_metrics)
+                score[-1][2][1].copy(metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ru'))
                 score[-1][0] += 1
                 ru_break_first = False
                 ru_break_last = False
@@ -306,18 +327,18 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         if score[-1][0] == len(ja_src) or score[-1][1] == len(ru_src):
             break
 
-    if ' '.join(ru_src[ru_baseline:score[-1][1] + 1]) == ' '.join(ja_src[ja_baseline:score[-1][0] + 1]) == '':
-        score = score[:-1]
-    score[-1][0] = len(ja_src)-1
-    score[-1][1] = len(ru_src)-1
-    score[0][2] = score[1][2]
+    # if ' '.join(ru_src[ru_baseline:score[-1][1] + 1]) == ' '.join(ja_src[ja_baseline:score[-1][0] + 1]) == '':
+    #     score = score[:-1]
+    score[-1][0] = len(ja_src) - 1
+    score[-1][1] = len(ru_src) - 1
+    #score[0][2].copy(score[1][2])
     res = []
     ja_baseline = 0
     ru_baseline = 0
 
-    for id, _ in enumerate(score[:-1]):
-        res.append([list(range(score[id][0] + 1, score[id + 1][0]+1)),
-                    list(range(score[id][1] + 1, score[id + 1][1]+1)), score[id][2]])
+    for id, _ in enumerate(score[1:-1]):
+        res.append([list(range(score[id][0] + 1, score[id + 1][0] + 1)),
+                    list(range(score[id][1] + 1, score[id + 1][1] + 1)), score[id + 1][2]])
         # ja_baseline = score[id][0]
         # ru_baseline = score[id][1]
 
@@ -327,32 +348,56 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                 m_without_first_element = metrics(res[index][0][1], res[index][1][0],
                                                   res[index][0][-1] + 1, res[index][1][-1] + 1,
                                                   ja, ru, 'ja')
-                while res[index][2][0].greater_1(m_without_first_element):
+                m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
+                                               res[index - 1][0][-1] + 2, res[index - 1][1][-1] + 1,
+                                               ja, ru, 'ja')
+                while mean([m_without_first_element.get_value_1(), m_with_first_element.get_value_1()]) < \
+                        mean([res[index][2][0].get_value_1(), res[index - 1][2][0].get_value_1()]):
                     res[index - 1][0].append(res[index][0][0])
                     res[index][0] = res[index][0][1:]
-                    res[index][2][0] = m_without_first_element
-                    res[index - 1][2][0] = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                                   res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 1,
-                                                   ja, ru, 'ja')
+                    res[index][2][0].copy(m_without_first_element)
+                    res[index - 1][2][0].copy(m_with_first_element)
+                    res[index][2][1] = metrics(res[index][0][0], res[index][1][0],
+                                               res[index][0][-1] + 1, res[index][1][-1] + 1,
+                                               ja, ru, 'ru')
+                    res[index - 1][2][1] = metrics(res[index - 1][0][0], res[index - 1][1][0],
+                                               res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 1,
+                                               ja, ru, 'ru')
                     if len(res[index][0]) > 1 and rebalance_several:
                         m_without_first_element = metrics(res[index][0][1], res[index][1][0],
                                                           res[index][0][-1] + 1, res[index][1][-1] + 1,
                                                           ja, ru, 'ja')
+                        m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
+                                                       res[index][0][0] + 2, res[index][1][0] + 1,
+                                                       ja, ru, 'ja')
             if len(res[index][1]) > 1 and res[index][0]:
                 m_without_first_element = metrics(res[index][0][0], res[index][1][1],
                                                   res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                                  ja, ru, 'ja')
-                while res[index][2][1].greater_1(m_without_first_element):
+                                                  ja, ru, 'ru')
+                m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
+                                               res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 2,
+                                               ja, ru, 'ru')
+                while mean([m_without_first_element.get_value_1(), m_with_first_element.get_value_1()]) < \
+                        mean([res[index][2][1].get_value_1(), res[index - 1][2][1].get_value_1()]):
                     res[index - 1][1].append(res[index][1][0])
                     res[index][1] = res[index][1][1:]
-                    res[index][2][1] = m_without_first_element
-                    res[index - 1][2][1] = metrics(res[index - 1][0][0], res[index][1][0],
+                    res[index][2][1].copy(m_without_first_element)
+                    res[index - 1][2][1].copy(m_with_first_element)
+                    res[index][2][0] = metrics(res[index][0][0], res[index][1][0],
+                                               res[index][0][-1] + 1, res[index][1][-1] + 1,
+                                               ja, ru, 'ja')
+                    res[index - 1][2][0] = metrics(res[index - 1][0][0], res[index - 1][1][0],
                                                    res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 1,
-                                                   ja, ru, 'ru')
+                                                   ja, ru, 'ja')
                     if len(res[index][1]) > 1 and rebalance_several:
                         m_without_first_element = metrics(res[index][0][0], res[index][1][1],
                                                           res[index][0][-1] + 1, res[index][1][-1] + 1,
                                                           ja, ru, 'ru')
+                        m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
+                                                       res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 2,
+                                                       ja, ru, 'ru')
+            print(' '.join([ja_src[ja_id] for ja_id in res[index - 1][0]]), '\n',
+                  ' '.join([ru_src[ru_id] for ru_id in res[index - 1][1]]))
 
     return [it[0:2] for it in res]
 
@@ -462,7 +507,7 @@ if __name__ == '__main__':
 
     # ann_ru([1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47], mystem, maru_analyzer)
 
-    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][9:10]:  # [4:]:
+    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][4:5]:  # [4:]:
         with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
             ru_src = [it[0] for it in jsonpickle.decode(file.read())]
         with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
