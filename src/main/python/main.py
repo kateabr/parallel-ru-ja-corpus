@@ -135,25 +135,18 @@ def get_stats(ja_src, ru_src):
             addition_size = len([it for it in ru['VERB'][ru_bnd-1:ru_bnd] if it != ''])
         elif current_addition == 'ja':
             out_cnt = len(list(set(sum(ja['VERB'][ja_base:ja_bnd], [])))) - in_cnt
-            addition_size = len([it for it in ja['VERB'][ja_bnd-1:ja_bnd] if it != ''])
-        else:
-            out_cnt = len(ru_candidates) - in_cnt
-            addition_size = len(ru_candidates)
+            addition_size = len([it for it in ja['VERB'][ja_bnd - 1:ja_bnd] if it != ''])
         verb_metrics = MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1, total_cnt=len(ru_candidates),
                                         addition_size=addition_size)
 
         ru_candidates = [item for item in list(set(sum(ru['NOUN'][ru_base:ru_bnd], []))) if item != '']
         in_cnt = len([item for item in ru_candidates if item in sum(ja['NOUN'][ja_base:ja_bnd], [])])
-        out_cnt = len(ru_candidates) - in_cnt
         if current_addition == 'ru':
             out_cnt = len(ru_candidates) - in_cnt
             addition_size = len([it for it in ru['NOUN'][ru_bnd-1:ru_bnd] if it != ''])
         elif current_addition == 'ja':
             out_cnt = len(list(set(sum(ja['NOUN'][ja_base:ja_bnd], [])))) - in_cnt
-            addition_size = len([it for it in ja['NOUN'][ja_bnd-1:ja_bnd] if it != ''])
-        else:
-            out_cnt = len(ru_candidates) - in_cnt
-            addition_size = len(ru_candidates)
+            addition_size = len([it for it in ja['NOUN'][ja_bnd - 1:ja_bnd] if it != ''])
         # print(f'NOUN/in: {in_cnt} :: out: {out_cnt} | {[item for item in ru_candidates if item in\
         # sum(ja["NOUN"][ja_base:ja_bnd], [])]}')
         noun_metrics = MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1, total_cnt=len(ru_candidates),
@@ -181,9 +174,9 @@ def get_stats(ja_src, ru_src):
         score.append([score[-1][0] + 1, score[-1][1] + 1, []])
         ja_baseline = score[-1][0]
         ru_baseline = score[-1][1]
-        init_metrics = metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 1, ja, ru, 'init')
-        score[-1][2] = [init_metrics, init_metrics]
-        print(f'{init_metrics.get_value_1()}')
+        score[-1][2] = [metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 1, ja, ru, 'ja'),
+                        metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 1, ja, ru, 'ru')]
+        print(f'{score[-1][2][0].get_value_1()} | {score[-1][2][1].get_value_1()}')
         # print(' ',' '.join(ru_src[ru_baseline:score[-1][1] + 1]), '\n',
         #       ' '.join(ja_src[ja_baseline:score[-1][0] + 1]))
 
@@ -351,7 +344,7 @@ if __name__ == '__main__':
 
     # ann_ru([1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47], mystem, maru_analyzer)
 
-    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][:1]:  # [4:]:
+    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][1:2]:  # [4:]:
         with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
             ru_src = [it[0] for it in jsonpickle.decode(file.read())]
         with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
