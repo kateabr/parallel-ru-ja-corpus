@@ -1,15 +1,15 @@
 from pathlib import Path
-from statistics import mean
+from typing import Optional
 
 import jsonpickle
 import maru
 import pykakasi
+from dataclasses import dataclass
 from pyknp import KNP
 from pymystem3 import Mystem
 
 from src.main.python.aligned_text import AlignedText
 from src.main.python.corpus_annotator import annotate_russian_text, annotate_japanese_text
-from src.main.python.corpus_model import Entry
 
 
 def annotate_texts():
@@ -69,29 +69,72 @@ def get_line_info(indices):
                     file.write(','.join(ppp) + '\n')
 
 
+# @dataclass
+# class MetricsValuesPos:
+#     in_cnt: Optional[float]
+#     out_cnt: Optional[float]
+#
+#
+# @dataclass
+# class MetricsValues:
+#     verb: MetricsValuesPos
+#     noun: MetricsValuesPos
+#
+#     def greater(self, target):
+#         if self.get_v_score() is not None and self.get_n_score() is not None and \
+#                 target.get_v_score() is not None and target.get_n_score() is not None:
+#             return self.get_v_score() * self.get_n_score() > target.get_v_score() * target.get_n_score()
+#
+#         # this can happen only during initialization, so must be always true
+#         if (target.get_v_score() is None and self.get_v_score() is not None) or \
+#                 (target.get_n_score() is None and self.get_n_score() is not None):
+#             return True
+#
+#         if self.get_v_score() is None and target.get_v_score() is not None:
+#             if self.get_n_score() is None and target.get_n_score() is not None:
+#                 return target.get_v_score() * target.get_n_score() < 100000.0
+#             else:
+#                 return self.get_n_score() > target.get_n_score()
+#         elif self.get_n_score() is not None and target.get_n_score() is not None:
+#             return self.get_v_score() > target.get_n_score()
+#
+#         return False
+#
+#     def get_v_score(self):
+#         if self.verb.out_cnt is not None:
+#             return self.verb.out_cnt / self.verb.in_cnt
+#         return None
+#
+#     def get_n_score(self):
+#         if self.noun.out_cnt is not None:
+#             return self.noun.out_cnt / self.noun.in_cnt
+#         return None
+
+
 def get_stats(ja_src, ru_src):
     def metrics(ja_base, ru_base, ja_bnd, ru_bnd, ja, ru, pos):
         pos_sc = {}
         for ps in pos:
             ru_candidates = [item for item in list(set(sum(ru[ps][ru_base:ru_bnd], []))) if item != '']
-            #ja_candidates = [item for item in list(set(sum(ja[ps][ja_base:ja_bnd], []))) if item != '']
+            # ja_candidates = [item for item in list(set(sum(ja[ps][ja_base:ja_bnd], []))) if item != '']
             in_cnt_ja = len([item for item in ru_candidates if item in sum(ja[ps][ja_base:ja_bnd], [])])
             # print(ps, ' : ', [item for item in sum(ru[ps][ru_base:ru_bnd], []) if item in sum(ja[ps][ja_base:ja_bnd], [])])
-            #in_cnt_ru = len([item for item in ja_candidates if item in sum(ru[ps][ru_base:ru_bnd], [])])
-            if not ru_candidates or not [it for it in ru[ps][ru_bnd-1] if it != '']:
-                out_cnt_ja = 10
+            # in_cnt_ru = len([item for item in ja_candidates if item in sum(ru[ps][ru_base:ru_bnd], [])])
+            if not ru_candidates or not [it for it in ru[ps][ru_bnd - 1] if it != '']:
+                out_cnt_ja = 2
             else:
                 out_cnt_ja = len(ru_candidates) - in_cnt_ja
-            print(f'{ps}/in: {in_cnt_ja} :: out: {out_cnt_ja} | {[item for item in ru_candidates if item in sum(ja[ps][ja_base:ja_bnd], [])]}')
+            print(
+                f'{ps}/in: {in_cnt_ja} :: out: {out_cnt_ja} | {[item for item in ru_candidates if item in sum(ja[ps][ja_base:ja_bnd], [])]}')
             # if not ja_candidates:
             #     out_cnt_ru = 10
             # else:
             #     out_cnt_ru = len(ja_candidates) - in_cnt_ru
-            pos_sc[ps] = out_cnt_ja / (in_cnt_ja + 0.1)#, out_cnt_ru / (in_cnt_ru + 0.1))
+            pos_sc[ps] = out_cnt_ja / (in_cnt_ja + 0.1)  # , out_cnt_ru / (in_cnt_ru + 0.1))
         return pos_sc
 
     sent_diff_mean = 2.6962334103151706
-    pos = ['VERB', 'NOUN']#, 'ADJECTIVE']
+    pos = ['VERB', 'NOUN']  # , 'ADJECTIVE']
 
     ru = {}
     ja = {}
@@ -109,19 +152,23 @@ def get_stats(ja_src, ru_src):
     #     ja_src = [it[0] for it in jsonpickle.decode(file.read())]
 
     #         ja ru  ja_sc    ru_sc
-    score = [[-1, -1,  [0.0,    0.0]],
-             [0, 0,  [1000000.0, 1000000.0]]]
+    score = [[-1, -1, [0.0, 0.0]],
+             [0, 0, [1000000.0, 1000000.0]]]
 
     for counter in range(0, min(len(ja_src), len(ru_src))):
+        new_iteration = True
         ja_iteration = -1
         ja_id = score[-1][0]
         ja_baseline = score[-1][0]
         while ja_id < len(ja_src) and not (ja_id > score[-1][0] + 1):
             ja_iteration += 1
             ru_iteration = -1
-            ru_id = score[-1][1]
+            if new_iteration:
+                ru_id = score[-1][1]
+            else:
+                ru_id = score[-1][1] - 1
             ru_baseline = score[-1][1]
-            while ru_id < len(ru_src) and ru_id + ja_id <= score[-1][1] + score[-1][0] + 1:
+            while ru_id < len(ru_src) and ru_id + ja_id <= score[-1][1] + score[-1][0] + int(new_iteration):
                 ru_iteration += 1
 
                 pos_sc = metrics(ja_baseline, ru_baseline, ja_id + 1, ru_id + 1, ja, ru, pos)
@@ -134,22 +181,26 @@ def get_stats(ja_src, ru_src):
                 if ja_iteration >= ru_iteration and score[-1][2][1] > pos_sc['VERB'] * pos_sc['NOUN']:
                     score[-1][0] = ja_id
                     score[-1][2][1] = pos_sc['VERB'] * pos_sc['NOUN']
-                ru_id += 1
+                if ru_iteration >= ja_iteration:
+                    ru_id += 1
+                else:
+                    ja_id += 1
+            new_iteration = False
             ja_id += 1
-        print(' '.join(ru_src[score[-2][1] + 1:score[-1][1] + 1]), '\n', ' '.join(ja_src[score[-2][0] + 1:score[-1][0] + 1]))
+        print(' '.join(ru_src[score[-2][1] + 1:score[-1][1] + 1]), '\n',
+              ' '.join(ja_src[score[-2][0] + 1:score[-1][0] + 1]))
         score.append([score[-1][0] + 1, score[-1][1] + 1, [1000000.0, 1000000.0]])
 
-
-
     score = [sc_pair for sc_pair in score[1:] if min(sc_pair[0], sc_pair[1]) <= min(len(ja_src), len(ru_src))]
+    score[-1][0] = len(ja_src)
     score[-1][1] = len(ru_src)
     res = []
     ja_baseline = 0
     ru_baseline = 0
     for id, _ in enumerate(score[:-1]):
-        ja_id = score[id+1][0] - score[id][0]
-        ru_id = score[id+1][1] - score[id][1]
-        res.append((list(range(ja_baseline, score[id+1][0])), list(range(ru_baseline, score[id+1][1]))))
+        ja_id = score[id + 1][0] - score[id][0]
+        ru_id = score[id + 1][1] - score[id][1]
+        res.append((list(range(ja_baseline, score[id + 1][0])), list(range(ru_baseline, score[id + 1][1]))))
         ja_baseline += ja_id
         ru_baseline += ru_id
 
@@ -184,8 +235,6 @@ def get_stats(ja_src, ru_src):
     #                 print(' '.join(ru_src[score[ja_id - 1][0]:score[ja_id][0]]), '\n', ja_src[ja_id])
 
 
-
-
 def ann_jap(ids, kakasi_converter, knp):
     for id in ids:
         with open(f'../texts/raw/{id}_ja.txt', 'r') as f:
@@ -207,7 +256,7 @@ def ann_ru(ids, mystem, maru_analyzer):
 
 
 if __name__ == '__main__':
-    #get_line_info([1,11,12,13,14,15,16,17,18,19,20,21])
+    # get_line_info([1,11,12,13,14,15,16,17,18,19,20,21])
     # align_texts()
     # annotate_texts()
 
@@ -223,19 +272,18 @@ if __name__ == '__main__':
 
     # ann_ru([1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47], mystem, maru_analyzer)
 
-    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][4:]:
+    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][:1]:  # [4:]:
         with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
             ru_src = [it[0] for it in jsonpickle.decode(file.read())]
         with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
             ja_src = [it[0] for it in jsonpickle.decode(file.read())]
         ids = get_stats(ja_src, ru_src)
         for id_pair in ids:
-            print(' '.join([ja_src[ja_id] for ja_id in id_pair[0]]), '\n', ' '.join([ru_src[ru_id] for ru_id in id_pair[1]]))
+            print(' '.join([ja_src[ja_id] for ja_id in id_pair[0]]), '\n',
+                  ' '.join([ru_src[ru_id] for ru_id in id_pair[1]]))
         print(1)
 
-
     # mean diff in sentence length: 2.6962334103151706
-
 
     # ids = [i for i in range(1, 49)]
     # ids.remove(2)
