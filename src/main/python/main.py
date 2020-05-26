@@ -184,11 +184,6 @@ class MetricsValues:
         return (self.noun.total_cnt / self.noun.in_cnt) * (self.verb.total_cnt / self.verb.in_cnt)
 
 
-# def blank_metrics():
-#     return MetricsValues(MetricsValuesPos(in_cnt=1.0, out_cnt=1000000.0, total_cnt=1, addition_size=1),
-#                          MetricsValuesPos(in_cnt=1.0, out_cnt=1000000.0, total_cnt=1, addition_size=1))
-
-
 def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
     def metrics(ja_base: int, ru_base: int, ja_bnd: int, ru_bnd: int, ja: [str], ru: [str], current_addition: str):
         res = []
@@ -237,32 +232,6 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         else:
             return -1
 
-        #     out_cnt = len(list(set(sum(ja['VERB'][ja_base:ja_bnd], [])))) - in_cnt
-        #     addition_size = len([it for it in ja['VERB'][ja_bnd - 1:ja_bnd] if it != '' and
-        #                          not it in sum(ja['VERB'][ja_base:ja_bnd - 1], [])])
-        # verb_metrics = MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1, total_cnt=len(ru_candidates),
-        #                                 addition_size=addition_size)
-        # print(f'VERB/in: {in_cnt} :: out: {out_cnt} |'
-        #       f'{[item for item in ru_candidates if item in sum(ja["VERB"][ja_base:ja_bnd], [])]}')
-        #
-        # ru_candidates = [item for item in list(set(sum(ru['NOUN'][ru_base:ru_bnd], []))) if item != '']
-        # in_cnt = len([item for item in ru_candidates if item in sum(ja['NOUN'][ja_base:ja_bnd], [])])
-        # if current_addition == 'ru':
-        #     out_cnt = len(ru_candidates) - in_cnt
-        #     addition_size = len([it for it in ru['NOUN'][ru_bnd - 1:ru_bnd] if it != '' and
-        #                          not it in sum(ru['NOUN'][ru_base:ru_bnd - 1], [])])
-        # elif current_addition == 'ja':
-        #     out_cnt = len(list(set(sum(ja['NOUN'][ja_base:ja_bnd], [])))) - in_cnt
-        #     addition_size = len([it for it in ja['NOUN'][ja_bnd - 1:ja_bnd] if it != '' and
-        #                          not it in sum(ja['NOUN'][ja_base:ja_bnd - 1], [])])
-        # noun_metrics = MetricsValuesPos(out_cnt=out_cnt, in_cnt=in_cnt + 0.1, total_cnt=len(ru_candidates),
-        #                                 addition_size=addition_size)
-        # print(f'NOUN/in: {in_cnt} :: out: {out_cnt} |'
-        #       f'{[item for item in ru_candidates if item in sum(ja["NOUN"][ja_base:ja_bnd], [])]}')
-        #
-        # return MetricsValues(verb=verb_metrics, noun=noun_metrics)
-
-    sent_diff_mean = 2.6962334103151706
     pos = ['VERB', 'NOUN']  # , 'ADJECTIVE']
 
     ru = {}
@@ -275,11 +244,15 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         with open(f"../texts/raw/with_ann/align_data/{i}_ja_{ps}.txt", 'r') as file:
             ja[ps] = [line.strip().split(',') for line in file.readlines()]
 
-    #         ja ru  ja_sc    ru_sc
+    #         ja  ru  ja_sc, ru_sc
     score = [[-1, -1, []]]
 
     while True:
         score.append([score[-1][0] + 1, score[-1][1] + 1, []])
+
+        if score[-1][0] == len(ja_src) or score[-1][1] == len(ru_src):
+            break
+
         ja_baseline = score[-1][0]
         ru_baseline = score[-1][1]
         score[-1][2] = [metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 1, ja, ru, 'ja'),
@@ -288,12 +261,10 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         # print(' ',' '.join(ru_src[ru_baseline:score[-1][1] + 1]), '\n',
         #       ' '.join(ja_src[ja_baseline:score[-1][0] + 1]))
 
-        ru_break_first = False
-        ru_break_last = False
-        ja_break_first = False
-        ja_break_last = False
+        ru_break = False
+        ja_break = False
 
-        while not (ru_break_last or ja_break_last):
+        while True:
             # +1 ru
             new_metrics = metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ru')
             print(f'{score[-1][2][1].get_value_1()} vs {new_metrics.get_value_1()}')
@@ -305,13 +276,12 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                 score[-1][2][0].copy(
                     metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ja'))
                 score[-1][1] += 1
-                ja_break_first = False
-                ja_break_last = False
+                ja_break = False
             else:
-                if ru_break_first:
-                    ru_break_last = True
-                else:
-                    ru_break_first = True
+                ru_break = True
+
+            if ru_break and ja_break:
+                break
 
             # +1 ja
             new_metrics = metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ja')
@@ -324,18 +294,17 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                 score[-1][2][1].copy(
                     metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ru'))
                 score[-1][0] += 1
-                ru_break_first = False
-                ru_break_last = False
+                ru_break = False
             else:
-                if ja_break_first:
-                    ja_break_last = True
-                else:
-                    ja_break_first = True
+                ja_break = True
+
+            if ru_break and ja_break:
+                break
+
         print(' ', ' '.join(ru_src[ru_baseline:score[-1][1] + 1]), '\n',
               ' '.join(ja_src[ja_baseline:score[-1][0] + 1]))
 
-        if score[-1][0] == len(ja_src) or score[-1][1] == len(ru_src):
-            break
+
 
     # if ' '.join(ru_src[ru_baseline:score[-1][1] + 1]) == ' '.join(ja_src[ja_baseline:score[-1][0] + 1]) == '':
     #     score = score[:-1]
@@ -428,75 +397,6 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
 
     return [it[0:2] for it in res]
 
-    #     new_iteration = True
-    #     ja_iteration = -1
-    #     ja_id = score[-1][0]
-    #     ja_baseline = score[-1][0]
-    #     while ja_id < len(ja_src) and not (ja_id > score[-1][0] + 1):
-    #         ja_iteration += 1
-    #         ru_iteration = -1
-    #         ru_baseline = score[-2][1] + 1
-    #         if score[-1][1] == ru_baseline:
-    #             ru_id = score[-1][1]
-    #         else:
-    #             ru_id = score[-1][1] - 1
-    #         while ru_id < len(ru_src) and ru_id + ja_id <= score[-1][1] + score[-1][0] + 1:
-    #             ru_iteration += 1
-    #             # if ja_iteration > 0 and ru_iteration == 0 and not new_iteration:
-    #             #     ja_id -= 1
-    #
-    #             pos_sc = metrics(ja_baseline, ru_baseline, ja_id + 1, ru_id + 1, ja, ru)
-    #             # print(f"ru: v -- {pos_sc['VERB'][0]}  n -- {pos_sc['NOUN'][0]}")
-    #             # print(f"ja: v -- {pos_sc['VERB'][1]}  n -- {pos_sc['NOUN'][1]}")
-    #
-    #             if cur == 'ru' and score[-1][2][1].greater(pos_sc):
-    #                 score[-1][1] = ru_id
-    #                 score[-1][2][0] = pos_sc
-    #             if ja_iteration >= ru_iteration and score[-1][2][0].greater(pos_sc):
-    #                 score[-1][0] = ja_id
-    #                 score[-1][2][1] = pos_sc
-    #             if ru_iteration >= ja_iteration:
-    #                 ru_id += 1
-    #             else:
-    #                 ja_id += 1
-    #         new_iteration = False
-    #         ja_id += 1
-    #     print(' '.join(ru_src[score[-2][1] + 1:score[-1][1] + 1]), '\n',
-    #           ' '.join(ja_src[score[-2][0] + 1:score[-1][0] + 1]))
-    #
-    # score = [sc_pair for sc_pair in score[1:] if min(sc_pair[0], sc_pair[1]) <= min(len(ja_src), len(ru_src))]
-    # score[-1][0] = len(ja_src)
-    # score[-1][1] = len(ru_src)
-
-    # for id, item in enumerate(res):
-    #     if not item[0]:
-    #         if item[1][0] > 1:
-    #             if id > 0:
-    #                 pos_sc = metrics(id - 1, ja_id, ru_id, ja, ru, pos)
-    #                 pass
-    #         elif item[1][1] > 1:
-    #             if id > 0:
-    #                 pos_sc = metrics(id - 1, res[id - 1][2][0][-1], ru_id, ja, ru, pos)
-
-    # for ja_id in range(0, len(ja_src)):
-    #     for ru_id in range(score[ja_id][0], len(ru_src) + 1):
-    #         if ru_id > score[ja_id][0] + 1:
-    #             continue
-    #         pos_sc = {}
-    #         for ps in pos:
-    #             in_cnt = len([item for item in sum(ru[ps][ja_id:ru_id], []) if item in ja[ps][ja_id]])
-    #             out_cnt = len(sum(ru[ps][ja_id:ru_id], [])) - in_cnt
-    #             pos_sc[ps] = out_cnt / (in_cnt + 1)
-    #         if score[ja_id][1] > pos_sc['VERB'] * (pos_sc['NOUN']):
-    #             score[ja_id] = (ru_id, pos_sc['VERB'] * pos_sc['NOUN'])
-    #         else:
-    #             score[ja_id + 1] = (score[ja_id][0] + 1, 1000)
-    #             if ja_id == 0:
-    #                 print(' '.join(ru_src[0:score[ja_id][0]]), '\n', ja_src[ja_id])
-    #             else:
-    #                 print(' '.join(ru_src[score[ja_id - 1][0]:score[ja_id][0]]), '\n', ja_src[ja_id])
-
-
 def ann_jap(ids, kakasi_converter, knp):
     for id in ids:
         with open(f'../texts/raw/{id}_ja.txt', 'r') as f:
@@ -544,20 +444,3 @@ if __name__ == '__main__':
             print(' '.join([ja_src[ja_id] for ja_id in id_pair[0]]), '\n',
                   ' '.join([ru_src[ru_id] for ru_id in id_pair[1]]))
         print(1)
-
-    # mean diff in sentence length: 2.6962334103151706
-
-    # ids = [i for i in range(1, 49)]
-    # ids.remove(2)
-    # ids.remove(10)
-    #
-    # len_ratio = []
-    #
-    # for i in ids:
-    #     entry = Entry.from_xml(f'../texts/annotated/{i}.xml')
-    #     for sp in entry.sentence_pairs:
-    #         len_ratio.append((len(sp.russian_source), len(sp.japanese_source)))
-    #     print(f'{i}/{len(ids)-1}')
-    #
-    # print(mean([item[0] / item[1] for item in len_ratio]))
-    # pass
