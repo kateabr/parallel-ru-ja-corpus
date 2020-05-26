@@ -42,8 +42,8 @@ def get_line_info(indices):
     mystem = Mystem(generate_all=True, use_english_names=True, weight=True)
     maru_analyzer = maru.get_analyzer(tagger='rnn', lemmatizer='dummy')
 
-    pos = ['VERB', 'NOUN']#, 'ADJECTIVE']
-    pos2 = ['Verb', 'Noun']#, 'Adjective']
+    pos = ['VERB', 'NOUN']  # , 'ADJECTIVE']
+    pos2 = ['Verb', 'Noun']  # , 'Adjective']
 
     for i in indices:
         with open(f'../texts/raw/with_ann/{i}_ru.json', 'r') as f:
@@ -357,7 +357,7 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
     if rebalance:
         for loop_id in loop_ids:
             for index in range(loop_id[0], loop_id[1], loop_id[2]):
-                if len(res[index][0]) > 1 and res[index][1]:
+                while len(res[index][0]) > 1 and res[index][1]:
                     m_without_first_element = metrics(res[index][0][1],
                                                       res[index][1][0],
                                                       res[index][0][-1] + 1,
@@ -368,8 +368,8 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                                                    res[prev(index, loop_id[2])][0][-1] + 2,
                                                    res[prev(index, loop_id[2])][1][-1] + 1,
                                                    ja, ru, 'ja')
-                    while mean([m_without_first_element.get_value_1(),
-                                m_with_first_element.get_value_1()]) < \
+                    if mean([m_without_first_element.get_value_1(),
+                             m_with_first_element.get_value_1()]) < \
                             mean([res[index][2][0].get_value_1(),
                                   res[prev(index, loop_id[2])][2][0].get_value_1()]):
                         res[prev(index, loop_id[2])][0].append(res[index][0][0])
@@ -386,18 +386,11 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                                                                      res[prev(index, loop_id[2])][0][-1] + 1,
                                                                      res[prev(index, loop_id[2])][1][-1] + 1,
                                                                      ja, ru, 'ru')
-                        if len(res[index][0]) > 1 and rebalance_several:
-                            m_without_first_element = metrics(res[index][0][1],
-                                                              res[index][1][0],
-                                                              res[index][0][-1] + 1,
-                                                              res[index][1][-1] + 1,
-                                                              ja, ru, 'ja')
-                            m_with_first_element = metrics(res[prev(index, loop_id[2])][0][0],
-                                                           res[prev(index, loop_id[2])][1][0],
-                                                           res[index][0][0] + 2,
-                                                           res[index][1][0] + 1,
-                                                           ja, ru, 'ja')
-                if len(res[index][1]) > 1 and res[index][0]:
+                    else:
+                        break
+                    if not rebalance_several:
+                        break
+                while len(res[index][1]) > 1 and res[index][0]:
                     m_without_first_element = metrics(res[index][0][0],
                                                       res[index][1][1],
                                                       res[index][0][-1] + 1,
@@ -408,8 +401,8 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                                                    res[prev(index, loop_id[2])][0][-1] + 1,
                                                    res[prev(index, loop_id[2])][1][-1] + 2,
                                                    ja, ru, 'ru')
-                    while mean([m_without_first_element.get_value_1(),
-                                m_with_first_element.get_value_1()]) < \
+                    if mean([m_without_first_element.get_value_1(),
+                             m_with_first_element.get_value_1()]) < \
                             mean([res[index][2][1].get_value_1(),
                                   res[prev(index, loop_id[2])][2][1].get_value_1()]):
                         res[prev(index, loop_id[2])][1].append(res[index][1][0])
@@ -426,17 +419,10 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                                                                      res[prev(index, loop_id[2])][0][-1] + 1,
                                                                      res[prev(index, loop_id[2])][1][-1] + 1,
                                                                      ja, ru, 'ja')
-                        if len(res[index][1]) > 1 and rebalance_several:
-                            m_without_first_element = metrics(res[index][0][0],
-                                                              res[index][1][1],
-                                                              res[index][0][-1] + 1,
-                                                              res[index][1][-1] + 1,
-                                                              ja, ru, 'ru')
-                            m_with_first_element = metrics(res[prev(index, loop_id[2])][0][0],
-                                                           res[prev(index, loop_id[2])][1][0],
-                                                           res[prev(index, loop_id[2])][0][-1] + 1,
-                                                           res[prev(index, loop_id[2])][1][-1] + 2,
-                                                           ja, ru, 'ru')
+                    else:
+                        break
+                    if not rebalance_several:
+                        break
                 print(' '.join([ja_src[ja_id] for ja_id in res[prev(index, loop_id[2])][0]]), '\n',
                       ' '.join([ru_src[ru_id] for ru_id in res[prev(index, loop_id[2])][1]]))
 
@@ -548,7 +534,7 @@ if __name__ == '__main__':
 
     # ann_ru([1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47], mystem, maru_analyzer)
 
-    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][1:2]:  # [4:]:
+    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][0:1]:  # [4:]:
         with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
             ru_src = [it[0] for it in jsonpickle.decode(file.read())]
         with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
