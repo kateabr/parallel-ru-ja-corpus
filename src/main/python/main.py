@@ -42,8 +42,8 @@ def get_line_info(indices):
     mystem = Mystem(generate_all=True, use_english_names=True, weight=True)
     maru_analyzer = maru.get_analyzer(tagger='rnn', lemmatizer='dummy')
 
-    pos = ['VERB', 'NOUN', 'ADJECTIVE']
-    pos2 = ['Verb', 'Noun', 'Adjective']
+    pos = ['VERB', 'NOUN']#, 'ADJECTIVE']
+    pos2 = ['Verb', 'Noun']#, 'Adjective']
 
     for i in indices:
         with open(f'../texts/raw/with_ann/{i}_ru.json', 'r') as f:
@@ -119,10 +119,10 @@ class MetricsValues:
         return v_sc or n_sc
 
     def v_score_is_none(self):
-        return (not self.verb.total_cnt > 0, not self.verb.addition_size > 0)
+        return not self.verb.total_cnt > 0, not self.verb.addition_size > 0
 
     def n_score_is_none(self):
-        return (not self.noun.total_cnt > 0, not self.noun.addition_size > 0)
+        return not self.noun.total_cnt > 0, not self.noun.addition_size > 0
 
     def get_value_1(self):
         ns_tot_empty, ns_add_empty = self.n_score_is_none()
@@ -190,7 +190,7 @@ class MetricsValues:
 
 
 def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
-    def metrics(ja_base, ru_base, ja_bnd, ru_bnd, ja, ru, current_addition):
+    def metrics(ja_base: int, ru_base: int, ja_bnd: int, ru_bnd: int, ja: [str], ru: [str], current_addition: str):
         res = []
         if current_addition == 'ru':
             for ps in ['VERB', 'NOUN']:
@@ -228,6 +228,14 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
                     f' + {[item for item in candidates_new if item in sum(ru[ps][ru_base:ru_bnd], [])]}')
 
         return MetricsValues(verb=res[0], noun=res[1], lang=current_addition)
+
+    def prev(id: int, mode: int):
+        if mode == 1:
+            return id - 1
+        elif mode == -1:
+            return id + 1
+        else:
+            return -1
 
         #     out_cnt = len(list(set(sum(ja['VERB'][ja_base:ja_bnd], [])))) - in_cnt
         #     addition_size = len([it for it in ja['VERB'][ja_bnd - 1:ja_bnd] if it != '' and
@@ -294,7 +302,8 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
             # cmp = [score[-1][2][1].greater_1(new_metrics), score[-1][2][1].greater_2(new_metrics), score[-1][2][1].greater_3(new_metrics)]
             if score[-1][2][1].greater_1(new_metrics):
                 score[-1][2][1].copy(new_metrics)
-                score[-1][2][0].copy(metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ja'))
+                score[-1][2][0].copy(
+                    metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ja'))
                 score[-1][1] += 1
                 ja_break_first = False
                 ja_break_last = False
@@ -312,7 +321,8 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
             # cmp = [score[-1][2][0].greater_1(new_metrics), score[-1][2][0].greater_2(new_metrics), score[-1][2][0].greater_3(new_metrics)]
             if score[-1][2][0].greater_1(new_metrics):
                 score[-1][2][0].copy(new_metrics)
-                score[-1][2][1].copy(metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ru'))
+                score[-1][2][1].copy(
+                    metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ru'))
                 score[-1][0] += 1
                 ru_break_first = False
                 ru_break_last = False
@@ -331,7 +341,7 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
     #     score = score[:-1]
     score[-1][0] = len(ja_src) - 1
     score[-1][1] = len(ru_src) - 1
-    #score[0][2].copy(score[1][2])
+    # score[0][2].copy(score[1][2])
     res = []
     ja_baseline = 0
     ru_baseline = 0
@@ -342,62 +352,93 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         # ja_baseline = score[id][0]
         # ru_baseline = score[id][1]
 
+    loop_ids = [[1, len(res), 1], [len(res) - 2, -1, -1]]
+
     if rebalance:
-        for index in range(1, len(res)):
-            if len(res[index][0]) > 1 and res[index][1]:
-                m_without_first_element = metrics(res[index][0][1], res[index][1][0],
-                                                  res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                                  ja, ru, 'ja')
-                m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                               res[index - 1][0][-1] + 2, res[index - 1][1][-1] + 1,
-                                               ja, ru, 'ja')
-                while mean([m_without_first_element.get_value_1(), m_with_first_element.get_value_1()]) < \
-                        mean([res[index][2][0].get_value_1(), res[index - 1][2][0].get_value_1()]):
-                    res[index - 1][0].append(res[index][0][0])
-                    res[index][0] = res[index][0][1:]
-                    res[index][2][0].copy(m_without_first_element)
-                    res[index - 1][2][0].copy(m_with_first_element)
-                    res[index][2][1] = metrics(res[index][0][0], res[index][1][0],
-                                               res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                               ja, ru, 'ru')
-                    res[index - 1][2][1] = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                               res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 1,
-                                               ja, ru, 'ru')
-                    if len(res[index][0]) > 1 and rebalance_several:
-                        m_without_first_element = metrics(res[index][0][1], res[index][1][0],
-                                                          res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                                          ja, ru, 'ja')
-                        m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                                       res[index][0][0] + 2, res[index][1][0] + 1,
-                                                       ja, ru, 'ja')
-            if len(res[index][1]) > 1 and res[index][0]:
-                m_without_first_element = metrics(res[index][0][0], res[index][1][1],
-                                                  res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                                  ja, ru, 'ru')
-                m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                               res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 2,
-                                               ja, ru, 'ru')
-                while mean([m_without_first_element.get_value_1(), m_with_first_element.get_value_1()]) < \
-                        mean([res[index][2][1].get_value_1(), res[index - 1][2][1].get_value_1()]):
-                    res[index - 1][1].append(res[index][1][0])
-                    res[index][1] = res[index][1][1:]
-                    res[index][2][1].copy(m_without_first_element)
-                    res[index - 1][2][1].copy(m_with_first_element)
-                    res[index][2][0] = metrics(res[index][0][0], res[index][1][0],
-                                               res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                               ja, ru, 'ja')
-                    res[index - 1][2][0] = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                                   res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 1,
+        for loop_id in loop_ids:
+            for index in range(loop_id[0], loop_id[1], loop_id[2]):
+                if len(res[index][0]) > 1 and res[index][1]:
+                    m_without_first_element = metrics(res[index][0][1],
+                                                      res[index][1][0],
+                                                      res[index][0][-1] + 1,
+                                                      res[index][1][-1] + 1,
+                                                      ja, ru, 'ja')
+                    m_with_first_element = metrics(res[prev(index, loop_id[2])][0][0],
+                                                   res[prev(index, loop_id[2])][1][0],
+                                                   res[prev(index, loop_id[2])][0][-1] + 2,
+                                                   res[prev(index, loop_id[2])][1][-1] + 1,
                                                    ja, ru, 'ja')
-                    if len(res[index][1]) > 1 and rebalance_several:
-                        m_without_first_element = metrics(res[index][0][0], res[index][1][1],
-                                                          res[index][0][-1] + 1, res[index][1][-1] + 1,
-                                                          ja, ru, 'ru')
-                        m_with_first_element = metrics(res[index - 1][0][0], res[index - 1][1][0],
-                                                       res[index - 1][0][-1] + 1, res[index - 1][1][-1] + 2,
-                                                       ja, ru, 'ru')
-            print(' '.join([ja_src[ja_id] for ja_id in res[index - 1][0]]), '\n',
-                  ' '.join([ru_src[ru_id] for ru_id in res[index - 1][1]]))
+                    while mean([m_without_first_element.get_value_1(),
+                                m_with_first_element.get_value_1()]) < \
+                            mean([res[index][2][0].get_value_1(),
+                                  res[prev(index, loop_id[2])][2][0].get_value_1()]):
+                        res[prev(index, loop_id[2])][0].append(res[index][0][0])
+                        res[index][0] = res[index][0][1:]
+                        res[index][2][0].copy(m_without_first_element)
+                        res[prev(index, loop_id[2])][2][0].copy(m_with_first_element)
+                        res[index][2][1] = metrics(res[index][0][0],
+                                                   res[index][1][0],
+                                                   res[index][0][-1] + 1,
+                                                   res[index][1][-1] + 1,
+                                                   ja, ru, 'ru')
+                        res[prev(index, loop_id[2])][2][1] = metrics(res[prev(index, loop_id[2])][0][0],
+                                                                     res[prev(index, loop_id[2])][1][0],
+                                                                     res[prev(index, loop_id[2])][0][-1] + 1,
+                                                                     res[prev(index, loop_id[2])][1][-1] + 1,
+                                                                     ja, ru, 'ru')
+                        if len(res[index][0]) > 1 and rebalance_several:
+                            m_without_first_element = metrics(res[index][0][1],
+                                                              res[index][1][0],
+                                                              res[index][0][-1] + 1,
+                                                              res[index][1][-1] + 1,
+                                                              ja, ru, 'ja')
+                            m_with_first_element = metrics(res[prev(index, loop_id[2])][0][0],
+                                                           res[prev(index, loop_id[2])][1][0],
+                                                           res[index][0][0] + 2,
+                                                           res[index][1][0] + 1,
+                                                           ja, ru, 'ja')
+                if len(res[index][1]) > 1 and res[index][0]:
+                    m_without_first_element = metrics(res[index][0][0],
+                                                      res[index][1][1],
+                                                      res[index][0][-1] + 1,
+                                                      res[index][1][-1] + 1,
+                                                      ja, ru, 'ru')
+                    m_with_first_element = metrics(res[prev(index, loop_id[2])][0][0],
+                                                   res[prev(index, loop_id[2])][1][0],
+                                                   res[prev(index, loop_id[2])][0][-1] + 1,
+                                                   res[prev(index, loop_id[2])][1][-1] + 2,
+                                                   ja, ru, 'ru')
+                    while mean([m_without_first_element.get_value_1(),
+                                m_with_first_element.get_value_1()]) < \
+                            mean([res[index][2][1].get_value_1(),
+                                  res[prev(index, loop_id[2])][2][1].get_value_1()]):
+                        res[prev(index, loop_id[2])][1].append(res[index][1][0])
+                        res[index][1] = res[index][1][1:]
+                        res[index][2][1].copy(m_without_first_element)
+                        res[prev(index, loop_id[2])][2][1].copy(m_with_first_element)
+                        res[index][2][0] = metrics(res[index][0][0],
+                                                   res[index][1][0],
+                                                   res[index][0][-1] + 1,
+                                                   res[index][1][-1] + 1,
+                                                   ja, ru, 'ja')
+                        res[prev(index, loop_id[2])][2][0] = metrics(res[prev(index, loop_id[2])][0][0],
+                                                                     res[prev(index, loop_id[2])][1][0],
+                                                                     res[prev(index, loop_id[2])][0][-1] + 1,
+                                                                     res[prev(index, loop_id[2])][1][-1] + 1,
+                                                                     ja, ru, 'ja')
+                        if len(res[index][1]) > 1 and rebalance_several:
+                            m_without_first_element = metrics(res[index][0][0],
+                                                              res[index][1][1],
+                                                              res[index][0][-1] + 1,
+                                                              res[index][1][-1] + 1,
+                                                              ja, ru, 'ru')
+                            m_with_first_element = metrics(res[prev(index, loop_id[2])][0][0],
+                                                           res[prev(index, loop_id[2])][1][0],
+                                                           res[prev(index, loop_id[2])][0][-1] + 1,
+                                                           res[prev(index, loop_id[2])][1][-1] + 2,
+                                                           ja, ru, 'ru')
+                print(' '.join([ja_src[ja_id] for ja_id in res[prev(index, loop_id[2])][0]]), '\n',
+                      ' '.join([ru_src[ru_id] for ru_id in res[prev(index, loop_id[2])][1]]))
 
     return [it[0:2] for it in res]
 
@@ -507,7 +548,7 @@ if __name__ == '__main__':
 
     # ann_ru([1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47], mystem, maru_analyzer)
 
-    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][4:5]:  # [4:]:
+    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][1:2]:  # [4:]:
         with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
             ru_src = [it[0] for it in jsonpickle.decode(file.read())]
         with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
