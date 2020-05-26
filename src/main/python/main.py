@@ -267,7 +267,7 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         while True:
             # +1 ru
             new_metrics = metrics(ja_baseline, ru_baseline, score[-1][0] + 1, score[-1][1] + 2, ja, ru, 'ru')
-            print(f'{score[-1][2][1].get_value_1()} vs {new_metrics.get_value_1()}')
+            print(f'RU:{score[-1][2][1].get_value_1()} vs RU:{new_metrics.get_value_1()}')
             # print(' ',' '.join(ru_src[ru_baseline:score[-1][1] + 2]), '\n',
             #       ' '.join(ja_src[ja_baseline:score[-1][0] + 1]))
             # cmp = [score[-1][2][1].greater_1(new_metrics), score[-1][2][1].greater_2(new_metrics), score[-1][2][1].greater_3(new_metrics)]
@@ -285,7 +285,7 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
 
             # +1 ja
             new_metrics = metrics(ja_baseline, ru_baseline, score[-1][0] + 2, score[-1][1] + 1, ja, ru, 'ja')
-            print(f'{score[-1][2][0].get_value_1()} vs {new_metrics.get_value_1()}')
+            print(f'JA:{score[-1][2][0].get_value_1()} vs JA:{new_metrics.get_value_1()}')
             # print(' ',' '.join(ru_src[ru_baseline:score[-1][1] + 1]), '\n',
             #       ' '.join(ja_src[ja_baseline:score[-1][0] + 2]))
             # cmp = [score[-1][2][0].greater_1(new_metrics), score[-1][2][0].greater_2(new_metrics), score[-1][2][0].greater_3(new_metrics)]
