@@ -68,8 +68,8 @@ export const api = {
           query: query,
           lang: lang,
           token_type: tokenType,
-          attr: attributes?.map(a => `${a.name}=${a.value}`),
-          ext_attr: extraAttributes,
+          attr: attributes?.map(a => `${a.name}=${a.value}`)?.join(','),
+          ext_attr: extraAttributes?.join(","),
           offset: offset,
           limit: limit
         }

@@ -1,6 +1,15 @@
 <template>
   <v-btn icon @click="furigana = !furigana">
-    <ruby><rt>{{ furigana ? (this.settingsStore.getters.reading === 'Hiragana' ? "あ" : "a") : "" }}</rt>ア</ruby>
+    <ruby
+      ><rt>{{
+        furigana
+          ? this.settingsStore.getters.reading === "Hiragana"
+            ? "あ"
+            : "a"
+          : ""
+      }}</rt
+      >ア</ruby
+    >
   </v-btn>
 </template>
 
@@ -17,7 +26,7 @@ export default class extends Vue {
   }
 
   get furigana() {
-    return this.settingsStore.getters.isFurigana
+    return this.settingsStore.getters.isFurigana;
   }
 }
 </script>

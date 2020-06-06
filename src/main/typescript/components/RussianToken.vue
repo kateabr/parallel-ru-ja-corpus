@@ -4,36 +4,64 @@
       <span :class="highlightStyle()" v-on="on">{{ token.text }}</span>
     </template>
 
-    <v-list aria-multiline="true" v-if="token.lexeme != null">
+    <v-list v-if="token.lexeme != null" aria-multiline="true">
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>
-            <v-chip class="ma-1 pl-sm-1 pr-sm-1" outlined color="secondary" x-small>
+            <v-chip
+              class="ma-1 pl-sm-1 pr-sm-1"
+              outlined
+              color="secondary"
+              x-small
+            >
               <div class="mdi mdi-chevron-right"></div>
             </v-chip>
-            {{token.lexeme}}
+            {{ token.lexeme }}
             <v-chip class="ma-1" outlined color="secondary" small>
-              {{renderMainAttributes()}}
+              {{ renderMainAttributes() }}
             </v-chip>
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item three-line v-if="renderAttributes() !== null || renderExtraAttributes() !== null">
+      <v-list-item
+        v-if="renderAttributes() !== null || renderExtraAttributes() !== null"
+        three-line
+      >
         <v-list-item-content>
-        <v-list-item-title>
-          <v-chip class="ma-1 pl-sm-1 pr-sm-1" outlined color="secondary" x-small>
-            <div class="mdi mdi-chevron-down"></div>
-          </v-chip>
-          {{token.text}}
-        </v-list-item-title>
+          <v-list-item-title>
+            <v-chip
+              class="ma-1 pl-sm-1 pr-sm-1"
+              outlined
+              color="secondary"
+              x-small
+            >
+              <div class="mdi mdi-chevron-down"></div>
+            </v-chip>
+            {{ token.text }}
+          </v-list-item-title>
           <v-list-item-subtitle v-if="renderAttributes() !== null" three-line>
-            <v-chip class="ma-1" outlined color="secondary" small v-for="item in renderAttributes()">
+            <v-chip
+              v-for="item in renderAttributes()"
+              class="ma-1"
+              outlined
+              color="secondary"
+              small
+            >
               <v-avatar left class="mdi mdi-tag"></v-avatar>
               {{ item }}
             </v-chip>
           </v-list-item-subtitle>
-          <v-list-item-subtitle v-if="renderExtraAttributes() !== null" three-line>
-            <v-chip class="ma-1" outlined color="secondary" small v-for="item in renderExtraAttributes()">
+          <v-list-item-subtitle
+            v-if="renderExtraAttributes() !== null"
+            three-line
+          >
+            <v-chip
+              v-for="item in renderExtraAttributes()"
+              class="ma-1"
+              outlined
+              color="secondary"
+              small
+            >
               <v-avatar left class="mdi mdi-tag-outline"></v-avatar>
               {{ item }}
             </v-chip>
@@ -56,15 +84,19 @@ export default class extends Vue {
   private readonly tokensIds!: number[] | null;
 
   renderAttributes(): Array<string> | null {
-    const res = this.token.attributes?.filter(a => a.name != 'pos').map(a => `${a.name} = ${a.value}`);
-    if (res == null || res.length == 0){
+    const res = this.token.attributes
+      ?.filter(a => a.name != "pos")
+      .map(a => `${a.name} = ${a.value}`);
+    if (res == null || res.length == 0) {
       return null;
     }
     return res;
   }
 
   renderMainAttributes(): string | null {
-    const res = this.token.attributes?.filter(a => a.name == 'pos').map(a => `${a.value}`);
+    const res = this.token.attributes
+      ?.filter(a => a.name == "pos")
+      .map(a => `${a.value}`);
     if (res == null || res[0] == null) {
       return null;
     }

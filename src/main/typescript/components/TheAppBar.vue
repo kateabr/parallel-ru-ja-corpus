@@ -6,7 +6,7 @@
     <v-spacer />
     <search-button />
     <about-button />
-    <switch-button-furigana/>
+    <switch-button-furigana />
     <switch-button-reading />
     <!--<switch-button-locale />-->
     <switch-button-theme />

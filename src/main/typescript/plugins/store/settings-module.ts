@@ -14,7 +14,7 @@ class SettingsState {
     : "en";
   itemsPerPage: number = 10;
   reading: Reading = "Hiragana";
-  furigana: boolean = true
+  furigana: boolean = true;
 }
 
 class SettingsGetters extends Getters<SettingsState> {

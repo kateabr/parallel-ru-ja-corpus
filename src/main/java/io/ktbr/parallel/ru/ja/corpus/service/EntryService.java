@@ -149,13 +149,15 @@ public class EntryService {
     }
 
     private @NotNull String extraAttrsToXquerySeq(List<String> extraAttributes) {
-        return "(" + String.join(", ", extraAttributes) + ")";
+        return "("
+                + extraAttributes.stream().map(e -> String.format("'%s'", e)).collect(Collectors.joining(", "))
+                + ")";
     }
 
     private @NotNull String attrsToXqueryMap(List<Attribute> attributeList) {
         return "map {"
                 + attributeList.stream()
-                .map(a -> a.getName() + ":" + a.getValue())
+                .map(a -> String.format("'%s':'%s'", a.getName(), a.getValue()))
                 .collect(Collectors.joining(","))
                 + "}";
     }

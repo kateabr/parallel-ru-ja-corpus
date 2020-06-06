@@ -1,51 +1,51 @@
 <template>
   <v-card outlined class="mt-3">
     <div class="pl-6 pr-6 pt-4">
-    <russian-token
-      v-for="token in result.sentencePair.russian.tokens"
-      :key="result.sentencePair.id + 'ru' + token.id"
-      :token="token"
-      :tokens-ids="russianTokens()"
-    />
+      <russian-token
+        v-for="token in result.sentencePair.russian.tokens"
+        :key="result.sentencePair.id + 'ru' + token.id"
+        :token="token"
+        :tokens-ids="russianTokens()"
+      />
     </div>
     <br />
     <div class="pl-6 pr-6">
-    <japanese-token
-      v-for="token in result.sentencePair.japanese.tokens"
-      :key="result.sentencePair.id + 'ja' + token.id"
-      :token="token"
-      :tokens-ids="japaneseTokens()"
-    />
+      <japanese-token
+        v-for="token in result.sentencePair.japanese.tokens"
+        :key="result.sentencePair.id + 'ja' + token.id"
+        :token="token"
+        :tokens-ids="japaneseTokens()"
+      />
     </div>
     <br />
     <div class="pb-2 pr-3">
-    <v-row dense no-gutters>
-      <v-spacer />
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on }">
-          <v-btn icon color="primary" v-on="on" @click="openSourceText()">
-            <v-icon>mdi-script-text-outline</v-icon>
-          </v-btn>
-        </template>
-        <span>Полный текст</span>
-      </v-tooltip>
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on }">
-          <v-btn icon color="primary" v-on="on" @click="openRussianSource()">
-            RU
-          </v-btn>
-        </template>
-        <span>Русский источник</span>
-      </v-tooltip>
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on }">
-          <v-btn icon color="primary" v-on="on" @click="openJapaneseSource()">
-            JA
-          </v-btn>
-        </template>
-        <span>Японский источник</span>
-      </v-tooltip>
-    </v-row>
+      <v-row dense no-gutters>
+        <v-spacer />
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn icon color="primary" v-on="on" @click="openSourceText()">
+              <v-icon>mdi-script-text-outline</v-icon>
+            </v-btn>
+          </template>
+          <span>Полный текст</span>
+        </v-tooltip>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn icon color="primary" v-on="on" @click="openRussianSource()">
+              RU
+            </v-btn>
+          </template>
+          <span>Русский источник</span>
+        </v-tooltip>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn icon color="primary" v-on="on" @click="openJapaneseSource()">
+              JA
+            </v-btn>
+          </template>
+          <span>Японский источник</span>
+        </v-tooltip>
+      </v-row>
     </div>
   </v-card>
 </template>

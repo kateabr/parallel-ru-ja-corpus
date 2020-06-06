@@ -9,8 +9,8 @@
           </v-tabs>
         </v-col>
         <v-col class="pa-md-4 mx-lg-auto">
-          <v-radio-group v-model="searchLanguage" label="Язык поиска" row>
-            <v-radio label="Русский" value="RUSSIAN" />
+          <v-radio-group v-model="searchLanguage" label="Язык поиска" row @change="attributeList.splice(0, attributeList.length)" >
+            <v-radio label="Русский" value="RUSSIAN"  />
             <v-radio label="Японский" value="JAPANESE" />
           </v-radio-group>
         </v-col>
@@ -38,249 +38,119 @@
                 <v-radio label="Лексема" value="LEXEME" />
               </v-radio-group>
             </v-col>
+          </v-row>
+          <v-row v-for="item in attributeList" :key="attributeList.indexOf(item)">
             <v-col>
-              <v-btn @click="showAttributesList = true">
-                Признаки
-              </v-btn>
+              <v-text-field
+                    v-model="item.name"
+                    dense
+                    outlined
+                    readonly
+            ></v-text-field>
             </v-col>
             <v-col>
-              <v-btn @click="showExtraAttributesList = true">
-                Доп. признаки
+              <v-text-field
+                    v-model="item.value"
+                    outlined
+                    dense
+                    readonly
+            ></v-text-field></v-col>
+            <v-col cols="1">
+            <v-btn outlined color="red" class="mx-2" small fab
+                   @click="attributeList.splice(attributeList.indexOf(item), 1)">
+              <v-icon>mdi-minus-circle</v-icon>
+            </v-btn>
+            </v-col>
+          </v-row>
+          <v-row v-if="searchLanguage === 'JAPANESE'">
+            <v-col>
+              <v-autocomplete
+                      v-model="attributePlaceholderName"
+                      :items="attributeListNamesJa"
+                      dense
+                      outlined
+                      label="Основной параметр"
+              ></v-autocomplete>
+            </v-col>
+            <v-col>
+              <v-autocomplete
+                      v-model="attributePlaceholderValue"
+                      :items="attributeListMapJa.get(attributePlaceholderName)"
+                      outlined
+                      dense
+                      label="Значение параметра"
+              ></v-autocomplete></v-col>
+            <v-col cols="1">
+              <v-btn :disabled="!(attributePlaceholderValue.length !== 0 && attributePlaceholderName.length !== 0)" outlined color="green" class="mx-2" small fab @click="attributeList.push({name: attributePlaceholderName,
+              value: attributePlaceholderValue})">
+                <v-icon>mdi-plus-circle</v-icon>
               </v-btn>
             </v-col>
           </v-row>
-          <v-dialog
-            v-model="showAttributesList"
-            transition="dialog-bottom-transition"
-            hide-overlay
-            fullscreen
-            @keydown.esc="showAttributesList = false"
-          >
-            <v-card>
-              <v-toolbar elevation="0">
-                <v-btn icon @click="showAttributesList = false">
-                  <v-icon>mdi-close</v-icon>
-                </v-btn>
-                <v-toolbar-title>Признаки</v-toolbar-title>
-                <v-spacer />
-                <v-btn type="primary" @click="showAttributesList = false">
-                  Снять все выделение
-                </v-btn>
-              </v-toolbar>
-              <v-card flat>
-                <v-card-text>
-                  <v-container fluid>
-                    <v-row>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="red"
-                          color="red"
-                          value="red"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="red darken-3"
-                          color="red darken-3"
-                          value="red darken-3"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="indigo"
-                          color="indigo"
-                          value="indigo"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="indigo darken-3"
-                          color="indigo darken-3"
-                          value="indigo darken-3"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="orange"
-                          color="orange"
-                          value="orange"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="orange darken-3"
-                          color="orange darken-3"
-                          value="orange darken-3"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                    </v-row>
-
-                    <v-row class="mt-12">
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="primary"
-                          color="primary"
-                          value="primary"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="secondary"
-                          color="secondary"
-                          value="secondary"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="success"
-                          color="success"
-                          value="success"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="info"
-                          color="info"
-                          value="info"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="warning"
-                          color="warning"
-                          value="warning"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="error"
-                          color="error"
-                          value="error"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                </v-card-text>
-              </v-card>
-            </v-card>
-          </v-dialog>
-          <v-dialog
-            v-model="showExtraAttributesList"
-            transition="dialog-bottom-transition"
-            hide-overlay
-            fullscreen
-            @keydown.esc="showExtraAttributesList = false"
-          >
-            <v-card>
-              <v-toolbar elevation="0">
-                <v-btn icon @click="showExtraAttributesList = false">
-                  <v-icon>mdi-close</v-icon>
-                </v-btn>
-                <v-toolbar-title>Доп. признаки</v-toolbar-title>
-                <v-spacer />
-                <v-btn type="primary" @click="showExtraAttributesList = false">
-                  Снять все выделение
-                </v-btn>
-              </v-toolbar>
-              <v-card flat>
-                <v-card-text>
-                  <v-container fluid>
-                    <v-row>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="red"
-                          color="red"
-                          value="red"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="red darken-3"
-                          color="red darken-3"
-                          value="red darken-3"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="indigo"
-                          color="indigo"
-                          value="indigo"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="indigo darken-3"
-                          color="indigo darken-3"
-                          value="indigo darken-3"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="orange"
-                          color="orange"
-                          value="orange"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="orange darken-3"
-                          color="orange darken-3"
-                          value="orange darken-3"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                    </v-row>
-
-                    <v-row class="mt-12">
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="primary"
-                          color="primary"
-                          value="primary"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="secondary"
-                          color="secondary"
-                          value="secondary"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="success"
-                          color="success"
-                          value="success"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="info"
-                          color="info"
-                          value="info"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4">
-                        <v-checkbox
-                          label="warning"
-                          color="warning"
-                          value="warning"
-                          hide-details
-                        ></v-checkbox>
-                        <v-checkbox
-                          label="error"
-                          color="error"
-                          value="error"
-                          hide-details
-                        ></v-checkbox>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                </v-card-text>
-              </v-card>
-            </v-card>
-          </v-dialog>
+          <v-row v-if="searchLanguage === 'RUSSIAN'">
+            <v-col>
+              <v-autocomplete
+                      v-model="attributePlaceholderName"
+                      :items="attributeListNamesRu"
+                      dense
+                      outlined
+                      label="Основной параметр"
+              ></v-autocomplete>
+            </v-col>
+            <v-col>
+              <v-autocomplete
+                      v-model="attributePlaceholderValue"
+                      :items="attributeListMapRu.get(attributePlaceholderName)"
+                      outlined
+                      dense
+                      label="Значение параметра"
+              ></v-autocomplete></v-col>
+            <v-col cols="1">
+              <v-btn :disabled="!(attributePlaceholderValue.length !== 0 && attributePlaceholderName.length !== 0)" outlined color="green" class="mx-2" small fab @click="attributeList.push({name: attributePlaceholderName,
+              value: attributePlaceholderValue})">
+                <v-icon>mdi-plus-circle</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-autocomplete
+                v-model="extraAttributeList"
+                :items="[
+                  'FamN',
+                  'PersN',
+                  'Human_name_or_family_name',
+                  'Abbr',
+                  'Content_word',
+                  'Hiragana',
+                  'Kanji',
+                  'Katakana',
+                  'Digits',
+                  'unknown_reading',
+                  'Progressive',
+                  'unrecognized_symbols',
+                  'Associated_content_word',
+                  'Counting',
+                  'To_supplement',
+                  'Ender',
+                  'Toponym',
+                  'Address',
+                  'Post',
+                  'Organisation',
+                  'Human_name'
+                ]"
+                outlined
+                dense
+                label="Дополнительные параметры"
+                multiple
+              ></v-autocomplete>
+            </v-col>
+          </v-row>
         </v-tab-item>
       </v-tabs-items>
+      <v-row>
+        <v-col cols="4"></v-col>
+        <v-col cols="4">
       <v-btn
         block
         color="primary"
@@ -288,8 +158,12 @@
         :disabled="searchQuery.trim() === ''"
         @click="search(1)"
       >
+        <v-icon left class="mdi mdi-magnify"></v-icon>
         Поиск
       </v-btn>
+        </v-col>
+        <v-col cols="4"></v-col>
+      </v-row>
     </v-card>
 
     <div v-if="searchResult !== null">
@@ -358,14 +232,23 @@ export default class extends Vue {
   private searchQuery: string = "";
   private regex: boolean = false;
   private attributeList: Attribute[] = [];
+  private attributeListNamesJa: string[] = ['pos', 'type'];
+  private attributeListMapJa: Map<string, string[]> = new Map<string, string[]>([
+                  ['pos', ['Noun', 'Verb']],
+                  ['type', ['Common', 'Toponym', 'Human_name']]
+          ]);
+  private attributeListNamesRu: string[] = ['pos'];
+  private attributeListMapRu: Map<string, string[]> = new Map<string, string[]>([
+                  ['pos', ['Noun', 'Verb']]
+          ]);
   private extraAttributeList: string[] = [];
 
   private searchMode: SearchMode = SearchMode.FULL_TEXT;
   private searchLanguage: Language = "RUSSIAN";
   private searchTokenType: TokenType = "WORD";
 
-  private showAttributesList = false;
-  private showExtraAttributesList = false;
+  private attributePlaceholderName = '';
+  private attributePlaceholderValue = '';
 
   private loading = false;
   private error = false;
