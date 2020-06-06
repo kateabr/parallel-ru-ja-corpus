@@ -293,7 +293,7 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
             translation, reading_type = scrap_translation(new_token, kakasi_converter.do(lexeme_reading), ref_value)
         if translation is not None:
             new_token.translation = translation
-            if reading_type is not None:
+            if reading_type is not None and not new_token.has_attr('reading', reading_type):
                 new_token.attributes.append(Attribute('reading_type', reading_type))
         result.append(new_token)
 

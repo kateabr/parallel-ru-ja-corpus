@@ -14,6 +14,7 @@
             </v-chip>
             {{ token.lexeme }} 〖{{ displayReading(token, true) }}〗
             <v-chip class="ma-1" outlined color="secondary" small>
+              <v-avatar left class="mdi mdi-note-text"></v-avatar>
               {{renderMainAttributes()}}
             </v-chip>
             <v-chip class="ma-1" outlined color="secondary" small v-if="renderReadingType(token) != null">
@@ -39,13 +40,13 @@
             {{token.text}} 〖{{ displayReading(token) }}〗</v-list-item-title>
           <v-list-item-subtitle v-if="renderAttributes() !== null">
                   <v-chip class="ma-1" outlined color="secondary" small v-for="item in renderAttributes()">
-                      <v-avatar left class="mdi mdi-tag"></v-avatar>
+                      <v-avatar left class="mdi mdi-tag-text"></v-avatar>
                       {{ item }}
                   </v-chip>
           </v-list-item-subtitle>
           <v-list-item-subtitle v-if="renderExtraAttributes() !== null">
                 <v-chip class="ma-1" outlined color="secondary" small v-for="item in renderExtraAttributes()">
-                    <v-avatar left class="mdi mdi-tag-outline"></v-avatar>
+                    <v-avatar left class="mdi mdi-tag-text-outline"></v-avatar>
                    {{ item }}
                 </v-chip>
           </v-list-item-subtitle>
@@ -88,7 +89,6 @@ export default class extends Vue {
 
   renderAttributes(): Array<string> | null {
       const res = this.token.attributes?.filter(a => a.name !== 'romaji_reading' &&
-          a.name !== 'intransitive_form' && a.name !== 'non_potential_form' && a.name !== 'non_causative_form' &&
           a.name !== 'category' && a.name !== 'domain' &&
           a.name !== 'lexeme_reading' && a.name !== 'romanized_lexeme_reading' &&
           a.name !== 'type' && a.name !== 'pos' && a.name !== 'reading_type')
