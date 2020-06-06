@@ -24,7 +24,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -56,7 +55,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -88,7 +86,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -166,7 +163,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -198,7 +194,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -234,7 +229,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -270,7 +264,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>16</id>
@@ -302,7 +295,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -334,7 +326,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -366,7 +357,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>22</id>
@@ -398,7 +388,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -414,7 +403,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>26</id>
@@ -430,7 +418,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>28</id>
@@ -446,7 +433,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>30</id>
@@ -474,7 +460,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>32</id>
@@ -490,7 +475,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>34</id>
@@ -514,7 +498,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>36</id>
@@ -546,7 +529,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>38</id>
@@ -578,7 +560,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>40</id>
@@ -610,7 +591,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>42</id>
@@ -654,7 +634,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>44</id>
@@ -686,7 +665,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>46</id>
@@ -718,7 +696,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>48</id>
@@ -738,7 +715,6 @@
                                 <value>COMPARATIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>50</id>
@@ -754,7 +730,6 @@
                                 <value>PARTICLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>52</id>
@@ -798,7 +773,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>54</id>
@@ -830,6 +804,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>honkaku</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ほんかく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>honkaku</value>
                             </attribute>
                         </attributes>
@@ -873,6 +855,14 @@
                                 <name>romaji_reading</name>
                                 <value>tekina</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>まと</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mato</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -908,10 +898,16 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>あき</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>aki</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
@@ -933,6 +929,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -967,6 +971,14 @@
                                 <name>romaji_reading</name>
                                 <value>kankou</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>かんこう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kankou</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -996,6 +1008,14 @@
                                 <name>romaji_reading</name>
                                 <value>shiizun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しーずん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shiizun</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -1020,6 +1040,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>wo</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>wo</value>
                             </attribute>
                         </attributes>
@@ -1054,6 +1082,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>むかえる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mukaeru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -1086,11 +1122,17 @@
                                 <name>reading_type</name>
                                 <value>On</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しゅう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shuu</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Weak_temporal_noun</extraAttribute>
-                            <extraAttribute>On</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
@@ -1118,6 +1160,14 @@
                                 <name>romaji_reading</name>
                                 <value>matsu</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>すえ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>sue</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -1144,6 +1194,14 @@
                                 <name>romaji_reading</name>
                                 <value>no</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>no</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -1165,6 +1223,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>juunana</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>じゅうなな</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>juunana</value>
                             </attribute>
                         </attributes>
@@ -1197,6 +1263,14 @@
                                 <name>romaji_reading</name>
                                 <value>nichi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>にち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nichi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -1225,6 +1299,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kyouto</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きょうと</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kyouto</value>
                             </attribute>
                         </attributes>
@@ -1256,6 +1338,14 @@
                                 <name>romaji_reading</name>
                                 <value>shi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>し</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -1284,6 +1374,14 @@
                                 <name>romaji_reading</name>
                                 <value>nai</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>うち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>uchi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Kanji</extraAttribute>
@@ -1306,6 +1404,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -1336,6 +1442,14 @@
                                 <name>romaji_reading</name>
                                 <value>kouyou</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>もみじ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>momiji</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -1359,6 +1473,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -1393,6 +1515,14 @@
                                 <name>romaji_reading</name>
                                 <value>meisho</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>めいしょ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>meisho</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -1416,6 +1546,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ha</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ha</value>
                             </attribute>
                         </attributes>
@@ -1450,10 +1588,16 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>あめ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ame</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
@@ -1475,6 +1619,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ni</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>に</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ni</value>
                             </attribute>
                         </attributes>
@@ -1501,6 +1653,14 @@
                                 <name>romaji_reading</name>
                                 <value>mo</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>も</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mo</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -1523,7 +1683,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -1536,6 +1696,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>かかわる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kakawaru</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -1562,12 +1730,20 @@
                                 <value>Conjunctive</value>
                             </attribute>
                             <attribute>
-                                <name>type</name>
+                                <name>verb_type</name>
                                 <value>Nu</value>
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>zu</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ぬ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -1600,6 +1776,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kouraku</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>こうらく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kouraku</value>
                             </attribute>
                         </attributes>
@@ -1639,12 +1823,18 @@
                                 <name>reading_type</name>
                                 <value>On</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きゃく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kyaku</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
-                            <extraAttribute>On</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1664,6 +1854,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>de</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>で</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>de</value>
                             </attribute>
                         </attributes>
@@ -1688,7 +1886,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -1705,6 +1903,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>にぎわう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nigiwau</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -1742,7 +1948,6 @@
                                 <value>NEUTER</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -1758,7 +1963,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -1790,7 +1994,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -1822,7 +2025,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -1866,7 +2068,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -1898,7 +2099,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -1930,7 +2130,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -1980,7 +2179,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -2012,7 +2210,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -2078,7 +2275,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -2094,7 +2290,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>26</id>
@@ -2114,7 +2309,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>28</id>
@@ -2150,7 +2344,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>30</id>
@@ -2182,7 +2375,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>32</id>
@@ -2214,7 +2406,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>34</id>
@@ -2246,7 +2437,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>36</id>
@@ -2286,7 +2476,6 @@
                                 <value>MIDDLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>38</id>
@@ -2318,7 +2507,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>40</id>
@@ -2334,7 +2522,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>42</id>
@@ -2374,7 +2561,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>44</id>
@@ -2394,7 +2580,6 @@
                                 <value>COMPARATIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>46</id>
@@ -2430,7 +2615,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>48</id>
@@ -2462,7 +2646,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>50</id>
@@ -2490,7 +2673,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>52</id>
@@ -2506,7 +2688,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>54</id>
@@ -2550,7 +2731,6 @@
                                 <value>MIDDLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>56</id>
@@ -2574,7 +2754,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>58</id>
@@ -2606,7 +2785,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>60</id>
@@ -2638,7 +2816,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>62</id>
@@ -2662,7 +2839,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>64</id>
@@ -2706,7 +2882,6 @@
                                 <value>MIDDLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>66</id>
@@ -2738,7 +2913,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>68</id>
@@ -2754,7 +2928,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>70</id>
@@ -2786,7 +2959,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>72</id>
@@ -2802,7 +2974,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>74</id>
@@ -2838,7 +3009,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>76</id>
@@ -2858,7 +3028,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>78</id>
@@ -2874,7 +3043,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>80</id>
@@ -2906,7 +3074,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>82</id>
@@ -2934,7 +3101,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>84</id>
@@ -2966,7 +3132,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>86</id>
@@ -3000,6 +3165,14 @@
                                 <name>romaji_reading</name>
                                 <value>migoro</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>みごろ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>migoro</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -3025,6 +3198,14 @@
                                 <name>romaji_reading</name>
                                 <value>to</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>to</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3047,7 +3228,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -3064,6 +3245,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>なる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>naru</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -3088,6 +3277,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>higashiyama</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ひがしやま</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>higashiyama</value>
                             </attribute>
                         </attributes>
@@ -3119,6 +3316,14 @@
                                 <name>romaji_reading</name>
                                 <value>ku</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>く</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ku</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -3147,6 +3352,14 @@
                                 <name>romaji_reading</name>
                                 <value>no</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>no</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3169,6 +3382,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>東福寺</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>東福寺</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>東福寺</value>
                             </attribute>
                         </attributes>
@@ -3196,6 +3417,14 @@
                                 <name>romaji_reading</name>
                                 <value>de</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>で</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>de</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3220,6 +3449,14 @@
                                 <name>romaji_reading</name>
                                 <value>ha</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ha</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3238,7 +3475,7 @@
                             </attribute>
                             <attribute>
                                 <name>row</name>
-                                <value>AIO</value>
+                                <value>AUO</value>
                             </attribute>
                             <attribute>
                                 <name>type</name>
@@ -3268,6 +3505,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>あかい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>akai</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -3291,7 +3536,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -3308,6 +3553,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>そまる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>somaru</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -3341,6 +3594,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きぎ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kigi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -3364,6 +3625,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -3398,10 +3667,16 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ha</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
@@ -3425,6 +3700,14 @@
                                 <name>romaji_reading</name>
                                 <value>ga</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>が</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ga</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3443,6 +3726,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>shittori</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しっとり</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>shittori</value>
                             </attribute>
                         </attributes>
@@ -3468,6 +3759,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>to</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>to</value>
                             </attribute>
                         </attributes>
@@ -3510,6 +3809,14 @@
                                 <name>romaji_reading</name>
                                 <value>nure</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ぬれる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nureru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -3544,6 +3851,14 @@
                                 <name>romaji_reading</name>
                                 <value>taniai</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>たにあい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>taniai</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -3568,6 +3883,14 @@
                                 <name>romaji_reading</name>
                                 <value>wo</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>wo</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3590,7 +3913,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -3611,6 +3934,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>またぐ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>matagu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -3652,6 +3983,14 @@
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>youni</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ようだ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>youda</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -3697,6 +4036,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>かける</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kakeru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
@@ -3731,6 +4078,14 @@
                                 <name>romaji_reading</name>
                                 <value>rareta</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>られる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>rareru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -3758,6 +4113,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>tsuuten</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>つうてん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>tsuuten</value>
                             </attribute>
                         </attributes>
@@ -3793,12 +4156,22 @@
                                 <name>romaji_reading</name>
                                 <value>kyou</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>はし</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hashi</value>
+                            </attribute>
+                            <attribute>
+                                <name>reading_type</name>
+                                <value>On</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Toponym</extraAttribute>
-                            <extraAttribute>On</extraAttribute>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
@@ -3820,6 +4193,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kara</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>から</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kara</value>
                             </attribute>
                         </attributes>
@@ -3844,6 +4225,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -3874,6 +4263,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ながめ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nagame</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -3896,6 +4293,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ni</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>に</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ni</value>
                             </attribute>
                         </attributes>
@@ -3928,6 +4333,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kankou</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>かんこう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kankou</value>
                             </attribute>
                         </attributes>
@@ -3967,12 +4380,18 @@
                                 <name>reading_type</name>
                                 <value>On</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きゃく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kyaku</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
-                            <extraAttribute>On</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -3992,6 +4411,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ga</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>が</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ga</value>
                             </attribute>
                         </attributes>
@@ -4026,6 +4453,14 @@
                                 <name>romaji_reading</name>
                                 <value>mitoreta</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>みとれる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mitoreru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -4054,7 +4489,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -4086,7 +4520,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -4118,7 +4551,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -4150,7 +4582,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -4204,7 +4635,6 @@
                                 <value>COMPARATIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -4228,7 +4658,6 @@
                                 <value>FEMININE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -4260,7 +4689,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>16</id>
@@ -4292,7 +4720,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -4324,7 +4751,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -4340,7 +4766,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>22</id>
@@ -4368,7 +4793,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -4400,7 +4824,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>26</id>
@@ -4428,7 +4851,6 @@
                                 <value>THIRD</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>28</id>
@@ -4468,7 +4890,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>30</id>
@@ -4492,7 +4913,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>32</id>
@@ -4524,7 +4944,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>34</id>
@@ -4548,7 +4967,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>36</id>
@@ -4580,7 +4998,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>38</id>
@@ -4612,7 +5029,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>40</id>
@@ -4640,7 +5056,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>42</id>
@@ -4656,7 +5071,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>44</id>
@@ -4696,7 +5110,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>48</id>
@@ -4724,7 +5137,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>50</id>
@@ -4740,7 +5152,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>52</id>
@@ -4772,7 +5183,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>54</id>
@@ -4792,7 +5202,6 @@
                                 <value>COMPARATIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>56</id>
@@ -4828,7 +5237,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>58</id>
@@ -4858,6 +5266,14 @@
                                 <name>romaji_reading</name>
                                 <value>東福寺</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>東福寺</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>東福寺</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -4881,6 +5297,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -4915,6 +5339,14 @@
                                 <name>romaji_reading</name>
                                 <value>keidai</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>けいだい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>keidai</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -4938,6 +5370,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ni</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>に</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ni</value>
                             </attribute>
                         </attributes>
@@ -4964,6 +5404,14 @@
                                 <name>romaji_reading</name>
                                 <value>yaku</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>約</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>約</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Kanji</extraAttribute>
@@ -4985,6 +5433,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>２千</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>２千</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>２千</value>
                             </attribute>
                         </attributes>
@@ -5013,6 +5469,14 @@
                                 <name>romaji_reading</name>
                                 <value>hon</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ほん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hon</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -5037,7 +5501,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -5050,6 +5514,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ある</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>aru</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -5085,6 +5557,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>かえで</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kaede</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -5108,6 +5588,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ha</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ha</value>
                             </attribute>
                         </attributes>
@@ -5138,6 +5626,14 @@
                                 <name>romaji_reading</name>
                                 <value>reinen</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>れいねん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>reinen</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -5161,6 +5657,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ni</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>に</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ni</value>
                             </attribute>
                         </attributes>
@@ -5199,6 +5703,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>くらべる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kuraberu</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -5224,6 +5736,14 @@
                                 <name>romaji_reading</name>
                                 <value>yaku</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>約</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>約</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Kanji</extraAttribute>
@@ -5245,6 +5765,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ichi</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>いち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ichi</value>
                             </attribute>
                         </attributes>
@@ -5276,6 +5804,14 @@
                                 <name>romaji_reading</name>
                                 <value>shuukan</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しゅうかん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shuukan</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -5296,7 +5832,7 @@
                             </attribute>
                             <attribute>
                                 <name>row</name>
-                                <value>AIO</value>
+                                <value>AUO</value>
                             </attribute>
                             <attribute>
                                 <name>type</name>
@@ -5313,6 +5849,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>はやい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hayai</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -5335,6 +5879,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>juuyon</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>じゅうよん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>juuyon</value>
                             </attribute>
                         </attributes>
@@ -5367,6 +5919,14 @@
                                 <name>romaji_reading</name>
                                 <value>nichi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>にち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nichi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -5393,6 +5953,14 @@
                                 <name>romaji_reading</name>
                                 <value>goro</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ころ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>koro</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -5415,6 +5983,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kara</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>から</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kara</value>
                             </attribute>
                         </attributes>
@@ -5445,6 +6021,14 @@
                                 <name>romaji_reading</name>
                                 <value>migoro</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>みごろ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>migoro</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -5468,6 +6052,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>wo</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>wo</value>
                             </attribute>
                         </attributes>
@@ -5502,6 +6094,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>むかえる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mukaeru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -5526,6 +6126,14 @@
                                 <name>romaji_reading</name>
                                 <value>to</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>to</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -5548,7 +6156,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -5561,6 +6169,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>いう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>iu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -5599,7 +6215,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -5631,7 +6246,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -5671,7 +6285,6 @@
                                 <value>MIDDLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -5687,7 +6300,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -5719,7 +6331,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -5735,7 +6346,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -5775,7 +6385,6 @@
                                 <value>MIDDLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -5807,7 +6416,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>16</id>
@@ -5843,7 +6451,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -5875,7 +6482,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -5913,6 +6519,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>おとずれる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>otozureru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -5945,10 +6559,16 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ひと</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hito</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
@@ -5972,6 +6592,14 @@
                                 <name>romaji_reading</name>
                                 <value>tachi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>とおる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>tooru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -5994,6 +6622,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ha</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ha</value>
                             </attribute>
                         </attributes>
@@ -6032,10 +6668,16 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>かさ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kasa</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
@@ -6057,6 +6699,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>wo</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>wo</value>
                             </attribute>
                         </attributes>
@@ -6081,7 +6731,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -6098,6 +6748,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>さす</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>sasu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -6121,6 +6779,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>nagara</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ながら</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>nagara</value>
                             </attribute>
                         </attributes>
@@ -6151,6 +6817,14 @@
                                 <name>romaji_reading</name>
                                 <value>teien</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ていえん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>teien</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -6174,6 +6848,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>wo</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>wo</value>
                             </attribute>
                         </attributes>
@@ -6200,6 +6882,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ゆったり</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>yuttari</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -6223,6 +6913,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>to</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>to</value>
                             </attribute>
                         </attributes>
@@ -6255,6 +6953,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>sansaku</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>さんさく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>sansaku</value>
                             </attribute>
                         </attributes>
@@ -6298,6 +7004,14 @@
                                 <name>romaji_reading</name>
                                 <value>shita</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>する</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>suru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Attached_verb</extraAttribute>
@@ -6334,7 +7048,6 @@
                                 <value>MASCULINE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -6350,7 +7063,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -6374,7 +7086,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -6406,7 +7117,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -6422,7 +7132,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -6454,7 +7163,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -6470,7 +7178,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -6498,7 +7205,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>16</id>
@@ -6530,7 +7236,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -6550,7 +7255,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -6594,7 +7298,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>22</id>
@@ -6610,7 +7313,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -6642,7 +7344,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>26</id>
@@ -6674,7 +7375,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>28</id>
@@ -6690,7 +7390,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>30</id>
@@ -6744,7 +7443,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>34</id>
@@ -6772,7 +7470,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>36</id>
@@ -6800,7 +7497,6 @@
                                 <value>FIRST</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>38</id>
@@ -6844,7 +7540,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>40</id>
@@ -6860,7 +7555,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>42</id>
@@ -6914,7 +7608,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>46</id>
@@ -6934,7 +7627,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>48</id>
@@ -6954,7 +7646,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>50</id>
@@ -6998,7 +7689,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>52</id>
@@ -7014,7 +7704,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>54</id>
@@ -7046,7 +7735,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>56</id>
@@ -7078,7 +7766,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>58</id>
@@ -7106,6 +7793,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>fukushima</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ふくしま</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>fukushima</value>
                             </attribute>
                         </attributes>
@@ -7137,6 +7832,14 @@
                                 <name>romaji_reading</name>
                                 <value>shi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>し</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -7163,6 +7866,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kara</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>から</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kara</value>
                             </attribute>
                         </attributes>
@@ -7193,6 +7904,14 @@
                                 <name>romaji_reading</name>
                                 <value>yuujin</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ゆうじん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>yuujin</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -7218,6 +7937,14 @@
                                 <name>romaji_reading</name>
                                 <value>to</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>to</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -7241,6 +7968,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>はじめて</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hajimete</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -7274,6 +8009,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>おとずれる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>otozureru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -7297,6 +8040,14 @@
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>watanabe</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>渡部</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>渡部</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -7324,6 +8075,14 @@
                                 <name>romaji_reading</name>
                                 <value>shin'ichirou</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shin</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>PersN</extraAttribute>
@@ -7348,6 +8107,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>san</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>さん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>san</value>
                             </attribute>
                         </attributes>
@@ -7375,6 +8142,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>rokujuugo</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ろくじゅうご</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>rokujuugo</value>
                             </attribute>
                         </attributes>
@@ -7405,6 +8180,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ha</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ha</value>
                             </attribute>
                         </attributes>
@@ -7439,6 +8222,14 @@
                                 <name>romaji_reading</name>
                                 <value>teire</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ていれ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>teire</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -7463,6 +8254,14 @@
                                 <name>romaji_reading</name>
                                 <value>ga</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>が</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ga</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -7485,7 +8284,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -7494,6 +8293,14 @@
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>ikitodoita</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>いきとどく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ikitodoku</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -7519,6 +8326,14 @@
                                 <name>romaji_reading</name>
                                 <value>kyouto</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きょうと</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kyouto</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -7542,6 +8357,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -7570,6 +8393,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>zoukei</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ぞうけい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>zoukei</value>
                             </attribute>
                         </attributes>
@@ -7605,12 +8436,18 @@
                                 <name>reading_type</name>
                                 <value>On</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>び</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>bi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
-                            <extraAttribute>On</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7630,6 +8467,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ha</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ha</value>
                             </attribute>
                         </attributes>
@@ -7662,6 +8507,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>subarashii</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>すばらしい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>subarashii</value>
                             </attribute>
                         </attributes>
@@ -7729,7 +8582,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -7745,7 +8597,6 @@
                                 <value>PARTICLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -7789,7 +8640,6 @@
                                 <value>MIDDLE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -7805,7 +8655,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -7837,7 +8686,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -7853,7 +8701,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -7885,7 +8732,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>16</id>
@@ -7905,7 +8751,6 @@
                                 <value>POSITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -7949,7 +8794,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -7977,7 +8821,6 @@
                                 <value>FIRST</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>22</id>
@@ -8009,7 +8852,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -8051,6 +8893,14 @@
                                 <name>romaji_reading</name>
                                 <value>shinsai</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しんさい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shinsai</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -8076,6 +8926,14 @@
                                 <name>romaji_reading</name>
                                 <value>de</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>で</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>de</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -8098,6 +8956,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>fukushima</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ふくしま</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>fukushima</value>
                             </attribute>
                         </attributes>
@@ -8126,6 +8992,14 @@
                                 <name>romaji_reading</name>
                                 <value>ha</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ha</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -8150,6 +9024,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>まだ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mada</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -8173,7 +9055,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -8194,6 +9076,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>しずむ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shizumu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -8228,6 +9118,14 @@
                                 <name>romaji_reading</name>
                                 <value>iru</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>いる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>iru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Progressive</extraAttribute>
@@ -8253,6 +9151,14 @@
                                 <name>romaji_reading</name>
                                 <value>ga</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>が</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ga</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -8276,6 +9182,14 @@
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>genki</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>げんきだ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>genkida</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -8303,6 +9217,14 @@
                                 <name>romaji_reading</name>
                                 <value>wo</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>wo</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -8325,7 +9247,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -8342,6 +9264,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>いただく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>itadaku</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -8373,6 +9303,14 @@
                                 <name>romaji_reading</name>
                                 <value>to</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>to</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -8395,7 +9333,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -8408,6 +9346,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>はなす</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hanasu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -8437,7 +9383,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -8469,7 +9414,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>4</id>
@@ -8501,7 +9445,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -8517,7 +9460,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -8549,7 +9491,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -8565,7 +9506,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -8597,7 +9537,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -8641,7 +9580,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>16</id>
@@ -8661,7 +9599,6 @@
                                 <value>INFINITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -8677,7 +9614,6 @@
                                 <value>CONJUNCTION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -8755,7 +9691,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -8775,7 +9710,6 @@
                                 <value>INFINITIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>26</id>
@@ -8799,7 +9733,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>28</id>
@@ -8831,7 +9764,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>30</id>
@@ -8863,7 +9795,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>32</id>
@@ -8895,7 +9826,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>34</id>
@@ -8927,7 +9857,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>36</id>
@@ -8959,7 +9888,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>38</id>
@@ -8991,7 +9919,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>40</id>
@@ -9018,6 +9945,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>juuichi</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>じゅういち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>juuichi</value>
                             </attribute>
                         </attributes>
@@ -9050,6 +9985,14 @@
                                 <name>romaji_reading</name>
                                 <value>gatsu</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>げつ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>getsu</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -9076,6 +10019,14 @@
                                 <name>romaji_reading</name>
                                 <value>ni</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>に</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ni</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -9098,7 +10049,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -9119,6 +10070,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>はいる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hairu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -9149,6 +10108,14 @@
                                 <name>romaji_reading</name>
                                 <value>asaban</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>あさばん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>asaban</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9172,6 +10139,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -9206,6 +10181,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ひえ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>hie</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9238,6 +10221,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>こみ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>komi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9263,6 +10254,14 @@
                                 <name>romaji_reading</name>
                                 <value>ga</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>が</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ga</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -9285,7 +10284,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -9302,6 +10301,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ます</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>masu</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -9329,6 +10336,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kyouto</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きょうと</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kyouto</value>
                             </attribute>
                         </attributes>
@@ -9360,6 +10375,14 @@
                                 <name>romaji_reading</name>
                                 <value>shi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>し</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -9388,6 +10411,14 @@
                                 <name>romaji_reading</name>
                                 <value>nai</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>うち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>uchi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Kanji</extraAttribute>
@@ -9410,6 +10441,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -9440,6 +10479,14 @@
                                 <name>romaji_reading</name>
                                 <value>kouyou</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>もみじ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>momiji</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9463,6 +10510,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -9497,6 +10552,14 @@
                                 <name>romaji_reading</name>
                                 <value>meisho</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>めいしょ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>meisho</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9520,6 +10583,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ha</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ha</value>
                             </attribute>
                         </attributes>
@@ -9562,6 +10633,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>おおく</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ooku</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9585,6 +10664,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>ga</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>が</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>ga</value>
                             </attribute>
                         </attributes>
@@ -9615,6 +10702,14 @@
                                 <name>romaji_reading</name>
                                 <value>migoro</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>みごろ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>migoro</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9638,6 +10733,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>wo</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>を</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>wo</value>
                             </attribute>
                         </attributes>
@@ -9676,6 +10779,14 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>むかえる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>mukaeru</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -9707,6 +10818,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>iru</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>いる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>iru</value>
                             </attribute>
                         </attributes>
@@ -9753,7 +10872,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>2</id>
@@ -9831,7 +10949,6 @@
                                 <value>ACTIVE</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>6</id>
@@ -9867,7 +10984,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>8</id>
@@ -9903,7 +11019,6 @@
                                 <value>FULL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>10</id>
@@ -9935,7 +11050,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>12</id>
@@ -9967,7 +11081,6 @@
                                 <value>SINGULAR</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>14</id>
@@ -10007,7 +11120,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>18</id>
@@ -10023,7 +11135,6 @@
                                 <value>ADPOSITION</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>20</id>
@@ -10047,7 +11158,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>22</id>
@@ -10079,7 +11189,6 @@
                                 <value>PLURAL</value>
                             </attribute>
                         </attributes>
-                        <extraAttributes/>
                     </token>
                     <token>
                         <id>24</id>
@@ -10109,6 +11218,14 @@
                                 <name>romaji_reading</name>
                                 <value>kyouto</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きょうと</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kyouto</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -10136,6 +11253,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>chihou</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>ちほう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>chihou</value>
                             </attribute>
                         </attributes>
@@ -10169,6 +11294,14 @@
                                 <name>romaji_reading</name>
                                 <value>kishou</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きしょう</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kishou</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -10200,11 +11333,21 @@
                                 <name>romaji_reading</name>
                                 <value>dai</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>だい</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>dai</value>
+                            </attribute>
+                            <attribute>
+                                <name>reading_type</name>
+                                <value>On</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>On</extraAttribute>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Organisation</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
@@ -10229,6 +11372,14 @@
                                 <name>romaji_reading</name>
                                 <value>ni</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>に</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ni</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -10251,7 +11402,7 @@
                             </attribute>
                             <attribute>
                                 <name>stem_type</name>
-                                <value>Consonantal</value>
+                                <value>Consonant</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -10272,6 +11423,14 @@
                             <attribute>
                                 <name>reading_type</name>
                                 <value>Kun</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>よる</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>yoru</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -10296,6 +11455,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>to</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>to</value>
                             </attribute>
                         </attributes>
@@ -10324,6 +11491,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>kono</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>この</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>kono</value>
                             </attribute>
                         </attributes>
@@ -10360,11 +11535,17 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>にち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nichi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
                             <extraAttribute>Weak_temporal_noun</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
@@ -10386,6 +11567,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>no</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>no</value>
                             </attribute>
                         </attributes>
@@ -10420,11 +11609,21 @@
                                 <name>romaji_reading</name>
                                 <value>shi</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>し</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>shi</value>
+                            </attribute>
+                            <attribute>
+                                <name>reading_type</name>
+                                <value>On</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>On</extraAttribute>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Address</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
@@ -10448,6 +11647,14 @@
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>nai</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>うち</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>uchi</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -10473,6 +11680,14 @@
                                 <name>romaji_reading</name>
                                 <value>no</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>の</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>no</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -10496,6 +11711,14 @@
                             <attribute>
                                 <name>romaji_reading</name>
                                 <value>saitei</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>さいていだ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>saiteida</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -10527,6 +11750,14 @@
                                 <name>romaji_reading</name>
                                 <value>kion</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>きおん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>kion</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Content_word</extraAttribute>
@@ -10552,6 +11783,14 @@
                                 <name>romaji_reading</name>
                                 <value>ha</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>は</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>ha</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Hiragana</extraAttribute>
@@ -10574,6 +11813,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>８.１</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>８・１</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>８.１</value>
                             </attribute>
                         </attributes>
@@ -10602,6 +11849,14 @@
                                 <name>romaji_reading</name>
                                 <value>do</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>たび</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>tabi</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
@@ -10626,6 +11881,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>to</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>と</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>to</value>
                             </attribute>
                         </attributes>
@@ -10654,6 +11917,14 @@
                             </attribute>
                             <attribute>
                                 <name>romaji_reading</name>
+                                <value>heinen</value>
+                            </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>へいねん</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
                                 <value>heinen</value>
                             </attribute>
                         </attributes>
@@ -10689,11 +11960,17 @@
                                 <name>reading_type</name>
                                 <value>Kun</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>なみ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>nami</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Kun</extraAttribute>
                             <extraAttribute>Ni_case_modifier</extraAttribute>
-                            <extraAttribute>reading_type</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -10720,9 +11997,16 @@
                                 <name>romaji_reading</name>
                                 <value>datta</value>
                             </attribute>
+                            <attribute>
+                                <name>lexeme_reading</name>
+                                <value>だ</value>
+                            </attribute>
+                            <attribute>
+                                <name>romanized_lexeme_reading</name>
+                                <value>da</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Judgemental</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>

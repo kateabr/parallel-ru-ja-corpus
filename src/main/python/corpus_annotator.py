@@ -72,7 +72,8 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
     item: Morpheme
     for pos, item in enumerate(blist.mrph_list(), 1):
 
-        if unicodedata.normalize('NFKC', item.midasi).isnumeric() or unicodedata.normalize('NFKC', item.midasi).isalpha():
+        if unicodedata.normalize('NFKC', item.midasi).isnumeric() or unicodedata.normalize('NFKC',
+                                                                                           item.midasi).isalpha():
             item.midasi = unicodedata.normalize('NFKC', item.midasi)
 
         hinsi = juman_hinsi_mapper[item.hinsi]
@@ -153,6 +154,10 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
             if type:
                 tags.append(Attribute('type', extra_tags[type[0][0]].split('_')[0]))
                 extra_tags.remove(type[0][1])
+            type1 = [(i, item) for i, item in enumerate(extra_tags) if item.endswith('_type1')]
+            if type1:
+                tags.append(Attribute('verb_type', extra_tags[type1[0][0]].split('_')[0]))
+                extra_tags.remove(type1[0][1])
 
         score = None
 
@@ -161,6 +166,8 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
             for sem_it in split_sem_info:
                 if sem_it[0] not in juman_semantic_info_mapper.keys():
                     unsorted.append(':'.join(sem_it))
+                elif juman_category_mapper[sem_it[0]] == hinsi[0]:
+                    continue
                 elif juman_semantic_info_mapper[sem_it[0]] == 'category':
                     tags.append(Attribute('category', [juman_category_mapper[c] for c in sem_it[1].split(';')]))
                 elif juman_semantic_info_mapper[sem_it[0]] == 'domain':
@@ -203,7 +210,8 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                     lexeme, lexeme_reading = lexeme_with_reading(sem_it[1])
                 elif juman_semantic_info_mapper[sem_it[0]] == 'Human_name_or_family_name':
                     if not sem_it[0].startswith('Wikipedia'):
-                        if juman_semantic_info_mapper[sem_it[1]] == "japanese" and sem_it[2] in juman_semantic_info_mapper.keys():
+                        if juman_semantic_info_mapper[sem_it[1]] == "japanese" and sem_it[
+                            2] in juman_semantic_info_mapper.keys():
                             extra_tags.append(juman_semantic_info_mapper[sem_it[2]])
                             if len(sem_it) > 4:
                                 score = float(sem_it[4])
@@ -225,9 +233,7 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
                     lexeme, lexeme_reading = lexeme_with_reading(sem_it[1])
                 elif sem_it[0] != '自動獲得':
                     for it in sem_it:
-                        if juman_semantic_info_mapper[it] in ['normal_writing_representation',
-                                                              'writing_representation',
-                                                              'suspected_writing_representation']:
+                        if juman_semantic_info_mapper[it] in juman_representation_mapper:
                             break
                         extra_tags.append(juman_semantic_info_mapper[it])
                 else:
@@ -255,6 +261,9 @@ def annotate_japanese_text(knp: KNP, kakasi_converter: kakasi, text: str) -> Lis
 
         if reading is not None:
             tags.append(Attribute('romaji_reading', kakasi_converter.do(reading)))
+
+        tags.append(Attribute('lexeme_reading', lexeme_reading))
+        tags.append(Attribute('romanized_lexeme_reading', kakasi_converter.do(lexeme_reading)))
 
         # if item.fstring:
         #     extra_tags.extend(item.fstring[1:-1].split('><'))

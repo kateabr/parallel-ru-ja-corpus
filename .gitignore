@@ -1,3 +1,6 @@
+# BaseX local installation
+basex/
+
 # Eclipse
 .project
 .classpath

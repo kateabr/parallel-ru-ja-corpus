@@ -10,7 +10,7 @@ from pyknp import KNP
 from pymystem3 import Mystem
 
 from src.main.python.aligned_text import AlignedText
-from src.main.python.corpus_annotator import annotate_russian_text, annotate_japanese_text
+from src.main.python.corpus_annotator import annotate_russian_text, annotate_japanese_text, Entry, Attribute
 
 
 def annotate_texts():
@@ -304,8 +304,6 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
         print(' ', ' '.join(ru_src[ru_baseline:score[-1][1] + 1]), '\n',
               ' '.join(ja_src[ja_baseline:score[-1][0] + 1]))
 
-
-
     # if ' '.join(ru_src[ru_baseline:score[-1][1] + 1]) == ' '.join(ja_src[ja_baseline:score[-1][0] + 1]) == '':
     #     score = score[:-1]
     score[-1][0] = len(ja_src) - 1
@@ -397,6 +395,7 @@ def get_stats(ja_src, ru_src, rebalance=True, rebalance_several=False):
 
     return [it[0:2] for it in res]
 
+
 def ann_jap(ids, kakasi_converter, knp):
     for id in ids:
         with open(f'../texts/raw/{id}_ja.txt', 'r') as f:
@@ -417,30 +416,81 @@ def ann_ru(ids, mystem, maru_analyzer):
             f.write(jsonpickle.encode(r_text_annotated_w_sent))
 
 
+# def add_xtra_attr(fname):
+#     text_broken = Entry.from_xml(f'../texts/annotated/{fname}.xml')
+#     text = Entry.from_xml(f'../texts/annotated_old/{fname}.xml')
+#     for spair_id, spair in enumerate(text.sentence_pairs):
+#         for token_id, token in enumerate(spair.japanese):
+#             if token.extra_attributes and not text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                 text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes = token.extra_attributes
+#             if text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes and 'reading_type' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                 if not [tok for tok in text_broken.sentence_pairs[spair_id].japanese[token_id].attributes if tok.name == 'reading_type']:
+#                     if 'On' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                         text_broken.sentence_pairs[spair_id].japanese[token_id].attributes.append(Attribute('reading_type', 'On'))
+#                         text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('On')
+#                     else:
+#                         text_broken.sentence_pairs[spair_id].japanese[token_id].attributes.append(Attribute('reading_type', 'Kun'))
+#                         text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('Kun')
+#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('reading_type')
+#             if text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                 if 'On' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('On')
+#                 if 'Kun' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('Kun')
+#                 if 'reading_type' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
+#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('reading_type')
+#             if text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes and\
+#                 'Judgemental' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes and\
+#                 [tok for tok in text_broken.sentence_pairs[spair_id].japanese[token_id].attributes if tok.name == 'pos']:
+#                 text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('Judgemental')
+#
+#     for spair_id, spair in enumerate(text.sentence_pairs):
+#         for token_id, token in enumerate(spair.russian):
+#             if token.extra_attributes and not text_broken.sentence_pairs[spair_id].russian[token_id].extra_attributes:
+#                 text_broken.sentence_pairs[spair_id].russian[token_id].extra_attributes = token.extra_attributes
+#     return text_broken
+
+
 if __name__ == '__main__':
     # get_line_info([1,11,12,13,14,15,16,17,18,19,20,21])
     # align_texts()
     # annotate_texts()
 
-    # knp = KNP()
-    # kakasi = pykakasi.kakasi()
-    # kakasi.setMode("H", "a")
-    # kakasi.setMode("K", "a")
-    # kakasi.setMode("r", "Hepburn")
-    # converter = kakasi.getConverter()
+    knp = KNP()
+    kakasi = pykakasi.kakasi()
+    kakasi.setMode("H", "a")
+    kakasi.setMode("K", "a")
+    kakasi.setMode("r", "Hepburn")
+    converter = kakasi.getConverter()
 
     # mystem = Mystem(generate_all=True, use_english_names=True, weight=True)
     # maru_analyzer = maru.get_analyzer(tagger='rnn', lemmatizer='dummy')
 
     # ann_ru([1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47], mystem, maru_analyzer)
 
-    for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][0:1]:  # [4:]:
-        with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
-            ru_src = [it[0] for it in jsonpickle.decode(file.read())]
-        with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
-            ja_src = [it[0] for it in jsonpickle.decode(file.read())]
-        ids = get_stats(ja_src, ru_src, rebalance=True, rebalance_several=True)
-        for id_pair in ids:
-            print(' '.join([ja_src[ja_id] for ja_id in id_pair[0]]), '\n',
-                  ' '.join([ru_src[ru_id] for ru_id in id_pair[1]]))
-        print(1)
+    # for i in [1, 3, 7, 13, 14, 22, 41, 43, 45, 46, 47][0:1]:  # [4:]:
+    #     with open(f"../texts/raw/with_ann/{i}_ru.json", 'r') as file:
+    #         ru_src = [it[0] for it in jsonpickle.decode(file.read())]
+    #     with open(f"../texts/raw/with_ann/{i}_ja.json", 'r') as file:
+    #         ja_src = [it[0] for it in jsonpickle.decode(file.read())]
+    #     ids = get_stats(ja_src, ru_src, rebalance=True, rebalance_several=True)
+    #     for id_pair in ids:
+    #         print(' '.join([ja_src[ja_id] for ja_id in id_pair[0]]), '\n',
+    #               ' '.join([ru_src[ru_id] for ru_id in id_pair[1]]))
+    # print(1)
+
+    # ru_t = 0
+    # ja_t = 0
+    #
+    # for f in Path("../texts/annotated").glob("*.xml"):
+    #     for sp in Entry.from_xml(f).sentence_pairs:
+    #         ru_t += len([t for t in sp.russian if t.attributes])
+    #         ja_t += len([t for t in sp.japanese if t.lexeme])
+    #
+    # print(f'Ru tokens: {ru_t} | Ja tokens: {ja_t}')
+    # for i in range(11, 49):
+    #     broken_text = add_xtra_attr(i)
+    #     with open(f'../texts/annotated/{i}.xml', 'w') as f:
+    #         xml = broken_text.to_xml()
+    #         xml.export(f, level=0)
+    #     print(i)

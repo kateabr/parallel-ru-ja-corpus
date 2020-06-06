@@ -79,10 +79,10 @@ juman_bunrui_mapper = {
     '動詞性接尾辞': ['Verbal'],
     # special -
     # unsupported
-    'カタカナ': ['Katakana'],
-    'アルファベット': ['Alpha'],
-    '数字': ['Digits'],
-    'その他': ['Unknown_symbols'],
+    # 'カタカナ': ['Katakana'],
+    # 'アルファベット': ['Alpha'],
+    # '数字': ['Digits'],
+    # 'その他': ['Unknown_symbols'],
     # empty
     '*': []
 }
@@ -91,25 +91,25 @@ juman_bunrui_mapper = {
 juman_katuyou1_mapper = {
     # verbs
     '母音動詞': ['Vowel_stem'],
-    '子音動詞カ行': ['Consonantal_stem', 'Ka_row'],
-    '子音動詞カ行促音便形': ['Consonantal_stem', 'Ka_row', 'Nasalization_change'],
-    '子音動詞ガ行': ['Consonantal_stem', 'Ga_row'],
-    '子音動詞サ行': ['Consonantal_stem', 'Sa_row'],
-    '子音動詞タ行': ['Consonantal_stem', 'Ta_row'],
-    '子音動詞ナ行': ['Consonantal_stem', 'Na_row'],
-    '子音動詞バ行': ['Consonantal_stem', 'Ba_row'],
-    '子音動詞マ行': ['Consonantal_stem', 'Ma_row'],
-    '子音動詞ラ行': ['Consonantal_stem', 'Ra_row'],
-    '子音動詞ラ行イ形': ['Consonantal_stem', 'Ra_row', 'I_form'],
-    '子音動詞ワ行': ['Consonantal_stem', 'Wa_row'],
-    '子音動詞ワ行文語音便形': ['Consonantal_stem', 'Wa_row', 'Written_form', 'Euphonic_change'],
-    'カ変動詞': ['Irregular_type'],
-    'カ変動詞来': ['Irregular2_type'],
-    'サ変動詞': ['Suru_type'],
-    'ザ変動詞': ['Zuru_type'],
+    '子音動詞カ行': ['Consonant_stem', 'Ka_row'],
+    '子音動詞カ行促音便形': ['Consonant_stem', 'Ka_row', 'Nasalization_change'],
+    '子音動詞ガ行': ['Consonant_stem', 'Ga_row'],
+    '子音動詞サ行': ['Consonant_stem', 'Sa_row'],
+    '子音動詞タ行': ['Consonant_stem', 'Ta_row'],
+    '子音動詞ナ行': ['Consonant_stem', 'Na_row'],
+    '子音動詞バ行': ['Consonant_stem', 'Ba_row'],
+    '子音動詞マ行': ['Consonant_stem', 'Ma_row'],
+    '子音動詞ラ行': ['Consonant_stem', 'Ra_row'],
+    '子音動詞ラ行イ形': ['Consonant_stem', 'Ra_row', 'I_form'],
+    '子音動詞ワ行': ['Consonant_stem', 'Wa_row'],
+    '子音動詞ワ行文語音便形': ['Consonant_stem', 'Wa_row', 'Written_form', 'Euphonic_change'],
+    'カ変動詞': ['Irregular_type1'],
+    'カ変動詞来': ['Irregular2_type1'],
+    'サ変動詞': ['Suru_type1'],
+    'ザ変動詞': ['Zuru_type1'],
     '動詞性接尾辞ます型': ['Masu_form'],
     # adjectives
-    'イ形容詞アウオ段': ['I_adjective', 'AIO_row'],
+    'イ形容詞アウオ段': ['I_adjective', 'AUO_row'],
     'イ形容詞イ段': ['I_adjective', 'I_row'],
     'イ形容詞イ段特殊': ['I_adjective', 'I_row', 'Special'],
     'ナ形容詞': ['Na_adjective'],
@@ -119,13 +119,13 @@ juman_katuyou1_mapper = {
     # judgementals -
     # auxiliary verbs - (duplicates omitted)
     '判定詞': ['Judgemental'],
-    '無活用型': ['Non_conjugating_type'],  # ?
-    '助動詞ぬ型': ['Nu_type'],
-    '助動詞だろう型': ['Darou_type'],
-    '助動詞そうだ型': ['Souda_type'],
-    '助動詞く型': ['Ku_type'],
+    '無活用型': ['Non_conjugating_type1'],  # ?
+    '助動詞ぬ型': ['Nu_type1'],
+    '助動詞だろう型': ['Darou_type1'],
+    '助動詞そうだ型': ['Souda_type1'],
+    '助動詞く型': ['Ku_type1'],
     # suffices (duplicates omitted)
-    '動詞性接尾辞うる型': ['Uru_type'],
+    '動詞性接尾辞うる型': ['Uru_type1'],
     # empty
     '*': []
 }
@@ -198,9 +198,6 @@ juman_semantic_info_mapper = {
     '略称': 'Abbr',
     '旧称': 'Former_name',
     '地名': 'Toponym',
-    '正規化代表表記': 'normal_writing_representation',
-    '代表表記': 'writing_representation',
-    '疑似代表表記': 'suspected_writing_representation',
     '読み不明': 'unknown_reading',
     '自動獲得': 'acquired_automatically',
     '自他動詞': 'transitivity',
@@ -306,3 +303,9 @@ def juman_katuyou2_mapper(katuyou2):
         res.append('Volitional_form2')
 
     return res
+
+juman_representation_mapper = {
+    '正規化代表表記': 'normal_writing_representation',
+    '代表表記': 'writing_representation',
+    '疑似代表表記': 'suspected_writing_representation'
+}

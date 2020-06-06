@@ -145,9 +145,9 @@ class Entry:
         with open(file, 'r', encoding='utf-8') as f:
             xml = bs4.BeautifulSoup(f.read(), features="lxml")
 
-            id = xml.entry.id.text
+            id = int(xml.entry.id.text)
             sps_xml: Tag = xml.entry.sentencepairs
-            sps = [SentencePair(sp.id, sp.russian.sentence.text, sp.japanese.sentence.text,
+            sps = [SentencePair(int(sp.id.text), sp.russian.sentence.text, sp.japanese.sentence.text,
                                 [RussianToken(
                                     int(t.id.text),
                                     t.find('text').text,
@@ -155,9 +155,9 @@ class Entry:
                                     None if t.find('attributes') is None or t.find('attributes').children is None else
                                     [Attribute(a.find('name').text, a.value.text)
                                      for a in t.find('attributes').children if isinstance(a, Tag)],
-                                    None if t.find('extraAttributes') is None or t.find(
-                                        'extraAttributes').children is None else
-                                    [a.text for a in t.find('extraAttributes').children if isinstance(a, Tag)]
+                                    None if t.find('extraattributes') is None or t.find(
+                                        'extraattributes').children is None else
+                                    [a.text for a in t.find('extraattributes').children if isinstance(a, Tag)]
                                 )
                                     for t in sp.russian.tokens if isinstance(t, Tag)],
                                 [JapaneseToken(
@@ -169,9 +169,9 @@ class Entry:
                                     None if t.find('attributes') is None or t.find('attributes').children is None else
                                     [Attribute(a.find('name').text, a.value.text)
                                      for a in t.find('attributes').children if isinstance(a, Tag)],
-                                    None if t.find('extraAttributes') is None or t.find(
-                                        'extraAttributes').children is None else
-                                    [a.text for a in t.find('extraAttributes').children if isinstance(a, Tag)]
+                                    None if t.find('extraattributes') is None or t.find(
+                                        'extraattributes').children is None else
+                                    [a.text for a in t.find('extraattributes').children if isinstance(a, Tag)]
                                 )
                                     for t in sp.japanese.tokens if isinstance(t, Tag)]
                                 )

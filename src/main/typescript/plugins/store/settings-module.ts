@@ -3,6 +3,7 @@ import { vuetify } from "@/plugins/vuetify";
 
 export type Theme = "Dark" | "Light";
 export type LocaleCode = "en" | "ja" | "ru";
+export type Reading = "Hiragana" | "Romaji";
 
 class SettingsState {
   theme: Theme = "Light";
@@ -12,6 +13,8 @@ class SettingsState {
     ? "ja"
     : "en";
   itemsPerPage: number = 10;
+  reading: Reading = "Hiragana";
+  furigana: boolean = true
 }
 
 class SettingsGetters extends Getters<SettingsState> {
@@ -30,6 +33,18 @@ class SettingsGetters extends Getters<SettingsState> {
   get itemsPerPage(): number {
     return this.state.itemsPerPage;
   }
+
+  get reading(): Reading {
+    return this.state.reading;
+  }
+
+  get isHiragana(): boolean {
+    return this.state.reading == "Hiragana";
+  }
+
+  get isFurigana(): boolean {
+    return this.state.furigana;
+  }
 }
 
 class SettingsMutations extends Mutations<SettingsState> {
@@ -45,6 +60,14 @@ class SettingsMutations extends Mutations<SettingsState> {
 
   setItemsPerPage(itemsPerPage: number) {
     this.state.itemsPerPage = itemsPerPage;
+  }
+
+  setReading(reading: Reading) {
+    this.state.reading = reading;
+  }
+
+  setFurigana(furigana: boolean) {
+    this.state.furigana = furigana;
   }
 }
 
@@ -64,6 +87,14 @@ class SettingsActions extends Actions<
 
   setItemsPerPage(itemsPerPage: number) {
     this.mutations.setItemsPerPage(itemsPerPage);
+  }
+
+  setReading(reading: Reading) {
+    this.mutations.setReading(reading);
+  }
+
+  setFurigana(furigana: boolean) {
+    this.mutations.setFurigana(furigana);
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card>
+    <v-card class="pa-3">
       <v-row>
         <v-col>
           <v-tabs v-model="searchMode">
@@ -303,7 +303,7 @@
       >
         Скачать все результаты
       </v-btn>
-      <sentence-pair
+      <sentence-pair-card
         v-for="result in results"
         :key="result.entryId + ',' + result.sentencePair.id"
         :result="result"
@@ -340,11 +340,11 @@ import {
 } from "@/backend/dto";
 import { api } from "@/backend";
 import { Dictionary } from "vue-router/types/router";
-import SentencePair from "@/components/SentencePairCard.vue";
+import SentencePairCard from "@/components/SentencePairCard.vue";
 import { settingsModule } from "@/plugins/store/settings-module";
 
 @Component({
-  components: { SentencePair }
+  components: { SentencePairCard }
 })
 export default class extends Vue {
   private readonly settingsStore = settingsModule.context(this.$store);

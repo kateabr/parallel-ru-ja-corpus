@@ -6,6 +6,8 @@
     <v-spacer />
     <search-button />
     <about-button />
+    <switch-button-furigana/>
+    <switch-button-reading />
     <!--<switch-button-locale />-->
     <switch-button-theme />
   </v-app-bar>
@@ -18,9 +20,13 @@ import SwitchButtonTheme from "@/components/SwitchButtonTheme.vue";
 import SwitchButtonLocale from "@/components/SwitchButtonLocale.vue";
 import AboutButton from "@/components/AboutButton.vue";
 import SearchButton from "@/components/SearchButton.vue";
+import SwitchButtonReading from "@/components/SwitchButtonReading.vue";
+import SwitchButtonFurigana from "@/components/SwitchButtonFurigana.vue";
 
 @Component({
   components: {
+    SwitchButtonFurigana,
+    SwitchButtonReading,
     SearchButton,
     AboutButton,
     SwitchButtonTheme,

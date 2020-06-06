@@ -1,38 +1,42 @@
 <template>
-  <v-menu :close-on-content-click="false">
+  <v-menu :close-on-content-click="false" offset-y>
     <template v-slot:activator="{ on }">
       <span :class="highlightStyle()" v-on="on">{{ token.text }}</span>
     </template>
 
-    <v-list two-line>
+    <v-list aria-multiline="true" v-if="token.lexeme != null">
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title>Исходный текст</v-list-item-title>
-          <v-list-item-subtitle>{{ token.text }}</v-list-item-subtitle>
+          <v-list-item-title>
+            <v-chip class="ma-1 pl-sm-1 pr-sm-1" outlined color="secondary" x-small>
+              <div class="mdi mdi-chevron-right"></div>
+            </v-chip>
+            {{token.lexeme}}
+            <v-chip class="ma-1" outlined color="secondary" small>
+              {{renderMainAttributes()}}
+            </v-chip>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item>
+      <v-list-item three-line v-if="renderAttributes() !== null || renderExtraAttributes() !== null">
         <v-list-item-content>
-          <v-list-item-title>Лексема</v-list-item-title>
-          <v-list-item-subtitle>
-            {{ token.lexeme || "Отсутствует" }}
+        <v-list-item-title>
+          <v-chip class="ma-1 pl-sm-1 pr-sm-1" outlined color="secondary" x-small>
+            <div class="mdi mdi-chevron-down"></div>
+          </v-chip>
+          {{token.text}}
+        </v-list-item-title>
+          <v-list-item-subtitle v-if="renderAttributes() !== null" three-line>
+            <v-chip class="ma-1" outlined color="secondary" small v-for="item in renderAttributes()">
+              <v-avatar left class="mdi mdi-tag"></v-avatar>
+              {{ item }}
+            </v-chip>
           </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>Атрибуты</v-list-item-title>
-          <v-list-item-subtitle>
-            {{ renderAttributes() }}
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>Доп. атрибуты</v-list-item-title>
-          <v-list-item-subtitle>
-            {{ renderExtraAttributes() }}
+          <v-list-item-subtitle v-if="renderExtraAttributes() !== null" three-line>
+            <v-chip class="ma-1" outlined color="secondary" small v-for="item in renderExtraAttributes()">
+              <v-avatar left class="mdi mdi-tag-outline"></v-avatar>
+              {{ item }}
+            </v-chip>
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -51,15 +55,27 @@ export default class extends Vue {
   @Prop()
   private readonly tokensIds!: number[] | null;
 
-  renderAttributes(): string {
-    return (
-      this.token.attributes?.map(a => `${a.name} = ${a.value}`)?.join(", ") ||
-      "Отсутствуют"
-    );
+  renderAttributes(): Array<string> | null {
+    const res = this.token.attributes?.filter(a => a.name != 'pos').map(a => `${a.name} = ${a.value}`);
+    if (res == null || res.length == 0){
+      return null;
+    }
+    return res;
   }
 
-  renderExtraAttributes(): string {
-    return this.token.extraAttributes?.join(", ") || "Отсутствуют";
+  renderMainAttributes(): string | null {
+    const res = this.token.attributes?.filter(a => a.name == 'pos').map(a => `${a.value}`);
+    if (res == null || res[0] == null) {
+      return null;
+    }
+    return res[0];
+  }
+
+  renderExtraAttributes(): Array<string> | null {
+    if (this.token.extraAttributes?.length == 0) {
+      return null;
+    }
+    return this.token.extraAttributes;
   }
 
   highlightStyle(): string {
@@ -75,8 +91,10 @@ export default class extends Vue {
 <style lang="scss">
 .word-hover:hover {
   background-color: yellow;
+  color: black;
 }
 .constant-yellow {
   background-color: yellow;
+  color: black;
 }
 </style>

@@ -110,7 +110,7 @@ declare function corpus:token-text-result($entry, $sentencePair, $tokenId) {
 };
 
 declare function corpus:token-has-all-attributes(
-    $tokenAttributes as element(),
+    $tokenAttributes as element()*,
     $queryAttributes as map(xs:string, xs:string)
 ) {
     let $mapTokenAttributes := map:merge(
@@ -133,7 +133,7 @@ declare function corpus:token-has-all-attributes(
     })
 };
 declare function corpus:token-has-all-extra-attributes(
-    $tokenAttributes as element(),
+    $tokenAttributes as element()*,
     $queryAttributes as xs:string*
 ) as xs:boolean {
     let $seqTokenAttributes := for $token in $tokenAttributes return $token/extraAttribute/string()
