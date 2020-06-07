@@ -1,8 +1,13 @@
 <template>
   <v-app-bar app fixed color="primary" hide-on-scroll>
-    <div id="logo-text" @click="$router.push('/')">
+    <v-row id="logo-text" class="flex" @click="$router.push('/')">
+      <v-col cols="1">
+        <v-img class="right" src="../assets/logo_white.png" alt="logo" min-height="100%" min-width="100%" contain/>
+      </v-col>
+      <div class="col text-truncate">
       Параллельный Русско-Японский Корпус
-    </div>
+      </div>
+    </v-row>
     <v-spacer />
     <search-button />
     <about-button />

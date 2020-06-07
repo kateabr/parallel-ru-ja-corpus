@@ -42,6 +42,7 @@
           <v-list-item-subtitle v-if="renderAttributes() !== null" three-line>
             <v-chip
               v-for="item in renderAttributes()"
+              :key="item"
               class="ma-1"
               outlined
               color="secondary"
@@ -57,6 +58,7 @@
           >
             <v-chip
               v-for="item in renderExtraAttributes()"
+              :key="item"
               class="ma-1"
               outlined
               color="secondary"

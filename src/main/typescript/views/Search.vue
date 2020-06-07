@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <v-card class="pa-3">
+  <div>
+    <v-card outlined class="pa-3">
       <v-row>
         <v-col>
           <v-tabs v-model="searchMode">
@@ -8,81 +8,120 @@
             <v-tab key="1">Поиск по словоформам</v-tab>
           </v-tabs>
         </v-col>
-        <v-col class="pa-md-4 mx-lg-auto">
-          <v-radio-group v-model="searchLanguage" label="Язык поиска" row @change="attributeList.splice(0, attributeList.length)" >
-            <v-radio label="Русский" value="RUSSIAN"  />
+      </v-row>
+      <v-row>
+        <v-col cols="4">
+          <v-radio-group
+            v-model="searchLanguage"
+            label="Язык поиска"
+            row
+            @change="resetInput()"
+          >
+            <v-radio label="Русский" value="RUSSIAN" />
             <v-radio label="Японский" value="JAPANESE" />
+          </v-radio-group>
+        </v-col>
+        <v-col v-if="searchMode === 0" cols="4"><v-switch v-model="regex" label="Regex" /></v-col>
+        <v-col v-if="searchMode === 1" cols="4">
+          <v-radio-group v-model="searchTokenType" row>
+            <v-radio label="Поиск по слову" value="WORD" />
+            <v-radio label="Поиск по лексеме" value="LEXEME" />
           </v-radio-group>
         </v-col>
       </v-row>
       <v-tabs-items v-model="searchMode">
-        <v-tab-item key="0" :transition="false" :reverse-transition="false">
-          <v-text-field
-            v-model="searchQuery"
-            label="Слово или фраза"
-            @click:clear="searchQuery = ''"
-            @keydown.enter="search(1)"
-          />
+        <v-tab-item key="0" :transition="true" :reverse-transition="false">
+          <v-row>
+            <v-col>
+            <v-text-field
+                    clearable
+              v-model="searchQuery"
+              label="Слово или фраза"
+              @click:clear="searchQuery = ''"
+              @keydown.enter="search(1)"
+            />
+            </v-col>
+          </v-row>
         </v-tab-item>
-        <v-tab-item key="1" :transition="false" :reverse-transition="false">
+        <v-tab-item key="1" :transition="true" :reverse-transition="false">
+          <v-row>
+            <v-col>
           <v-text-field
+                  clearable
             v-model="searchQuery"
             label="Слово или лексема"
             @click:clear="searchQuery = ''"
             @keydown.enter="search(1)"
           />
-          <v-row>
-            <v-col>
-              <v-radio-group v-model="searchTokenType" label="Тип поиска" row>
-                <v-radio label="Слово" value="WORD" />
-                <v-radio label="Лексема" value="LEXEME" />
-              </v-radio-group>
             </v-col>
           </v-row>
-          <v-row v-for="item in attributeList" :key="attributeList.indexOf(item)">
+          <v-row
+            v-for="item in attributeList"
+            :key="attributeList.indexOf(item)"
+          >
             <v-col>
               <v-text-field
-                    v-model="item.name"
-                    dense
-                    outlined
-                    readonly
-            ></v-text-field>
+                v-model="item.name"
+                dense
+                outlined
+                readonly
+              ></v-text-field>
             </v-col>
             <v-col>
               <v-text-field
-                    v-model="item.value"
-                    outlined
-                    dense
-                    readonly
-            ></v-text-field></v-col>
+                v-model="item.value"
+                outlined
+                dense
+                readonly
+              ></v-text-field
+            ></v-col>
             <v-col cols="1">
-            <v-btn outlined color="red" class="mx-2" small fab
-                   @click="attributeList.splice(attributeList.indexOf(item), 1)">
-              <v-icon>mdi-minus-circle</v-icon>
-            </v-btn>
+              <v-btn
+                outlined
+                color="red"
+                class="mx-2"
+                small
+                fab
+                @click="attributeList.splice(attributeList.indexOf(item), 1)"
+              >
+                <v-icon>mdi-minus-circle</v-icon>
+              </v-btn>
             </v-col>
           </v-row>
           <v-row v-if="searchLanguage === 'JAPANESE'">
             <v-col>
               <v-autocomplete
-                      v-model="attributePlaceholderName"
-                      :items="attributeListNamesJa"
-                      dense
-                      outlined
-                      label="Основной параметр"
+                v-model="attributePlaceholderName"
+                :items="attributeListNamesJa"
+                dense
+                outlined
+                label="Основной параметр"
               ></v-autocomplete>
             </v-col>
             <v-col>
               <v-autocomplete
-                      v-model="attributePlaceholderValue"
-                      :items="attributeListMapJa.get(attributePlaceholderName)"
-                      outlined
-                      dense
-                      label="Значение параметра"
-              ></v-autocomplete></v-col>
+                v-model="attributePlaceholderValue"
+                :items="attributeListMapJa.get(attributePlaceholderName)"
+                outlined
+                dense
+                label="Значение параметра"
+              ></v-autocomplete
+            ></v-col>
             <v-col cols="1">
-              <v-btn :disabled="!(attributePlaceholderValue.length !== 0 && attributePlaceholderName.length !== 0)" outlined color="green" class="mx-2" small fab @click="attributeList.push({name: attributePlaceholderName,
-              value: attributePlaceholderValue})">
+              <v-btn
+                :disabled="
+                  !(
+                    attributePlaceholderValue.length !== 0 &&
+                    attributePlaceholderName.length !== 0
+                  )
+                "
+                outlined
+                color="green"
+                class="mx-2"
+                small
+                fab
+                @click="addAttribute()"
+              >
                 <v-icon>mdi-plus-circle</v-icon>
               </v-btn>
             </v-col>
@@ -90,24 +129,37 @@
           <v-row v-if="searchLanguage === 'RUSSIAN'">
             <v-col>
               <v-autocomplete
-                      v-model="attributePlaceholderName"
-                      :items="attributeListNamesRu"
-                      dense
-                      outlined
-                      label="Основной параметр"
+                v-model="attributePlaceholderName"
+                :items="attributeListNamesRu"
+                dense
+                outlined
+                label="Основной параметр"
               ></v-autocomplete>
             </v-col>
             <v-col>
               <v-autocomplete
-                      v-model="attributePlaceholderValue"
-                      :items="attributeListMapRu.get(attributePlaceholderName)"
-                      outlined
-                      dense
-                      label="Значение параметра"
-              ></v-autocomplete></v-col>
+                v-model="attributePlaceholderValue"
+                :items="attributeListMapRu.get(attributePlaceholderName)"
+                outlined
+                dense
+                label="Значение параметра"
+              ></v-autocomplete
+            ></v-col>
             <v-col cols="1">
-              <v-btn :disabled="!(attributePlaceholderValue.length !== 0 && attributePlaceholderName.length !== 0)" outlined color="green" class="mx-2" small fab @click="attributeList.push({name: attributePlaceholderName,
-              value: attributePlaceholderValue})">
+              <v-btn
+                :disabled="
+                  !(
+                    attributePlaceholderValue.length !== 0 &&
+                    attributePlaceholderName.length !== 0
+                  )
+                "
+                outlined
+                color="green"
+                class="mx-2"
+                small
+                fab
+                @click="addAttribute()"
+              >
                 <v-icon>mdi-plus-circle</v-icon>
               </v-btn>
             </v-col>
@@ -137,10 +189,16 @@
                   'Address',
                   'Post',
                   'Organisation',
-                  'Human_name'
+                  'Human_name',
+                  'Predicative',
+                  'Special',
+                  'Counting',
+                  'Nominal'
                 ]"
                 outlined
                 dense
+                chips
+                small-chips
                 label="Дополнительные параметры"
                 multiple
               ></v-autocomplete>
@@ -151,32 +209,43 @@
       <v-row>
         <v-col cols="4"></v-col>
         <v-col cols="4">
-      <v-btn
-        block
-        color="primary"
-        :loading="loading"
-        :disabled="searchQuery.trim() === ''"
-        @click="search(1)"
-      >
-        <v-icon left class="mdi mdi-magnify"></v-icon>
-        Поиск
-      </v-btn>
+          <v-btn
+            block
+            color="primary"
+            :loading="loading"
+            :disabled="
+              searchQuery.trim() === '' &&
+              attributeList.length === 0 &&
+              extraAttributeList.length === 0
+            "
+            @click="search(1)"
+          >
+            <v-icon left class="mdi mdi-magnify"></v-icon>
+            Поиск
+          </v-btn>
         </v-col>
         <v-col cols="4"></v-col>
       </v-row>
     </v-card>
 
     <div v-if="searchResult !== null">
-      <p>Всего результатов: {{ searchResult.totalCount }}</p>
-      <p>Время запроса: {{ String(queryTime() / 1000.0) }} с</p>
+        <v-row class="pl-3 pr-3 pt-2 pb-2">
+          <v-col cols="9">
+      <div class="pt-1">Время поиска: {{ String(queryTime() / 1000.0) }} с</div>
+            <div class="pt-1">Найдено результатов: {{ searchResult.totalCount }}</div>
+          </v-col>
+          <v-col cols="3" align-self="center">
       <v-btn
-        block
+              block
         color="primary"
         :disabled="loading || results.length < 1"
         @click="downloadResults"
       >
-        Скачать все результаты
+        <v-icon left>mdi-download</v-icon>
+        Скачать результаты
       </v-btn>
+          </v-col>
+        </v-row>
       <sentence-pair-card
         v-for="result in results"
         :key="result.entryId + ',' + result.sentencePair.id"
@@ -185,6 +254,7 @@
       />
     </div>
 
+    <div class="ma-5">
     <v-pagination
       :value="page"
       :length="numberOfPages()"
@@ -192,14 +262,15 @@
       :disabled="loading"
       @input="changePage"
     />
+    </div>
 
     <v-snackbar v-model="error">
-      Не удалось обработать запрос
+      {{ errorMessage }}
       <v-btn color="red" text @click="error = false">
         Скрыть
       </v-btn>
     </v-snackbar>
-  </v-card>
+  </div>
 </template>
 
 <script lang="ts">
@@ -232,26 +303,41 @@ export default class extends Vue {
   private searchQuery: string = "";
   private regex: boolean = false;
   private attributeList: Attribute[] = [];
-  private attributeListNamesJa: string[] = ['pos', 'type'];
-  private attributeListMapJa: Map<string, string[]> = new Map<string, string[]>([
-                  ['pos', ['Noun', 'Verb']],
-                  ['type', ['Common', 'Toponym', 'Human_name']]
-          ]);
-  private attributeListNamesRu: string[] = ['pos'];
-  private attributeListMapRu: Map<string, string[]> = new Map<string, string[]>([
-                  ['pos', ['Noun', 'Verb']]
-          ]);
+  private attributeListNamesJa: string[] = ["pos", "type"];
+  private attributeListMapJa: Map<string, string[]> = new Map<string, string[]>(
+    [
+      ['pos', ['Verb', 'Noun', 'Adjective', 'Judgemental', 'Suffix', 'Particle', 'Prefix', 'Demonstrative', 'Adverb',
+      'Conjunction', 'Interjection', 'Numeral']],
+      ['type', ['Common', 'Suru', 'Proper', 'Toponym', 'Human_name', 'Organization_name', 'Expletive', 'Adverbial',
+      'Temporal', 'Nominal', 'Adnominal', 'Adjectival', 'Adverbial', 'Case_marking', 'Conjunctive', 'Sentence_ending',
+      'Verbal', 'I', 'Na']]
+    ]
+  );
+  private attributeListNamesRu: string[] = ['animacy', 'aspect', 'case', 'degree', 'gender', 'mood',
+    'number', 'person', 'pos', 'tense', 'variant', 'verbform', 'voice'];
+  private attributeListMapRu: Map<string, string[]> = new Map<string, string[]>(
+    [['animacy', ['ANIMATE', 'INANIMATE']], ['aspect', ['PERFECT', 'IMPERFECT']],
+      ['case', ['NOMINATIVE', 'GENITIVE', 'DATIVE', 'ACCUSATIVE', 'LOCATIVE', 'INSTRUCTIVE']],
+      ['degree', ['POSITIVE', 'COMPARATIVE']], ['gender', ['MASCULINE', 'FEMININE', 'NEUTER']],
+      ['mood', ['INDICATIVE', 'IMPERATIVE']], ['number', ['SINGULAR', 'PLURAL']],
+      ['person', ['FIRST', 'SECOND', 'THIRD']],
+      ['pos', ['NOUN', 'ADJECTIVE', 'PRONOUN', 'NUMERICAL', 'VERB', 'ADVERB', 'DETERMINANT',
+      'CONJUNCTION', 'ADPOSITION', 'PARTICLE', 'INTERJECTION', 'INTRODUCTION', 'UNKNOWN']],
+      ['tense', ['PAST', 'PRESENT', 'FUTURE']], ['variant', ['FULL', 'SHORT']],
+      ['verbform', ['INFINITIVE', 'FINITE', 'CONVERB']], ['voice', ['ACTIVE', 'MIDDLE', 'PASSIVE']]]
+  );
   private extraAttributeList: string[] = [];
 
   private searchMode: SearchMode = SearchMode.FULL_TEXT;
   private searchLanguage: Language = "RUSSIAN";
   private searchTokenType: TokenType = "WORD";
 
-  private attributePlaceholderName = '';
-  private attributePlaceholderValue = '';
+  private attributePlaceholderName = "";
+  private attributePlaceholderValue = "";
 
   private loading = false;
   private error = false;
+  private errorMessage = "";
 
   async search(page: number) {
     this.page = page;
@@ -321,6 +407,20 @@ export default class extends Vue {
     }
   }
 
+  addAttribute() {
+    this.attributeList.push({
+      name: this.attributePlaceholderName,
+      value: this.attributePlaceholderValue
+    });
+    this.attributePlaceholderName = "";
+    this.attributePlaceholderValue = "";
+  }
+
+  resetInput() {
+    this.attributeList.splice(0, this.attributeList.length);
+    this.searchQuery = '';
+  }
+
   updateUrlQuery() {
     this.$router
       .push({
@@ -356,7 +456,7 @@ export default class extends Vue {
   }
 
   numberOfPages(): number {
-    if (this.searchResult === null) return 1;
+    if (this.searchResult === null) return 0;
     return Math.ceil(this.searchResult.totalCount / this.itemsPerPage);
   }
 
@@ -373,7 +473,20 @@ export default class extends Vue {
   }
 
   requestErrored(e: Error) {
-    console.log("Search error: " + e);
+    const code: number | null = e.response.status ?? null;
+    if (code == null) {
+      this.errorMessage = "Неизвестная ошибка";
+    } else {
+      if (code >= 400 && code < 500) {
+        this.errorMessage =
+          "Ошибка запроса, обновите адресную строку и повторите запрос";
+      } else if (code >= 500) {
+        this.errorMessage = "Сервер не смог обработать запрос";
+      } else {
+        this.errorMessage = "Неизвестная ошибка";
+      }
+    }
+
     this.error = true;
   }
 
@@ -384,6 +497,7 @@ export default class extends Vue {
     query.searchLanguage = this.searchLanguage;
     query.searchMode = this.searchMode.toString();
     query.searchTokenType = this.searchTokenType;
+    query.regex = this.regex.toString();
     query.attributeList = JSON.stringify(this.attributeList);
     query.extraAttributeList = JSON.stringify(this.extraAttributeList);
     query.offset = this.offset().toString();
@@ -403,6 +517,8 @@ export default class extends Vue {
       (Number(query.searchMode) as SearchMode) || this.searchMode;
     this.searchTokenType =
       (query.searchTokenType as TokenType) || this.searchTokenType;
+
+    this.regex = Boolean(query.regex === "true") || this.regex;
 
     if (query.attributeList) {
       try {

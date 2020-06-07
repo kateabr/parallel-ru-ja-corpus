@@ -3,7 +3,7 @@
     <the-app-bar />
     <v-content>
       <v-container fluid>
-        <router-view></router-view>
+        <router-view />
       </v-container>
     </v-content>
   </v-app>
@@ -17,6 +17,3 @@ import { Component } from "vue-property-decorator";
 @Component({ components: { TheAppBar } })
 export default class extends Vue {}
 </script>
-<style>
-/*@import "../styles/hide-scrollbar.scss";*/
-</style>

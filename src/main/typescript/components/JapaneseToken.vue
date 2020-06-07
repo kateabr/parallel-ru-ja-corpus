@@ -19,7 +19,7 @@
             >
               <div class="mdi mdi-chevron-right"></div>
             </v-chip>
-            {{ token.lexeme }} 〖{{ displayReading(token, true) }}〗
+            {{ token.lexeme }} 〖{{ displayLexeme(token) }}〗
             <v-chip class="ma-1" outlined color="secondary" small>
               <v-avatar left class="mdi mdi-note-text"></v-avatar>
               {{ renderMainAttributes() }}
@@ -63,6 +63,7 @@
           <v-list-item-subtitle v-if="renderAttributes() !== null">
             <v-chip
               v-for="item in renderAttributes()"
+              :key="item"
               class="ma-1"
               outlined
               color="secondary"
@@ -75,6 +76,7 @@
           <v-list-item-subtitle v-if="renderExtraAttributes() !== null">
             <v-chip
               v-for="item in renderExtraAttributes()"
+              :key="item"
               class="ma-1"
               outlined
               color="secondary"
@@ -168,28 +170,40 @@ export default class extends Vue {
     }
   }
 
-  displayReading(token: JapaneseToken, lexeme = false): string | null {
+  displayReading(token: JapaneseToken): string | null {
     if (token.reading !== null) {
       if (token.extraAttributes?.indexOf("unknown_reading") != -1) {
         return "?";
       }
-      const reading_type = this.settingsStore.getters.reading;
-      if (reading_type == "Hiragana") {
-        if (!lexeme) {
-          return token.reading;
-        } else {
-          return token.attributes!.filter(e => e.name == "lexeme_reading")[0]
-            .value;
-        }
+      const readingType = this.settingsStore.getters.reading;
+      if (readingType == "Hiragana") {
+        return token.reading;
       } else {
-        if (!lexeme) {
-          return token.attributes!.filter(e => e.name == "romaji_reading")[0]
-            .value;
-        } else {
-          return token.attributes!.filter(
-            e => e.name == "romanized_lexeme_reading"
-          )[0].value;
-        }
+        const attrs = token.attributes;
+        const reading = attrs?.filter(e => e.name == "romaji_reading")[0];
+        return reading?.value ?? null;
+      }
+    } else {
+      return null;
+    }
+  }
+
+  displayLexeme(token: JapaneseToken): string | null {
+    if (token.reading !== null) {
+      if (token.extraAttributes?.indexOf("unknown_reading") != -1) {
+        return "?";
+      }
+      const readingType = this.settingsStore.getters.reading;
+      if (readingType == "Hiragana") {
+        const reading = token?.attributes?.filter(
+          e => e.name == "lexeme_reading"
+        )[0];
+        return reading?.value ?? null;
+      } else {
+        const reading = token?.attributes?.filter(
+          e => e.name == "romanized_lexeme_reading"
+        )[0];
+        return reading?.value ?? null;
       }
     } else {
       return null;

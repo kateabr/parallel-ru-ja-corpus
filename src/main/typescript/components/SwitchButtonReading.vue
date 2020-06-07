@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { Reading, settingsModule } from "@/plugins/store/settings-module";
+import { settingsModule } from "@/plugins/store/settings-module";
 
 @Component
 export default class extends Vue {

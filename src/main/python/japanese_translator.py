@@ -123,12 +123,16 @@ def scrap_translation(token: JapaneseToken, lexeme_reading: str, ref_value: str)
     if token.has_attr('pos', 'Particle') and token.get_attr_value('romaji_reading') != 'nado':
         return '<i>служебная частица</i>', None
 
-    if token.has_attr('pos', 'Suffix') and token.has_attr('type', 'Verbal') and not lexeme_reading in ['iru', 'beki',
+    if token.has_attr('pos', 'Suffix'):
+        if token.has_attr('type', 'Verbal') and not lexeme_reading in ['iru', 'beki',
                                                                                                        'nai', 'kuru',
                                                                                                        'iku',
                                                                                                        'kudasaru',
                                                                                                        'kureru']:
-        return '<i>глагольный суффикс</i>', None
+            return '<i>глагольный суффикс</i>', None
+        elif token.has_attr('type', 'Adjectival'):
+            if lexeme_reading in ['tai']:
+                return '<i>суфф., выражающий желание говорящего что-либо сделать</i>', None
 
     if token.has_attr('pos', 'Suffix') and token.has_attr('type', 'Nominal') and token.has_attr('Predicative'):
         return '<i>предикативный именной суффикс</i>', None

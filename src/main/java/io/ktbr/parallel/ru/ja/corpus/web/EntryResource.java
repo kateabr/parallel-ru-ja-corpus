@@ -54,7 +54,7 @@ public class EntryResource {
     @Path("/_search/token")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public SearchResult tokenSearch(
-            @QueryParam("query") @NotNull @NotBlank String query,
+            @QueryParam("query") String query,
             @QueryParam("lang") @NotNull Language language,
             @QueryParam("token_type") @NotNull SearchMode searchMode,
             @QueryParam("attr") List<@Pattern(regexp = "\\b.+=.+\\b") String> attributes,
@@ -78,7 +78,7 @@ public class EntryResource {
     @Path("/_search/token/download")
     @Produces(MediaType.APPLICATION_XML)
     public Response tokenSearchDownload(
-            @QueryParam("query") @NotNull @NotBlank String query,
+            @QueryParam("query") String query,
             @QueryParam("lang") @NotNull Language language,
             @QueryParam("token_type") @NotNull SearchMode searchMode,
             @QueryParam("attr") List<@Pattern(regexp = "\\b.+=.+\\b") String> attributes,
@@ -95,7 +95,7 @@ public class EntryResource {
     @Path("/_search/full-text")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public SearchResult fullTextSearch(
-            @QueryParam("query") @NotNull @NotBlank String query,
+            @QueryParam("query") String query,
             @QueryParam("regex") @NotNull Boolean regex,
             @QueryParam("lang") @NotNull Language language,
             @QueryParam("offset") @NotNull @PositiveOrZero int offset,
@@ -108,7 +108,7 @@ public class EntryResource {
     @Path("/_search/full-text/download")
     @Produces(MediaType.APPLICATION_XML)
     public Response fullTextSearchDownload(
-            @QueryParam("query") @NotNull @NotBlank String query,
+            @QueryParam("query") String query,
             @QueryParam("regex") @NotNull Boolean regex,
             @QueryParam("lang") @NotNull Language language
     ) {

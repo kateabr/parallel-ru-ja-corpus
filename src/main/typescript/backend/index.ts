@@ -62,18 +62,22 @@ export const api = {
     limit: number
   ): Promise<SearchResult> {
     /* eslint-disable @typescript-eslint/camelcase */
+    const params = new URLSearchParams();
+    params.append("query", query);
+    params.append("lang", lang);
+    params.append("token_type", tokenType);
+    params.append("offset", String(offset));
+    params.append("limit", String(limit));
+
+    attributes?.forEach(a => {
+      params.append("attr", `${a.name}=${a.value}`);
+    });
+    extraAttributes?.forEach(a => {
+      params.append("ext_attr", a);
+    });
+
     return axios
-      .get<SearchResult>("/api/v1/entry/_search/token", {
-        params: {
-          query: query,
-          lang: lang,
-          token_type: tokenType,
-          attr: attributes?.map(a => `${a.name}=${a.value}`)?.join(','),
-          ext_attr: extraAttributes?.join(","),
-          offset: offset,
-          limit: limit
-        }
-      })
+      .get<SearchResult>("/api/v1/entry/_search/token", { params: params })
       .then(value => value.data);
     /* eslint-enable @typescript-eslint/camelcase */
   },

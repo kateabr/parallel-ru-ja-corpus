@@ -26,32 +26,18 @@ declare function corpus:full-text-result($entry as element(), $sentencePair as e
     }
 };
 
-declare function corpus:full-text-search-japanese-regex($dbName as xs:string, $query as xs:string) {
+declare function corpus:full-text-search-japanese($dbName as xs:string, $query as xs:string, $regex as xs:boolean) {
     for $entry in collection($dbName)/entry
     for $pair in $entry/sentencePairs/sentencePair
     for $sentence in $pair/japanese/sentence
-    where matches($sentence, $query)
+    where if ($regex) then matches($sentence, $query) else contains($sentence, $query)
     return corpus:full-text-result($entry, $pair)
 };
-declare function corpus:full-text-search-japanese($dbName as xs:string, $query as xs:string) {
-    for $entry in collection($dbName)/entry
-    for $pair in $entry/sentencePairs/sentencePair
-    for $sentence in $pair/japanese/sentence
-    where contains($sentence, $query)
-    return corpus:full-text-result($entry, $pair)
-};
-declare function corpus:full-text-search-russian-regex($dbName as xs:string, $query as xs:string) {
+declare function corpus:full-text-search-russian($dbName as xs:string, $query as xs:string, $regex as xs:boolean) {
     for $entry in collection($dbName)/entry
     for $pair in $entry/sentencePairs/sentencePair
     for $sentence in $pair/russian/sentence
-    where matches($sentence, $query)
-    return corpus:full-text-result($entry, $pair)
-};
-declare function corpus:full-text-search-russian($dbName as xs:string, $query as xs:string) {
-    for $entry in collection($dbName)/entry
-    for $pair in $entry/sentencePairs/sentencePair
-    for $sentence in $pair/russian/sentence
-    where contains($sentence, $query)
+    where if ($regex) then matches($sentence, $query) else contains($sentence, $query)
     return corpus:full-text-result($entry, $pair)
 };
 declare function corpus:full-text-search(
@@ -65,16 +51,11 @@ declare function corpus:full-text-search(
     let $startTime := prof:current-ms()
     let $matches :=
         if ($language = "RUSSIAN") then
-            if ($regex) then
-                corpus:full-text-search-russian-regex($dbName, $query)
-            else
-                corpus:full-text-search-russian($dbName, $query)
+            corpus:full-text-search-russian($dbName, $query, $regex)
         else if ($language = "JAPANESE") then
-            if ($regex) then
-                corpus:full-text-search-japanese-regex($dbName, $query)
-            else
-                corpus:full-text-search-japanese($dbName, $query)
+            corpus:full-text-search-japanese($dbName, $query, $regex)
         else ()
+
     let $results := element results { if ($limit <= 0) then $matches else subsequence($matches, $offset, $limit) }
     let $endTime := prof:current-ms()
 
@@ -149,9 +130,10 @@ declare function corpus:token-has-all-extra-attributes(
     })
 };
 
-declare function corpus:token-search-word-russian(
+declare function corpus:token-search-russian(
     $dbName as xs:string,
     $query as xs:string,
+    $mode as xs:string,
     $attributes as map(xs:string, xs:string),
     $extraAttributes as xs:string*
 ) {
@@ -159,32 +141,26 @@ declare function corpus:token-search-word-russian(
     for $pair in $entry/sentencePairs/sentencePair
     for $tokens in $pair/russian/tokens
     for $token in $tokens/token
-    where $query = $token/text
+    where (
+        let $text := if ($mode = "WORD") then $token/text else $token/lexeme
+        return  $query (: EBV: `"" and true` returns false, because empty string is treated like false boolean :)
+            and $query = $text
+            and corpus:token-has-all-attributes($token/attributes, $attributes)
+            and corpus:token-has-all-extra-attributes($token/extraAttributes, $extraAttributes)
+    ) or
+    (
+        not($query)
         and corpus:token-has-all-attributes($token/attributes, $attributes)
         and corpus:token-has-all-extra-attributes($token/extraAttributes, $extraAttributes)
-    group by $entryId := $entry/id, $pairId := $pair/id
-    return corpus:token-text-result($entry,$pair, $token/id)
-};
-declare function corpus:token-search-lexeme-russian(
-    $dbName as xs:string,
-    $query as xs:string,
-    $attributes as map(xs:string, xs:string),
-    $extraAttributes as xs:string*
-) {
-    for $entry in collection($dbName)/entry
-    for $pair in $entry/sentencePairs/sentencePair
-    for $tokens in $pair/russian/tokens
-    for $token in $tokens/token
-    where $query = $token/lexeme
-        and corpus:token-has-all-attributes($token/attributes, $attributes)
-        and corpus:token-has-all-extra-attributes($token/extraAttributes, $extraAttributes)
+    )
     group by $entryId := $entry/id, $pairId := $pair/id
     return corpus:token-text-result($entry,$pair, $token/id)
 };
 
-declare function corpus:token-search-word-japanese(
+declare function corpus:token-search-japanese(
     $dbName as xs:string,
     $query as xs:string,
+    $mode as xs:string,
     $attributes as map(xs:string, xs:string),
     $extraAttributes as xs:string*
 ) {
@@ -192,41 +168,19 @@ declare function corpus:token-search-word-japanese(
     for $pair in $entry/sentencePairs/sentencePair
     for $tokens in $pair/japanese/tokens
     for $token in $tokens/token
-    where $query = $token/text
+    where
+    (
+        let $text := if ($mode = "WORD") then $token/text else if ($mode = "NORMAL_FORM") then $token/normalForm else $token/lexeme
+        return  $query (: EBV: `"" and true` returns false, because empty string is treated like false boolean :)
+            and $query = $text
         and corpus:token-has-all-attributes($token/attributes, $attributes)
         and corpus:token-has-all-extra-attributes($token/extraAttributes, $extraAttributes)
-    group by $entryId := $entry/id, $pairId := $pair/id
-    return corpus:token-text-result($entry,$pair, $token/id)
-};
-declare function corpus:token-search-lexeme-japanese(
-    $dbName as xs:string,
-    $query as xs:string,
-    $attributes as map(xs:string, xs:string),
-    $extraAttributes as xs:string*
-) {
-    for $entry in collection($dbName)/entry
-    for $pair in $entry/sentencePairs/sentencePair
-    for $tokens in $pair/japanese/tokens
-    for $token in $tokens/token
-    where $query = $token/lexeme
+    ) or
+    (
+        not($query)
         and corpus:token-has-all-attributes($token/attributes, $attributes)
         and corpus:token-has-all-extra-attributes($token/extraAttributes, $extraAttributes)
-    group by $entryId := $entry/id, $pairId := $pair/id
-    return corpus:token-text-result($entry,$pair, $token/id)
-};
-declare function corpus:token-search-normal-form-japanese(
-    $dbName as xs:string,
-    $query as xs:string,
-    $attributes as map(xs:string, xs:string),
-    $extraAttributes as xs:string*
-) {
-    for $entry in collection($dbName)/entry
-    for $pair in $entry/sentencePairs/sentencePair
-    for $tokens in $pair/japanese/tokens
-    for $token in $tokens/token
-    where $query = $token/normalForm
-        and corpus:token-has-all-attributes($token/attributes, $attributes)
-        and corpus:token-has-all-extra-attributes($token/extraAttributes, $extraAttributes)
+    )
     group by $entryId := $entry/id, $pairId := $pair/id
     return corpus:token-text-result($entry,$pair, $token/id)
 };
@@ -245,20 +199,11 @@ declare function corpus:token-search(
 
     let $matches :=
         if ($language = "RUSSIAN") then
-            if ($mode = "WORD") then
-                corpus:token-search-word-russian($dbName, $query, $attributes, $extraAttributes)
-            else if ($mode = "LEXEME") then
-                corpus:token-search-lexeme-russian($dbName, $query, $attributes, $extraAttributes)
-            else ()
+            corpus:token-search-russian($dbName, $query, $mode, $attributes, $extraAttributes)
         else if ($language = "JAPANESE") then
-            if ($mode = "WORD") then
-                corpus:token-search-word-japanese($dbName, $query, $attributes, $extraAttributes)
-            else if ($mode = "LEXEME") then
-                corpus:token-search-lexeme-japanese($dbName, $query, $attributes, $extraAttributes)
-            else if ($mode = "NORMAL_FORM") then
-                corpus:token-search-normal-form-japanese($dbName, $query, $attributes, $extraAttributes)
-            else ()
+            corpus:token-search-japanese($dbName, $query, $mode, $attributes, $extraAttributes)
         else ()
+
     let $results := element results { if ($limit <= 0) then $matches else subsequence($matches, $offset, $limit) }
     let $endTime := prof:current-ms()
 
