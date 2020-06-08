@@ -28,6 +28,29 @@
             <v-radio label="Поиск по лексеме" value="LEXEME" />
           </v-radio-group>
         </v-col>
+        <v-col align-self="center">
+          <v-menu
+                  transition="slide-y-transition"
+                  bottom
+                  offset-y
+          >
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on">
+                Результатов на странице: {{itemsPerPage}}
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item
+                      v-for="item in itemsPerPageVariants"
+                      :key="item"
+                      @change="search(1)"
+                      @click="itemsPerPage = item"
+              >
+                <v-list-item-title>{{ item }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-col>
       </v-row>
       <v-tabs-items v-model="searchMode">
         <v-tab-item key="0" :transition="true" :reverse-transition="false">
@@ -77,14 +100,14 @@
             ></v-col>
             <v-col cols="1">
               <v-btn
-                outlined
-                color="red"
+                depressed
+                color="red lighten-1"
                 class="mx-2"
                 small
                 fab
                 @click="attributeList.splice(attributeList.indexOf(item), 1)"
               >
-                <v-icon>mdi-minus-circle</v-icon>
+                <v-icon>mdi-close</v-icon>
               </v-btn>
             </v-col>
           </v-row>
@@ -115,14 +138,14 @@
                     attributePlaceholderName.length !== 0
                   )
                 "
-                outlined
-                color="green"
+                depressed
+                color="green lighten-1"
                 class="mx-2"
                 small
                 fab
                 @click="addAttribute()"
               >
-                <v-icon>mdi-plus-circle</v-icon>
+                <v-icon>mdi-check</v-icon>
               </v-btn>
             </v-col>
           </v-row>
@@ -153,57 +176,47 @@
                     attributePlaceholderName.length !== 0
                   )
                 "
-                outlined
-                color="green"
+                depressed
+                color="green lighten-1"
                 class="mx-2"
                 small
                 fab
                 @click="addAttribute()"
               >
-                <v-icon>mdi-plus-circle</v-icon>
+                <v-icon>mdi-check</v-icon>
               </v-btn>
             </v-col>
           </v-row>
-          <v-row>
+          <v-row v-if="searchLanguage === 'JAPANESE'">
             <v-col>
               <v-autocomplete
                 v-model="extraAttributeList"
-                :items="[
-                  'FamN',
-                  'PersN',
-                  'Human_name_or_family_name',
-                  'Abbr',
-                  'Content_word',
-                  'Hiragana',
-                  'Kanji',
-                  'Katakana',
-                  'Digits',
-                  'unknown_reading',
-                  'Progressive',
-                  'unrecognized_symbols',
-                  'Associated_content_word',
-                  'Counting',
-                  'To_supplement',
-                  'Ender',
-                  'Toponym',
-                  'Address',
-                  'Post',
-                  'Organisation',
-                  'Human_name',
-                  'Predicative',
-                  'Special',
-                  'Counting',
-                  'Nominal'
-                ]"
+                :items="extraAttributeNamesJa"
                 outlined
                 dense
-                chips
+                clearable
                 small-chips
+                deletable-chips
                 label="Дополнительные параметры"
                 multiple
               ></v-autocomplete>
             </v-col>
           </v-row>
+            <v-row v-if="searchLanguage === 'RUSSIAN'">
+              <v-col>
+                <v-autocomplete
+                        v-model="extraAttributeList"
+                        :items="extraAttributeNamesRu"
+                        outlined
+                        dense
+                        clearable
+                        small-chips
+                        deletable-chips
+                        label="Дополнительные параметры"
+                        multiple
+                ></v-autocomplete>
+              </v-col>
+            </v-row>
         </v-tab-item>
       </v-tabs-items>
       <v-row>
@@ -299,34 +312,118 @@ export default class extends Vue {
 
   private page = 1;
   private itemsPerPage = this.settingsStore.getters.itemsPerPage;
+  private itemsPerPageVariants = [10, 20, 50]
 
   private searchQuery: string = "";
   private regex: boolean = false;
   private attributeList: Attribute[] = [];
-  private attributeListNamesJa: string[] = ["pos", "type"];
+  private attributeListNamesJa: string[] = ["pos", "type", 'stem_type', 'row', 'form', 'adj_type', 'transitivity',
+    'attachment_form', 'form', 'form1', 'form2', 'derivation_type', 'reading_type'];
   private attributeListMapJa: Map<string, string[]> = new Map<string, string[]>(
     [
       ['pos', ['Verb', 'Noun', 'Adjective', 'Judgemental', 'Suffix', 'Particle', 'Prefix', 'Demonstrative', 'Adverb',
       'Conjunction', 'Interjection', 'Numeral']],
       ['type', ['Common', 'Suru', 'Proper', 'Toponym', 'Human_name', 'Organization_name', 'Expletive', 'Adverbial',
       'Temporal', 'Nominal', 'Adnominal', 'Adjectival', 'Adverbial', 'Case_marking', 'Conjunctive', 'Sentence_ending',
-      'Verbal', 'I', 'Na']]
+      'Verbal', 'Auxiliary', 'I', 'Na', 'NaNo', 'Taru', 'Zuru']],
+      ['stem_type', ['Consonant', 'Vowel']],
+      ['row', ['Ka', 'Ga', 'Sa', 'Ta', 'Na', 'Ba', 'Ma', 'Ra', 'Wa', 'Da', 'AUO', 'I']],
+      ['form', ['Written', 'I']],
+      ['adj_type', ['I', 'Na']],
+      ['transitivity', ['Intransitive', 'Transitive', 'Both']],
+      ['attachment_form', ['Basic', 'Ta_system']],
+      ['form', ['Short', 'Written', 'I', 'Tari', 'Cha', 'Ja']],
+      ['form1', ['Ta', 'Te', 'Basic', 'Imperfective']],
+      ['form2', ['Assumptional', 'Conditional', 'Conjunctive', 'Imperative', 'Volitional'],],
+      ['derivation_type', ['Verbal', 'Adjectival', 'Nominal']],
+      ['reading_type', ['Kun', 'On']]
     ]
   );
   private attributeListNamesRu: string[] = ['animacy', 'aspect', 'case', 'degree', 'gender', 'mood',
     'number', 'person', 'pos', 'tense', 'variant', 'verbform', 'voice'];
   private attributeListMapRu: Map<string, string[]> = new Map<string, string[]>(
-    [['animacy', ['ANIMATE', 'INANIMATE']], ['aspect', ['PERFECT', 'IMPERFECT']],
+    [['animacy', ['ANIMATE', 'INANIMATE']],
+      ['aspect', ['PERFECT', 'IMPERFECT']],
       ['case', ['NOMINATIVE', 'GENITIVE', 'DATIVE', 'ACCUSATIVE', 'LOCATIVE', 'INSTRUCTIVE']],
-      ['degree', ['POSITIVE', 'COMPARATIVE']], ['gender', ['MASCULINE', 'FEMININE', 'NEUTER']],
-      ['mood', ['INDICATIVE', 'IMPERATIVE']], ['number', ['SINGULAR', 'PLURAL']],
+      ['degree', ['POSITIVE', 'COMPARATIVE']],
+      ['gender', ['MASCULINE', 'FEMININE', 'NEUTER']],
+      ['mood', ['INDICATIVE', 'IMPERATIVE']],
+      ['number', ['SINGULAR', 'PLURAL']],
       ['person', ['FIRST', 'SECOND', 'THIRD']],
       ['pos', ['NOUN', 'ADJECTIVE', 'PRONOUN', 'NUMERICAL', 'VERB', 'ADVERB', 'DETERMINANT',
       'CONJUNCTION', 'ADPOSITION', 'PARTICLE', 'INTERJECTION', 'INTRODUCTION', 'UNKNOWN']],
-      ['tense', ['PAST', 'PRESENT', 'FUTURE']], ['variant', ['FULL', 'SHORT']],
-      ['verbform', ['INFINITIVE', 'FINITE', 'CONVERB']], ['voice', ['ACTIVE', 'MIDDLE', 'PASSIVE']]]
+      ['tense', ['PAST', 'PRESENT', 'FUTURE']],
+      ['variant', ['FULL', 'SHORT']],
+      ['verbform', ['INFINITIVE', 'FINITE', 'CONVERB']],
+      ['voice', ['ACTIVE', 'MIDDLE', 'PASSIVE']]]
   );
   private extraAttributeList: string[] = [];
+  private extraAttributeNamesJa: string[] = [
+    'FamN',
+    'PersN',
+    'Human_name_or_family_name',
+    'Abbr',
+    'Content_word',
+    'Hiragana',
+    'Kanji',
+    'Katakana',
+    'Digits',
+    'unknown_reading',
+    'Progressive',
+    'unrecognized_symbols',
+    'Associated_content_word',
+    'Counting',
+    'To_supplement',
+    'Ender',
+    'Toponym',
+    'Address',
+    'Post',
+    'Organisation',
+    'Human_name',
+    'Predicative',
+    'Special',
+    'Counting',
+    'Nominal',
+    'Nasalization_change',
+    'Euphonic_change',
+    'Irregular',
+    'Ta_system',
+    'Uru',
+    'japanese',
+    'foreign',
+    'Former_name',
+    'Potential',
+    'Onomatopoeia',
+    'Causative',
+    'Masu',
+    'Nu',
+    'Negation',
+    'Darou',
+    'Souda',
+    'Ku',
+    'Compound_word',
+    'Consonant_reduplication',
+    'Stem',
+    'Historical_compound_word',
+    'Weak_temporal_noun',
+    'Weak_declinable_modifier',
+    'Quantity_modifier',
+    'Ni_case_modifier',
+    'De_case_modifier',
+    'To_case_modifier',
+    'Derivative',
+    'Relativity_noun',
+    'Relativity_modifier'
+  ];
+  private extraAttributeNamesRu: string[] = ['Parenth',
+  'Toponym',
+  'PersN',
+  'PatrN',
+  'Praed',
+  'Informal',
+  'Abbr',
+  'Obsolete',
+  'FamN'];
 
   private searchMode: SearchMode = SearchMode.FULL_TEXT;
   private searchLanguage: Language = "RUSSIAN";
@@ -418,6 +515,7 @@ export default class extends Vue {
 
   resetInput() {
     this.attributeList.splice(0, this.attributeList.length);
+    this.extraAttributeList.splice(0, this.extraAttributeList.length);
     this.searchQuery = '';
   }
 

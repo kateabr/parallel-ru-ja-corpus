@@ -200,8 +200,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -245,8 +245,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1201,10 +1201,10 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Adnominal</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Special</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1329,8 +1329,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1374,8 +1374,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1482,10 +1482,10 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>FamN</extraAttribute>
                             <extraAttribute>Human_name_or_family_name</extraAttribute>
+                            <extraAttribute>FamN</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1517,11 +1517,11 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>unknown_reading</extraAttribute>
-                            <extraAttribute>PersN</extraAttribute>
                             <extraAttribute>Human_name_or_family_name</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>PersN</extraAttribute>
+                            <extraAttribute>unknown_reading</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1565,8 +1565,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1602,9 +1602,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>FamN</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1627,9 +1627,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1735,8 +1735,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1773,8 +1773,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1846,8 +1846,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -1919,8 +1919,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -2013,8 +2013,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Passive</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -2031,10 +2031,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -2054,6 +2050,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -2307,9 +2304,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -2548,9 +2545,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -2700,8 +2697,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Passive</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -2728,10 +2725,6 @@
                                 <value>Assumptional</value>
                             </attribute>
                             <attribute>
-                                <name>verb_type</name>
-                                <value>Darou</value>
-                            </attribute>
-                            <attribute>
                                 <name>romaji_reading</name>
                                 <value>deshou</value>
                             </attribute>
@@ -2743,10 +2736,14 @@
                                 <name>romanized_lexeme_reading</name>
                                 <value>darou</value>
                             </attribute>
+                            <attribute>
+                                <name>type</name>
+                                <value>Auxiliary</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Darou</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Auxiliary_type</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -2778,8 +2775,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -3010,9 +3007,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Relativity_noun</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Relativity_noun</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -3173,10 +3170,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -3194,6 +3187,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -3608,8 +3602,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -3758,9 +3752,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -3797,8 +3791,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4015,8 +4009,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4120,9 +4114,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4155,8 +4149,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4442,9 +4436,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ni_case_modifier</extraAttribute>
                             <extraAttribute>Relativity_modifier</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -4555,8 +4549,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4628,8 +4622,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4696,8 +4690,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4734,8 +4728,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -4990,8 +4984,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5031,8 +5025,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5104,8 +5098,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>To_supplement</extraAttribute>
                             <extraAttribute>Potential</extraAttribute>
+                            <extraAttribute>To_supplement</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -5171,11 +5165,11 @@
                             </attribute>
                             <attribute>
                                 <name>lexeme_reading</name>
-                                <value>とおる</value>
+                                <value>たち</value>
                             </attribute>
                             <attribute>
                                 <name>romanized_lexeme_reading</name>
-                                <value>tooru</value>
+                                <value>tachi</value>
                             </attribute>
                         </attributes>
                         <extraAttributes>
@@ -5453,8 +5447,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Weak_declinable_modifier</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5502,8 +5496,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5584,8 +5578,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5617,8 +5611,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5662,8 +5656,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -5703,8 +5697,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -6175,8 +6169,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -6249,8 +6243,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -6322,8 +6316,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>To_supplement</extraAttribute>
                             <extraAttribute>Potential</extraAttribute>
+                            <extraAttribute>To_supplement</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -6368,9 +6362,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -6613,8 +6607,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -6892,9 +6886,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -6931,8 +6925,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7033,8 +7027,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7070,8 +7064,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7112,9 +7106,9 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Organisation</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Organisation</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7186,8 +7180,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7714,9 +7708,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Quantity_modifier</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7747,9 +7741,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7786,8 +7780,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7855,8 +7849,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7897,9 +7891,9 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Organisation</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Organisation</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -7963,8 +7957,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8004,8 +7998,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8251,8 +8245,8 @@
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8397,8 +8391,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8429,9 +8423,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8464,8 +8458,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8622,9 +8616,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -8832,10 +8826,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form2</name>
                                 <value>Volitional</value>
                             </attribute>
@@ -8853,6 +8843,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -9528,8 +9519,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -9592,9 +9583,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -9626,9 +9617,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Katakana</extraAttribute>
                             <extraAttribute>Associated_content_word</extraAttribute>
                             <extraAttribute>Counting</extraAttribute>
+                            <extraAttribute>Katakana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -9709,8 +9700,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -9750,8 +9741,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -9961,9 +9952,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Weak_temporal_noun</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -10064,9 +10055,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Katakana</extraAttribute>
                             <extraAttribute>Human_name_or_family_name</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Katakana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -10110,9 +10101,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Adnominal</extraAttribute>
                             <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -10148,8 +10139,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -10297,8 +10288,8 @@
                         <extraAttributes>
                             <extraAttribute>Weak_declinable_modifier</extraAttribute>
                             <extraAttribute>Relativity_modifier</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -10338,8 +10329,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Adnominal</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Adjectival</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -11032,9 +11023,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11067,8 +11058,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11172,8 +11163,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11218,9 +11209,9 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Organisation</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Organisation</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11256,8 +11247,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11326,8 +11317,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11363,8 +11354,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11405,9 +11396,9 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Organisation</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Organisation</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11727,8 +11718,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -11792,8 +11783,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ender</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Human_name</extraAttribute>
                         </extraAttributes>
@@ -12225,9 +12216,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -12264,8 +12255,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -12301,8 +12292,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -12419,8 +12410,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -12565,8 +12556,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -12607,8 +12598,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13013,10 +13004,10 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Nasalization_change</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13252,8 +13243,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13290,8 +13281,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13343,8 +13334,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13392,9 +13383,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13486,9 +13477,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -13838,8 +13829,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -14768,8 +14759,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Potential</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -14813,9 +14804,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15311,9 +15302,9 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Organisation</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Organisation</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15450,8 +15441,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15491,8 +15482,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15532,8 +15523,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15573,8 +15564,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15686,8 +15677,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Causative</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15800,8 +15791,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15919,8 +15910,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -15960,8 +15951,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -16192,8 +16183,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -16210,10 +16201,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -16233,6 +16220,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -16470,9 +16458,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -16614,8 +16602,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -16659,8 +16647,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -16813,8 +16801,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -16841,10 +16829,6 @@
                                 <value>Conjunctive</value>
                             </attribute>
                             <attribute>
-                                <name>type</name>
-                                <value>Irregular</value>
-                            </attribute>
-                            <attribute>
                                 <name>romaji_reading</name>
                                 <value>kite</value>
                             </attribute>
@@ -16858,6 +16842,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Irregular</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
@@ -16922,10 +16907,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -16943,6 +16924,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -17579,8 +17561,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -17616,8 +17598,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -17692,8 +17674,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -17757,9 +17739,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18033,9 +18015,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18103,9 +18085,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18604,9 +18586,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18643,8 +18625,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18675,8 +18657,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18713,8 +18695,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18777,8 +18759,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18815,8 +18797,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -18900,9 +18882,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Ta_system</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
-                            <extraAttribute>Ta_system</extraAttribute>
                             <extraAttribute>To_supplement</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
@@ -19056,8 +19038,8 @@
                         <extraAttributes>
                             <extraAttribute>Toponym</extraAttribute>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -19218,8 +19200,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Derivative</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -19236,10 +19218,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -19259,6 +19237,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -19573,9 +19552,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -19915,8 +19894,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -19953,8 +19932,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -19985,9 +19964,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -20024,8 +20003,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -20572,8 +20551,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -20726,9 +20705,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -20764,8 +20743,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -20833,8 +20812,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -21018,10 +20997,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Basic</value>
                             </attribute>
@@ -21039,6 +21014,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -21115,8 +21091,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                 </tokens>
@@ -21323,9 +21299,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -21362,8 +21338,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -21394,9 +21370,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -21433,8 +21409,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -21538,8 +21514,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -21611,10 +21587,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -21632,6 +21604,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -21996,8 +21969,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22089,9 +22062,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -22201,8 +22174,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22294,9 +22267,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -22402,8 +22375,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22443,10 +22416,10 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Associated_content_word</extraAttribute>
                             <extraAttribute>Nominal</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22478,8 +22451,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22519,8 +22492,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22850,8 +22823,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -22943,9 +22916,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -23132,8 +23105,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23604,9 +23577,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
+                            <extraAttribute>unrecognized_symbols</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23643,8 +23616,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Associated_content_word</extraAttribute>
-                            <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Counting</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23684,8 +23657,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23725,8 +23698,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23770,8 +23743,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23807,8 +23780,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -23852,8 +23825,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -24441,8 +24414,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -24514,9 +24487,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Derivative</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Derivative</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -24629,8 +24602,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -24706,8 +24679,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -24796,9 +24769,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -24838,8 +24811,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -25305,9 +25278,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -25524,10 +25497,6 @@
                                 <value>Conjunctive</value>
                             </attribute>
                             <attribute>
-                                <name>verb_type</name>
-                                <value>Ku</value>
-                            </attribute>
-                            <attribute>
                                 <name>romaji_reading</name>
                                 <value>beku</value>
                             </attribute>
@@ -25543,10 +25512,14 @@
                                 <name>romanized_lexeme_reading</name>
                                 <value>be</value>
                             </attribute>
+                            <attribute>
+                                <name>type</name>
+                                <value>Auxiliary</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Ku</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Auxiliary_type</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -25590,9 +25563,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Relativity_noun</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Relativity_noun</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -25696,8 +25669,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -25765,8 +25738,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -25847,10 +25820,6 @@
                                 <value>Conjunctive</value>
                             </attribute>
                             <attribute>
-                                <name>type</name>
-                                <value>Irregular</value>
-                            </attribute>
-                            <attribute>
                                 <name>romaji_reading</name>
                                 <value>ki</value>
                             </attribute>
@@ -25864,6 +25833,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Irregular</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -25883,10 +25853,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -25904,6 +25870,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -26154,9 +26121,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -26257,9 +26224,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Digits</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -26291,8 +26258,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Associated_content_word</extraAttribute>
                             <extraAttribute>Historical_compound_word</extraAttribute>
+                            <extraAttribute>Associated_content_word</extraAttribute>
                             <extraAttribute>Counting</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
@@ -26403,8 +26370,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -26448,8 +26415,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -27019,8 +26986,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -27455,10 +27422,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -27476,6 +27439,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -27721,8 +27685,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -27862,10 +27826,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -27883,6 +27843,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -28353,8 +28314,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Adnominal</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -28395,9 +28356,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Weak_temporal_noun</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -28446,8 +28407,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -28464,10 +28425,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -28487,6 +28444,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -28539,8 +28497,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -28660,9 +28618,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Weak_temporal_noun</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -28706,8 +28664,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -28835,9 +28793,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -29381,8 +29339,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -29430,8 +29388,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -29564,9 +29522,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -30079,9 +30037,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -30149,8 +30107,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -30374,9 +30332,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -30613,8 +30571,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Adnominal</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Adjectival</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -30655,8 +30613,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31076,8 +31034,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31196,8 +31154,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Derivative</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31277,8 +31235,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31350,9 +31308,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Relativity_noun</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Relativity_noun</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31424,8 +31382,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31461,8 +31419,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31498,8 +31456,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31620,8 +31578,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31661,8 +31619,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -31756,8 +31714,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -32269,9 +32227,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -32556,8 +32514,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -32601,8 +32559,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                 </tokens>
@@ -33103,9 +33061,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33205,8 +33163,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Adnominal</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -33247,9 +33205,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Weak_temporal_noun</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33358,9 +33316,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33474,8 +33432,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33492,10 +33450,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -33515,6 +33469,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -33563,8 +33518,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33608,8 +33563,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33714,8 +33669,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33759,8 +33714,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33828,8 +33783,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -33913,9 +33868,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -33956,8 +33911,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -34761,8 +34716,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -34968,10 +34923,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -34989,6 +34940,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -35215,8 +35167,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Weak_declinable_modifier</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -35366,8 +35318,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -35708,8 +35660,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -35781,8 +35733,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -35866,8 +35818,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -35952,8 +35904,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -36049,9 +36001,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -36403,10 +36355,10 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>FamN</extraAttribute>
                             <extraAttribute>Human_name_or_family_name</extraAttribute>
+                            <extraAttribute>FamN</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -36682,8 +36634,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -37115,8 +37067,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -37189,8 +37141,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -37234,8 +37186,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -37417,8 +37369,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -37502,9 +37454,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -37545,8 +37497,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -38099,10 +38051,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -38120,6 +38068,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -38382,8 +38331,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -38511,10 +38460,6 @@
                                 <value>Assumptional</value>
                             </attribute>
                             <attribute>
-                                <name>verb_type</name>
-                                <value>Darou</value>
-                            </attribute>
-                            <attribute>
                                 <name>romaji_reading</name>
                                 <value>deshou</value>
                             </attribute>
@@ -38526,10 +38471,14 @@
                                 <name>romanized_lexeme_reading</name>
                                 <value>darou</value>
                             </attribute>
+                            <attribute>
+                                <name>type</name>
+                                <value>Auxiliary</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Darou</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Auxiliary_type</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -38561,8 +38510,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -39011,8 +38960,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -39199,8 +39148,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -39538,9 +39487,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40159,10 +40108,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Ta</value>
                             </attribute>
@@ -40180,6 +40125,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -40563,8 +40509,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40604,8 +40550,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40641,8 +40587,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40674,8 +40620,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40727,8 +40673,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40768,8 +40714,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40805,8 +40751,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -40905,10 +40851,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Imperfective</value>
                             </attribute>
@@ -40926,6 +40868,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -40945,10 +40888,6 @@
                                 <value>Basic</value>
                             </attribute>
                             <attribute>
-                                <name>verb_type</name>
-                                <value>Nu</value>
-                            </attribute>
-                            <attribute>
                                 <name>romaji_reading</name>
                                 <value>n</value>
                             </attribute>
@@ -40960,12 +40899,16 @@
                                 <name>romanized_lexeme_reading</name>
                                 <value>nu</value>
                             </attribute>
+                            <attribute>
+                                <name>type</name>
+                                <value>Auxiliary</value>
+                            </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Euphonic_change</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
+                            <extraAttribute>Nu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Auxiliary_type</extraAttribute>
+                            <extraAttribute>Euphonic_change</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41298,8 +41241,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41343,8 +41286,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41489,8 +41432,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41562,8 +41505,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41657,8 +41600,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41743,8 +41686,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -41761,10 +41704,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -41784,6 +41723,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -42067,8 +42007,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42108,8 +42048,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42193,8 +42133,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42477,8 +42417,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42562,9 +42502,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -42605,8 +42545,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42638,9 +42578,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
-                            <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Stem</extraAttribute>
+                            <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42793,8 +42733,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -42878,8 +42818,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -42899,10 +42839,6 @@
                                 <value>Suffix</value>
                             </attribute>
                             <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
-                            </attribute>
-                            <attribute>
                                 <name>form1</name>
                                 <value>Basic</value>
                             </attribute>
@@ -42920,6 +42856,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -43147,8 +43084,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -43192,9 +43129,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -43230,8 +43167,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                 </tokens>
@@ -43680,8 +43617,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44283,8 +44220,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44324,8 +44261,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44365,8 +44302,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44467,8 +44404,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44549,8 +44486,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44627,8 +44564,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44692,8 +44629,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44729,8 +44666,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44823,8 +44760,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44864,8 +44801,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -44933,8 +44870,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -45036,8 +44973,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Nasalization_change</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -45054,10 +44991,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -45077,6 +45010,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -45578,9 +45512,9 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>Ender</extraAttribute>
-                            <extraAttribute>Organisation</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Organisation</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -45652,8 +45586,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -45693,8 +45627,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -45762,8 +45696,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -45958,8 +45892,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46061,8 +45995,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46130,8 +46064,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46215,8 +46149,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46256,8 +46190,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Causative</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46602,8 +46536,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46647,8 +46581,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -46716,8 +46650,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -47203,8 +47137,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -47285,8 +47219,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -47398,8 +47332,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -47669,8 +47603,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -47711,8 +47645,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -47810,8 +47744,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -47828,10 +47762,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -47851,6 +47781,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -48275,8 +48206,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48503,9 +48434,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48541,8 +48472,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48663,9 +48594,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Attached_verb</extraAttribute>
                             <extraAttribute>Ta_system</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48705,8 +48636,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Progressive</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
+                            <extraAttribute>Progressive</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48750,9 +48681,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Predicative</extraAttribute>
                             <extraAttribute>Negation</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Predicative</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48833,8 +48764,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48981,8 +48912,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -48999,10 +48930,6 @@
                             <attribute>
                                 <name>pos</name>
                                 <value>Suffix</value>
-                            </attribute>
-                            <attribute>
-                                <name>form</name>
-                                <value>Masu</value>
                             </attribute>
                             <attribute>
                                 <name>form1</name>
@@ -49022,6 +48949,7 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
+                            <extraAttribute>Masu</extraAttribute>
                             <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
@@ -49283,9 +49211,9 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Hiragana</extraAttribute>
-                            <extraAttribute>Adjectival</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Adjectival</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -49321,8 +49249,8 @@
                             </attribute>
                         </attributes>
                         <extraAttributes>
-                            <extraAttribute>Content_word</extraAttribute>
                             <extraAttribute>Kanji</extraAttribute>
+                            <extraAttribute>Content_word</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>
@@ -49399,8 +49327,8 @@
                         </attributes>
                         <extraAttributes>
                             <extraAttribute>To_supplement</extraAttribute>
-                            <extraAttribute>Hiragana</extraAttribute>
                             <extraAttribute>Content_word</extraAttribute>
+                            <extraAttribute>Hiragana</extraAttribute>
                         </extraAttributes>
                     </token>
                     <token>

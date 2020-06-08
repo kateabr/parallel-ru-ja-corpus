@@ -103,11 +103,11 @@ juman_katuyou1_mapper = {
     '子音動詞ラ行イ形': ['Consonant_stem', 'Ra_row', 'I_form'],
     '子音動詞ワ行': ['Consonant_stem', 'Wa_row'],
     '子音動詞ワ行文語音便形': ['Consonant_stem', 'Wa_row', 'Written_form', 'Euphonic_change'],
-    'カ変動詞': ['Irregular_type1'],
-    'カ変動詞来': ['Irregular2_type1'],
-    'サ変動詞': ['Suru_type1'],
-    'ザ変動詞': ['Zuru_type1'],
-    '動詞性接尾辞ます型': ['Masu_form'],
+    'カ変動詞': ['Irregular'],
+    'カ変動詞来': ['Irregular', 'Kanji'],
+    'サ変動詞': ['Suru_type'],
+    'ザ変動詞': ['Zuru_type'],
+    '動詞性接尾辞ます型': ['Masu'],
     # adjectives
     'イ形容詞アウオ段': ['I_adjective', 'AUO_row'],
     'イ形容詞イ段': ['I_adjective', 'I_row'],
@@ -119,13 +119,13 @@ juman_katuyou1_mapper = {
     # judgementals -
     # auxiliary verbs - (duplicates omitted)
     '判定詞': ['Judgemental'],
-    '無活用型': ['Non_conjugating_type1'],  # ?
-    '助動詞ぬ型': ['Nu_type1'],
-    '助動詞だろう型': ['Darou_type1'],
-    '助動詞そうだ型': ['Souda_type1'],
-    '助動詞く型': ['Ku_type1'],
+    '無活用型': ['Non_conjugating'],
+    '助動詞ぬ型': ['Nu', 'Negation'],
+    '助動詞だろう型': ['Darou'],
+    '助動詞そうだ型': ['Souda'],
+    '助動詞く型': ['Ku'],
     # suffices (duplicates omitted)
-    '動詞性接尾辞うる型': ['Uru_type1'],
+    '動詞性接尾辞うる型': ['Uru'],
     # empty
     '*': []
 }
@@ -284,7 +284,7 @@ def juman_katuyou2_mapper(katuyou2):
     if katuyou2.find('語幹') != -1:
         res.append('Stem')
     if katuyou2.find('エ基本') != -1:
-        res.append('E_basic_form')
+        res.append('E_basic_form1')
     if katuyou2.find('タリ形') != -1:
         res.append('Tari_form')
     if katuyou2.find('チャ形') != -1:

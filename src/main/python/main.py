@@ -418,36 +418,20 @@ def ann_ru(ids, mystem, maru_analyzer):
 
 # def add_xtra_attr(fname):
 #     text_broken = Entry.from_xml(f'../texts/annotated/{fname}.xml')
-#     text = Entry.from_xml(f'../texts/annotated_old/{fname}.xml')
-#     for spair_id, spair in enumerate(text.sentence_pairs):
+#     # text = Entry.from_xml(f'../texts/annotated_old/{fname}.xml')
+#     for spair_id, spair in enumerate(text_broken.sentence_pairs):
 #         for token_id, token in enumerate(spair.japanese):
-#             if token.extra_attributes and not text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                 text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes = token.extra_attributes
-#             if text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes and 'reading_type' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                 if not [tok for tok in text_broken.sentence_pairs[spair_id].japanese[token_id].attributes if tok.name == 'reading_type']:
-#                     if 'On' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                         text_broken.sentence_pairs[spair_id].japanese[token_id].attributes.append(Attribute('reading_type', 'On'))
-#                         text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('On')
-#                     else:
-#                         text_broken.sentence_pairs[spair_id].japanese[token_id].attributes.append(Attribute('reading_type', 'Kun'))
-#                         text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('Kun')
-#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('reading_type')
-#             if text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                 if 'On' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('On')
-#                 if 'Kun' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('Kun')
-#                 if 'reading_type' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes:
-#                     text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('reading_type')
-#             if text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes and\
-#                 'Judgemental' in text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes and\
-#                 [tok for tok in text_broken.sentence_pairs[spair_id].japanese[token_id].attributes if tok.name == 'pos']:
-#                 text_broken.sentence_pairs[spair_id].japanese[token_id].extra_attributes.remove('Judgemental')
+#             if not token.attributes:
+#                 continue
+#             irr = [tok for tok in token.attributes if tok.name == 'pos' and tok.value == 'Verb']
+#             if token.extra_attributes and irr:
+#                 if 'Auxiliary' in token.extra_attributes and\
+#                         not [tok for tok in token.attributes if tok.name == 'type' and tok.value == 'Auxiliary']:
+#                     token.attributes.append(Attribute('type', 'Auxiliary'))
+#                     token.extra_attributes.remove('Auxiliary')
 #
-#     for spair_id, spair in enumerate(text.sentence_pairs):
-#         for token_id, token in enumerate(spair.russian):
-#             if token.extra_attributes and not text_broken.sentence_pairs[spair_id].russian[token_id].extra_attributes:
-#                 text_broken.sentence_pairs[spair_id].russian[token_id].extra_attributes = token.extra_attributes
+#             if token.extra_attributes:
+#                 token.extra_attributes = list(set(token.extra_attributes))
 #     return text_broken
 
 
