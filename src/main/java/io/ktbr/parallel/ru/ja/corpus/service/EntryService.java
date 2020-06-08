@@ -1,5 +1,6 @@
 package io.ktbr.parallel.ru.ja.corpus.service;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import io.ktbr.parallel.ru.ja.corpus.BaseXClient;
 import io.ktbr.parallel.ru.ja.corpus.model.basex.Language;
 import io.ktbr.parallel.ru.ja.corpus.model.basex.SearchMode;
@@ -9,7 +10,6 @@ import io.ktbr.parallel.ru.ja.corpus.model.xml.Entry;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.StringReader;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +22,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jetbrains.annotations.NotNull;
 
 @ApplicationScoped
+@SuppressFBWarnings("EXS_EXCEPTION_SOFTENING_NO_CONSTRAINTS")
 public class EntryService {
     private static final String XQUERY_PREAMBLE = "XQUERY import module namespace m='http://parallel-ru-ja-corpus.com'; ";
 

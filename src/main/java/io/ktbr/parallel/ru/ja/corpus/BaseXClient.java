@@ -1,5 +1,6 @@
 package io.ktbr.parallel.ru.ja.corpus;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
@@ -46,6 +47,7 @@ public final class BaseXClient implements Closeable {
      * @param password password
      * @throws IOException Exception
      */
+    @SuppressFBWarnings("UNENCRYPTED_SOCKET")
     public BaseXClient(final String host, final int port, final String username, final String password)
             throws IOException {
 
@@ -100,6 +102,12 @@ public final class BaseXClient implements Closeable {
      * @param pw String
      * @return String
      */
+    @SuppressFBWarnings({
+            "WEAK_MESSAGE_DIGEST_MD5",
+            "BAD_HEXA_CONVERSION",
+            "DM_DEFAULT_ENCODING",
+            "MDM_STRING_BYTES_ENCODING"
+    })
     private static String md5(final String pw) {
         final StringBuilder sb = new StringBuilder();
         try {
@@ -242,6 +250,7 @@ public final class BaseXClient implements Closeable {
      * @return String result or info
      * @throws IOException I/O exception
      */
+    @SuppressFBWarnings("MOM_MISLEADING_OVERLOAD_MODEL")
     private String receive() throws IOException {
         final ByteArrayOutputStream os = new ByteArrayOutputStream();
         receive(in, os);

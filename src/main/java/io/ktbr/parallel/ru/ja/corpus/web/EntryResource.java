@@ -1,5 +1,6 @@
 package io.ktbr.parallel.ru.ja.corpus.web;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import io.ktbr.parallel.ru.ja.corpus.model.basex.Language;
 import io.ktbr.parallel.ru.ja.corpus.model.basex.SearchMode;
 import io.ktbr.parallel.ru.ja.corpus.model.basex.SearchResult;
@@ -7,24 +8,29 @@ import io.ktbr.parallel.ru.ja.corpus.model.xml.Attribute;
 import io.ktbr.parallel.ru.ja.corpus.model.xml.Entry;
 import io.ktbr.parallel.ru.ja.corpus.model.xml.SentencePair;
 import io.ktbr.parallel.ru.ja.corpus.service.EntryService;
-import org.jboss.resteasy.annotations.jaxrs.PathParam;
-import org.jboss.resteasy.annotations.jaxrs.QueryParam;
-
-import javax.validation.constraints.*;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.StreamingOutput;
 import java.io.ByteArrayOutputStream;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.StreamingOutput;
+import org.jboss.resteasy.annotations.jaxrs.PathParam;
+import org.jboss.resteasy.annotations.jaxrs.QueryParam;
 
 @Path("/api/v1/entry")
+@SuppressFBWarnings("JXI_UNDEFINED_PARAMETER_SOURCE_IN_ENDPOINT")
 public class EntryResource {
     private final EntryService entryService;
 
@@ -58,11 +64,11 @@ public class EntryResource {
             @QueryParam("offset") @NotNull @PositiveOrZero int offset,
             @QueryParam("limit") @NotNull @Positive @Max(50) int limit
     ) {
-        if (query == null) query = "";
+        String queryTemp = query == null ? "" : query;
 
         List<Attribute> attributeList = convertToAttributes(attributes);
         return entryService.tokenSearch(
-                query,
+                queryTemp,
                 language,
                 searchMode,
                 attributeList,
@@ -82,10 +88,11 @@ public class EntryResource {
             @QueryParam("attr") List<@Pattern(regexp = "\\b.+=.+\\b") String> attributes,
             @QueryParam("ext_attr") List<String> extraAttributes
     ) {
-        if (query == null) query = "";
+        String queryTemp = query == null ? "" : query;
 
         List<Attribute> attributeList = convertToAttributes(attributes);
-        ByteArrayOutputStream out = entryService.tokenSearchAll(query, language, searchMode, attributeList, extraAttributes);
+        ByteArrayOutputStream out = entryService
+                .tokenSearchAll(queryTemp, language, searchMode, attributeList, extraAttributes);
 
         String filename = resultFilename();
         return searchResultResponse(out, filename);

@@ -4,6 +4,9 @@
 .settings/
 bin/
 
+.git/
+src/main/texts/
+
 # IntelliJ
 .idea
 *.ipr

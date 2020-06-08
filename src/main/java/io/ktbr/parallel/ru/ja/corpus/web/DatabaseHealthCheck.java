@@ -41,8 +41,8 @@ public class DatabaseHealthCheck implements HealthCheck {
                 );
 
             var up = builder.up();
-            for (var key : info.keySet()) {
-                up.withData(key, info.get(key));
+            for (var e : info.entrySet()) {
+                up.withData(e.getKey(), e.getValue());
             }
 
             health = up.build();
