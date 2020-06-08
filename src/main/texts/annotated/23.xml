@@ -27520,7 +27520,7 @@
         <sentencePair>
             <id>12</id>
             <russian>
-                <sentence>Тогда Ксения полностью опровергла слухи о своем выдвижении: «Унылое гавно ваша политика сегодня, господа!</sentence>
+                <sentence>Тогда Ксения полностью опровергла слухи о своем выдвижении: «Унылое гавно ваша политика сегодня, господа! Скучно и мерзко».</sentence>
                 <tokens>
                     <token>
                         <id>1</id>
@@ -27901,7 +27901,64 @@
                     </token>
                     <token>
                         <id>28</id>
-                        <text>!</text>
+                        <text>! </text>
+                    </token>
+                    <token>
+                        <id>29</id>
+                        <text>Скучно</text>
+                        <lexeme>скучно</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADVERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>degree</name>
+                                <value>POSITIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>30</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>31</id>
+                        <text>и</text>
+                        <lexeme>и</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>CONJUNCTION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>32</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>33</id>
+                        <text>мерзко</text>
+                        <lexeme>мерзко</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADVERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>degree</name>
+                                <value>POSITIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>34</id>
+                        <text>»</text>
+                    </token>
+                    <token>
+                        <id>35</id>
+                        <text>.</text>
                     </token>
                 </tokens>
             </russian>
@@ -28727,67 +28784,10 @@
         <sentencePair>
             <id>13</id>
             <russian>
-                <sentence>Скучно и мерзко». Известный оппозиционер Навальный также обратился с призывом к Собчак с тем, чтобы она не принимала участие в мерзкой игре Кремля.</sentence>
+                <sentence>Известный оппозиционер Навальный также обратился с призывом к Собчак с тем, чтобы она не принимала участие в мерзкой игре Кремля. Навальный критиковал администрацию Путина и планировал баллотироваться на президентских выборах, однако в феврале этого года он был признан виновным по делу о хищении имущества, в результате чего ЦИК не допустил его к президентской гонке.</sentence>
                 <tokens>
                     <token>
                         <id>1</id>
-                        <text>Скучно</text>
-                        <lexeme>скучно</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADVERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>degree</name>
-                                <value>POSITIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>2</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>3</id>
-                        <text>и</text>
-                        <lexeme>и</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>CONJUNCTION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>4</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>5</id>
-                        <text>мерзко</text>
-                        <lexeme>мерзко</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADVERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>degree</name>
-                                <value>POSITIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>6</id>
-                        <text>»</text>
-                    </token>
-                    <token>
-                        <id>7</id>
-                        <text>. </text>
-                    </token>
-                    <token>
-                        <id>8</id>
                         <text>Известный</text>
                         <lexeme>известный</lexeme>
                         <attributes>
@@ -28818,11 +28818,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>9</id>
+                        <id>2</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>10</id>
+                        <id>3</id>
                         <text>оппозиционер</text>
                         <lexeme>оппозиционер</lexeme>
                         <attributes>
@@ -28849,11 +28849,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>11</id>
+                        <id>4</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>12</id>
+                        <id>5</id>
                         <text>Навальный</text>
                         <lexeme>навальный</lexeme>
                         <attributes>
@@ -28880,11 +28880,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>13</id>
+                        <id>6</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>14</id>
+                        <id>7</id>
                         <text>также</text>
                         <lexeme>также</lexeme>
                         <attributes>
@@ -28899,11 +28899,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>15</id>
+                        <id>8</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>16</id>
+                        <id>9</id>
                         <text>обратился</text>
                         <lexeme>обращаться</lexeme>
                         <attributes>
@@ -28942,11 +28942,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>17</id>
+                        <id>10</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>18</id>
+                        <id>11</id>
                         <text>с</text>
                         <lexeme>с</lexeme>
                         <attributes>
@@ -28957,11 +28957,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>19</id>
+                        <id>12</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>20</id>
+                        <id>13</id>
                         <text>призывом</text>
                         <lexeme>призыв</lexeme>
                         <attributes>
@@ -28988,11 +28988,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>21</id>
+                        <id>14</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>22</id>
+                        <id>15</id>
                         <text>к</text>
                         <lexeme>к</lexeme>
                         <attributes>
@@ -29003,11 +29003,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>23</id>
+                        <id>16</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>24</id>
+                        <id>17</id>
                         <text>Собчак</text>
                         <lexeme>собчак</lexeme>
                         <attributes>
@@ -29037,11 +29037,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>25</id>
+                        <id>18</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>26</id>
+                        <id>19</id>
                         <text>с</text>
                         <lexeme>с</lexeme>
                         <attributes>
@@ -29052,11 +29052,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>27</id>
+                        <id>20</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>28</id>
+                        <id>21</id>
                         <text>тем</text>
                         <lexeme>то</lexeme>
                         <attributes>
@@ -29079,11 +29079,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>29</id>
+                        <id>22</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>30</id>
+                        <id>23</id>
                         <text>чтобы</text>
                         <lexeme>чтобы</lexeme>
                         <attributes>
@@ -29094,11 +29094,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>31</id>
+                        <id>24</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>32</id>
+                        <id>25</id>
                         <text>она</text>
                         <lexeme>она</lexeme>
                         <attributes>
@@ -29125,11 +29125,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>33</id>
+                        <id>26</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>34</id>
+                        <id>27</id>
                         <text>не</text>
                         <lexeme>не</lexeme>
                         <attributes>
@@ -29140,11 +29140,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>35</id>
+                        <id>28</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>36</id>
+                        <id>29</id>
                         <text>принимала</text>
                         <lexeme>принимать</lexeme>
                         <attributes>
@@ -29183,11 +29183,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>37</id>
+                        <id>30</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>38</id>
+                        <id>31</id>
                         <text>участие</text>
                         <lexeme>участие</lexeme>
                         <attributes>
@@ -29214,11 +29214,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>39</id>
+                        <id>32</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>40</id>
+                        <id>33</id>
                         <text>в</text>
                         <lexeme>в</lexeme>
                         <attributes>
@@ -29229,11 +29229,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>41</id>
+                        <id>34</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>42</id>
+                        <id>35</id>
                         <text>мерзкой</text>
                         <lexeme>мерзкий</lexeme>
                         <attributes>
@@ -29264,11 +29264,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>43</id>
+                        <id>36</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>44</id>
+                        <id>37</id>
                         <text>игре</text>
                         <lexeme>игра</lexeme>
                         <attributes>
@@ -29295,11 +29295,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>45</id>
+                        <id>38</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>46</id>
+                        <id>39</id>
                         <text>Кремля</text>
                         <lexeme>кремль</lexeme>
                         <attributes>
@@ -29326,7 +29326,952 @@
                         </attributes>
                     </token>
                     <token>
+                        <id>40</id>
+                        <text>. </text>
+                    </token>
+                    <token>
+                        <id>41</id>
+                        <text>Навальный</text>
+                        <lexeme>навальный</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>ANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>NOMINATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>42</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>43</id>
+                        <text>критиковал</text>
+                        <lexeme>критиковать</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>VERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>aspect</name>
+                                <value>IMPERFECT</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>mood</name>
+                                <value>INDICATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>tense</name>
+                                <value>PAST</value>
+                            </attribute>
+                            <attribute>
+                                <name>verbform</name>
+                                <value>FINITE</value>
+                            </attribute>
+                            <attribute>
+                                <name>voice</name>
+                                <value>ACTIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>44</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>45</id>
+                        <text>администрацию</text>
+                        <lexeme>администрация</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>ACCUSATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>FEMININE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>46</id>
+                        <text> </text>
+                    </token>
+                    <token>
                         <id>47</id>
+                        <text>Путина</text>
+                        <lexeme>путин</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>ANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>GENITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                        <extraAttributes>
+                            <extraAttribute>FamN</extraAttribute>
+                        </extraAttributes>
+                    </token>
+                    <token>
+                        <id>48</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>49</id>
+                        <text>и</text>
+                        <lexeme>и</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>CONJUNCTION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>50</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>51</id>
+                        <text>планировал</text>
+                        <lexeme>планировать</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>VERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>aspect</name>
+                                <value>IMPERFECT</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>mood</name>
+                                <value>INDICATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>tense</name>
+                                <value>PAST</value>
+                            </attribute>
+                            <attribute>
+                                <name>verbform</name>
+                                <value>FINITE</value>
+                            </attribute>
+                            <attribute>
+                                <name>voice</name>
+                                <value>ACTIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>52</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>53</id>
+                        <text>баллотироваться</text>
+                        <lexeme>баллотироваться</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>VERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>verbform</name>
+                                <value>INFINITIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>54</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>55</id>
+                        <text>на</text>
+                        <lexeme>на</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADPOSITION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>56</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>57</id>
+                        <text>президентских</text>
+                        <lexeme>президентский</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADJECTIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>LOCATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>degree</name>
+                                <value>POSITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>PLURAL</value>
+                            </attribute>
+                            <attribute>
+                                <name>variant</name>
+                                <value>FULL</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>58</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>59</id>
+                        <text>выборах</text>
+                        <lexeme>выборы</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>LOCATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>PLURAL</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>60</id>
+                        <text>, </text>
+                    </token>
+                    <token>
+                        <id>61</id>
+                        <text>однако</text>
+                        <lexeme>однако</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>CONJUNCTION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>62</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>63</id>
+                        <text>в</text>
+                        <lexeme>в</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADPOSITION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>64</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>65</id>
+                        <text>феврале</text>
+                        <lexeme>февраль</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>LOCATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>66</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>67</id>
+                        <text>этого</text>
+                        <lexeme>этот</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>DETERMINANT</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>GENITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>68</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>69</id>
+                        <text>года</text>
+                        <lexeme>год</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>GENITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>70</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>71</id>
+                        <text>он</text>
+                        <lexeme>он</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>PRONOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>NOMINATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>person</name>
+                                <value>THIRD</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>72</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>73</id>
+                        <text>был</text>
+                        <lexeme>быть</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>VERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>aspect</name>
+                                <value>IMPERFECT</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>mood</name>
+                                <value>INDICATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>tense</name>
+                                <value>PAST</value>
+                            </attribute>
+                            <attribute>
+                                <name>verbform</name>
+                                <value>FINITE</value>
+                            </attribute>
+                            <attribute>
+                                <name>voice</name>
+                                <value>ACTIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>74</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>75</id>
+                        <text>признан</text>
+                        <lexeme>признавать</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADJECTIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>degree</name>
+                                <value>POSITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>variant</name>
+                                <value>SHORT</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>76</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>77</id>
+                        <text>виновным</text>
+                        <lexeme>виновный</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADJECTIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>INSTRUCTIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>degree</name>
+                                <value>POSITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>variant</name>
+                                <value>FULL</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>78</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>79</id>
+                        <text>по</text>
+                        <lexeme>по</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADPOSITION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>80</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>81</id>
+                        <text>делу</text>
+                        <lexeme>дело</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>DATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>NEUTER</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>82</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>83</id>
+                        <text>о</text>
+                        <lexeme>о</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADPOSITION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>84</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>85</id>
+                        <text>хищении</text>
+                        <lexeme>хищение</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>LOCATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>NEUTER</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>86</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>87</id>
+                        <text>имущества</text>
+                        <lexeme>имущество</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>GENITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>NEUTER</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>88</id>
+                        <text>, </text>
+                    </token>
+                    <token>
+                        <id>89</id>
+                        <text>в</text>
+                        <lexeme>в</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADPOSITION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>90</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>91</id>
+                        <text>результате</text>
+                        <lexeme>результат</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>LOCATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>92</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>93</id>
+                        <text>чего</text>
+                        <lexeme>что</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>PRONOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>GENITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>NEUTER</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>94</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>95</id>
+                        <text>ЦИК</text>
+                        <lexeme>цик</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>NOMINATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>96</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>97</id>
+                        <text>не</text>
+                        <lexeme>не</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>PARTICLE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>98</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>99</id>
+                        <text>допустил</text>
+                        <lexeme>допускать</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>VERB</value>
+                            </attribute>
+                            <attribute>
+                                <name>aspect</name>
+                                <value>PERFECT</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>mood</name>
+                                <value>INDICATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>tense</name>
+                                <value>PAST</value>
+                            </attribute>
+                            <attribute>
+                                <name>verbform</name>
+                                <value>FINITE</value>
+                            </attribute>
+                            <attribute>
+                                <name>voice</name>
+                                <value>ACTIVE</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>100</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>101</id>
+                        <text>его</text>
+                        <lexeme>он</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>PRONOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>ACCUSATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>MASCULINE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>person</name>
+                                <value>THIRD</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>102</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>103</id>
+                        <text>к</text>
+                        <lexeme>к</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADPOSITION</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>104</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>105</id>
+                        <text>президентской</text>
+                        <lexeme>президентский</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>ADJECTIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>DATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>degree</name>
+                                <value>POSITIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>FEMININE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                            <attribute>
+                                <name>variant</name>
+                                <value>FULL</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>106</id>
+                        <text> </text>
+                    </token>
+                    <token>
+                        <id>107</id>
+                        <text>гонке</text>
+                        <lexeme>гонка</lexeme>
+                        <attributes>
+                            <attribute>
+                                <name>pos</name>
+                                <value>NOUN</value>
+                            </attribute>
+                            <attribute>
+                                <name>animacy</name>
+                                <value>INANIMATE</value>
+                            </attribute>
+                            <attribute>
+                                <name>case</name>
+                                <value>DATIVE</value>
+                            </attribute>
+                            <attribute>
+                                <name>gender</name>
+                                <value>FEMININE</value>
+                            </attribute>
+                            <attribute>
+                                <name>number</name>
+                                <value>SINGULAR</value>
+                            </attribute>
+                        </attributes>
+                    </token>
+                    <token>
+                        <id>108</id>
                         <text>.</text>
                     </token>
                 </tokens>
@@ -31591,955 +32536,10 @@
         <sentencePair>
             <id>14</id>
             <russian>
-                <sentence>Навальный критиковал администрацию Путина и планировал баллотироваться на президентских выборах, однако в феврале этого года он был признан виновным по делу о хищении имущества, в результате чего ЦИК не допустил его к президентской гонке. Причина, по которой Собчак резко изменила свое решение, неизвестна, однако оппозиционный ресурс newtimes.ru сообщил, что в качестве награды за свое выдвижение Собчак будет разрешено вернуться на федеральные телеканалы, более того, она может возглавить один из телеканалов, например, RT.</sentence>
+                <sentence>Причина, по которой Собчак резко изменила свое решение, неизвестна, однако оппозиционный ресурс newtimes.ru сообщил, что в качестве награды за свое выдвижение Собчак будет разрешено вернуться на федеральные телеканалы, более того, она может возглавить один из телеканалов, например, RT.</sentence>
                 <tokens>
                     <token>
                         <id>1</id>
-                        <text>Навальный</text>
-                        <lexeme>навальный</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>ANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>NOMINATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>2</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>3</id>
-                        <text>критиковал</text>
-                        <lexeme>критиковать</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>VERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>aspect</name>
-                                <value>IMPERFECT</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>mood</name>
-                                <value>INDICATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>tense</name>
-                                <value>PAST</value>
-                            </attribute>
-                            <attribute>
-                                <name>verbform</name>
-                                <value>FINITE</value>
-                            </attribute>
-                            <attribute>
-                                <name>voice</name>
-                                <value>ACTIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>4</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>5</id>
-                        <text>администрацию</text>
-                        <lexeme>администрация</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>ACCUSATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>FEMININE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>6</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>7</id>
-                        <text>Путина</text>
-                        <lexeme>путин</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>ANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>GENITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>FamN</extraAttribute>
-                        </extraAttributes>
-                    </token>
-                    <token>
-                        <id>8</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>9</id>
-                        <text>и</text>
-                        <lexeme>и</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>CONJUNCTION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>10</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>11</id>
-                        <text>планировал</text>
-                        <lexeme>планировать</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>VERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>aspect</name>
-                                <value>IMPERFECT</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>mood</name>
-                                <value>INDICATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>tense</name>
-                                <value>PAST</value>
-                            </attribute>
-                            <attribute>
-                                <name>verbform</name>
-                                <value>FINITE</value>
-                            </attribute>
-                            <attribute>
-                                <name>voice</name>
-                                <value>ACTIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>12</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>13</id>
-                        <text>баллотироваться</text>
-                        <lexeme>баллотироваться</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>VERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>verbform</name>
-                                <value>INFINITIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>14</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>15</id>
-                        <text>на</text>
-                        <lexeme>на</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADPOSITION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>16</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>17</id>
-                        <text>президентских</text>
-                        <lexeme>президентский</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADJECTIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>LOCATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>degree</name>
-                                <value>POSITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>PLURAL</value>
-                            </attribute>
-                            <attribute>
-                                <name>variant</name>
-                                <value>FULL</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>18</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>19</id>
-                        <text>выборах</text>
-                        <lexeme>выборы</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>LOCATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>PLURAL</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>20</id>
-                        <text>, </text>
-                    </token>
-                    <token>
-                        <id>21</id>
-                        <text>однако</text>
-                        <lexeme>однако</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>CONJUNCTION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>22</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>23</id>
-                        <text>в</text>
-                        <lexeme>в</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADPOSITION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>24</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>25</id>
-                        <text>феврале</text>
-                        <lexeme>февраль</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>LOCATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>26</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>27</id>
-                        <text>этого</text>
-                        <lexeme>этот</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>DETERMINANT</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>GENITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>28</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>29</id>
-                        <text>года</text>
-                        <lexeme>год</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>GENITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>30</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>31</id>
-                        <text>он</text>
-                        <lexeme>он</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>PRONOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>NOMINATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>person</name>
-                                <value>THIRD</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>32</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>33</id>
-                        <text>был</text>
-                        <lexeme>быть</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>VERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>aspect</name>
-                                <value>IMPERFECT</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>mood</name>
-                                <value>INDICATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>tense</name>
-                                <value>PAST</value>
-                            </attribute>
-                            <attribute>
-                                <name>verbform</name>
-                                <value>FINITE</value>
-                            </attribute>
-                            <attribute>
-                                <name>voice</name>
-                                <value>ACTIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>34</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>35</id>
-                        <text>признан</text>
-                        <lexeme>признавать</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADJECTIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>degree</name>
-                                <value>POSITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>variant</name>
-                                <value>SHORT</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>36</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>37</id>
-                        <text>виновным</text>
-                        <lexeme>виновный</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADJECTIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>INSTRUCTIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>degree</name>
-                                <value>POSITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>variant</name>
-                                <value>FULL</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>38</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>39</id>
-                        <text>по</text>
-                        <lexeme>по</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADPOSITION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>40</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>41</id>
-                        <text>делу</text>
-                        <lexeme>дело</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>DATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>NEUTER</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>42</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>43</id>
-                        <text>о</text>
-                        <lexeme>о</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADPOSITION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>44</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>45</id>
-                        <text>хищении</text>
-                        <lexeme>хищение</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>LOCATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>NEUTER</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>46</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>47</id>
-                        <text>имущества</text>
-                        <lexeme>имущество</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>GENITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>NEUTER</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>48</id>
-                        <text>, </text>
-                    </token>
-                    <token>
-                        <id>49</id>
-                        <text>в</text>
-                        <lexeme>в</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADPOSITION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>50</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>51</id>
-                        <text>результате</text>
-                        <lexeme>результат</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>LOCATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>52</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>53</id>
-                        <text>чего</text>
-                        <lexeme>что</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>PRONOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>GENITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>NEUTER</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>54</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>55</id>
-                        <text>ЦИК</text>
-                        <lexeme>цик</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>NOMINATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>56</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>57</id>
-                        <text>не</text>
-                        <lexeme>не</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>PARTICLE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>58</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>59</id>
-                        <text>допустил</text>
-                        <lexeme>допускать</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>VERB</value>
-                            </attribute>
-                            <attribute>
-                                <name>aspect</name>
-                                <value>PERFECT</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>mood</name>
-                                <value>INDICATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>tense</name>
-                                <value>PAST</value>
-                            </attribute>
-                            <attribute>
-                                <name>verbform</name>
-                                <value>FINITE</value>
-                            </attribute>
-                            <attribute>
-                                <name>voice</name>
-                                <value>ACTIVE</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>60</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>61</id>
-                        <text>его</text>
-                        <lexeme>он</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>PRONOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>ACCUSATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>MASCULINE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>person</name>
-                                <value>THIRD</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>62</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>63</id>
-                        <text>к</text>
-                        <lexeme>к</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADPOSITION</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>64</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>65</id>
-                        <text>президентской</text>
-                        <lexeme>президентский</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>ADJECTIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>DATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>degree</name>
-                                <value>POSITIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>FEMININE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                            <attribute>
-                                <name>variant</name>
-                                <value>FULL</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>66</id>
-                        <text> </text>
-                    </token>
-                    <token>
-                        <id>67</id>
-                        <text>гонке</text>
-                        <lexeme>гонка</lexeme>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>NOUN</value>
-                            </attribute>
-                            <attribute>
-                                <name>animacy</name>
-                                <value>INANIMATE</value>
-                            </attribute>
-                            <attribute>
-                                <name>case</name>
-                                <value>DATIVE</value>
-                            </attribute>
-                            <attribute>
-                                <name>gender</name>
-                                <value>FEMININE</value>
-                            </attribute>
-                            <attribute>
-                                <name>number</name>
-                                <value>SINGULAR</value>
-                            </attribute>
-                        </attributes>
-                    </token>
-                    <token>
-                        <id>68</id>
-                        <text>. </text>
-                    </token>
-                    <token>
-                        <id>69</id>
                         <text>Причина</text>
                         <lexeme>причина</lexeme>
                         <attributes>
@@ -32566,11 +32566,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>70</id>
+                        <id>2</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>71</id>
+                        <id>3</id>
                         <text>по</text>
                         <lexeme>по</lexeme>
                         <attributes>
@@ -32581,11 +32581,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>72</id>
+                        <id>4</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>73</id>
+                        <id>5</id>
                         <text>которой</text>
                         <lexeme>который</lexeme>
                         <attributes>
@@ -32608,11 +32608,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>74</id>
+                        <id>6</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>75</id>
+                        <id>7</id>
                         <text>Собчак</text>
                         <lexeme>собчак</lexeme>
                         <attributes>
@@ -32642,11 +32642,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>76</id>
+                        <id>8</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>77</id>
+                        <id>9</id>
                         <text>резко</text>
                         <lexeme>резко</lexeme>
                         <attributes>
@@ -32661,11 +32661,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>78</id>
+                        <id>10</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>79</id>
+                        <id>11</id>
                         <text>изменила</text>
                         <lexeme>изменять</lexeme>
                         <attributes>
@@ -32704,11 +32704,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>80</id>
+                        <id>12</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>81</id>
+                        <id>13</id>
                         <text>свое</text>
                         <lexeme>свой</lexeme>
                         <attributes>
@@ -32731,11 +32731,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>82</id>
+                        <id>14</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>83</id>
+                        <id>15</id>
                         <text>решение</text>
                         <lexeme>решение</lexeme>
                         <attributes>
@@ -32762,11 +32762,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>84</id>
+                        <id>16</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>85</id>
+                        <id>17</id>
                         <text>неизвестна</text>
                         <lexeme>неизвестный</lexeme>
                         <attributes>
@@ -32793,11 +32793,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>86</id>
+                        <id>18</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>87</id>
+                        <id>19</id>
                         <text>однако</text>
                         <lexeme>однако</lexeme>
                         <attributes>
@@ -32808,11 +32808,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>88</id>
+                        <id>20</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>89</id>
+                        <id>21</id>
                         <text>оппозиционный</text>
                         <lexeme>оппозиционный</lexeme>
                         <attributes>
@@ -32843,11 +32843,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>90</id>
+                        <id>22</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>91</id>
+                        <id>23</id>
                         <text>ресурс</text>
                         <lexeme>ресурс</lexeme>
                         <attributes>
@@ -32874,11 +32874,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>92</id>
+                        <id>24</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>93</id>
+                        <id>25</id>
                         <text>newtimes</text>
                         <attributes>
                             <attribute>
@@ -32888,11 +32888,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>94</id>
+                        <id>26</id>
                         <text>.</text>
                     </token>
                     <token>
-                        <id>95</id>
+                        <id>27</id>
                         <text>ru</text>
                         <attributes>
                             <attribute>
@@ -32902,11 +32902,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>96</id>
+                        <id>28</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>97</id>
+                        <id>29</id>
                         <text>сообщил</text>
                         <lexeme>сообщать</lexeme>
                         <attributes>
@@ -32945,11 +32945,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>98</id>
+                        <id>30</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>99</id>
+                        <id>31</id>
                         <text>что</text>
                         <lexeme>что</lexeme>
                         <attributes>
@@ -32960,11 +32960,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>100</id>
+                        <id>32</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>101</id>
+                        <id>33</id>
                         <text>в</text>
                         <lexeme>в</lexeme>
                         <attributes>
@@ -32975,11 +32975,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>102</id>
+                        <id>34</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>103</id>
+                        <id>35</id>
                         <text>качестве</text>
                         <lexeme>качество</lexeme>
                         <attributes>
@@ -33006,11 +33006,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>104</id>
+                        <id>36</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>105</id>
+                        <id>37</id>
                         <text>награды</text>
                         <lexeme>награда</lexeme>
                         <attributes>
@@ -33037,11 +33037,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>106</id>
+                        <id>38</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>107</id>
+                        <id>39</id>
                         <text>за</text>
                         <lexeme>за</lexeme>
                         <attributes>
@@ -33052,11 +33052,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>108</id>
+                        <id>40</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>109</id>
+                        <id>41</id>
                         <text>свое</text>
                         <lexeme>свой</lexeme>
                         <attributes>
@@ -33079,11 +33079,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>110</id>
+                        <id>42</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>111</id>
+                        <id>43</id>
                         <text>выдвижение</text>
                         <lexeme>выдвижение</lexeme>
                         <attributes>
@@ -33110,11 +33110,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>112</id>
+                        <id>44</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>113</id>
+                        <id>45</id>
                         <text>Собчак</text>
                         <lexeme>собчак</lexeme>
                         <attributes>
@@ -33144,11 +33144,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>114</id>
+                        <id>46</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>115</id>
+                        <id>47</id>
                         <text>будет</text>
                         <lexeme>быть</lexeme>
                         <attributes>
@@ -33187,11 +33187,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>116</id>
+                        <id>48</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>117</id>
+                        <id>49</id>
                         <text>разрешено</text>
                         <lexeme>разрешать</lexeme>
                         <attributes>
@@ -33218,11 +33218,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>118</id>
+                        <id>50</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>119</id>
+                        <id>51</id>
                         <text>вернуться</text>
                         <lexeme>вернуться</lexeme>
                         <attributes>
@@ -33237,11 +33237,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>120</id>
+                        <id>52</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>121</id>
+                        <id>53</id>
                         <text>на</text>
                         <lexeme>на</lexeme>
                         <attributes>
@@ -33252,11 +33252,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>122</id>
+                        <id>54</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>123</id>
+                        <id>55</id>
                         <text>федеральные</text>
                         <lexeme>федеральный</lexeme>
                         <attributes>
@@ -33283,11 +33283,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>124</id>
+                        <id>56</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>125</id>
+                        <id>57</id>
                         <text>телеканалы</text>
                         <lexeme>телеканал</lexeme>
                         <attributes>
@@ -33314,11 +33314,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>126</id>
+                        <id>58</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>127</id>
+                        <id>59</id>
                         <text>более</text>
                         <lexeme>более</lexeme>
                         <attributes>
@@ -33333,11 +33333,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>128</id>
+                        <id>60</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>129</id>
+                        <id>61</id>
                         <text>того</text>
                         <lexeme>то</lexeme>
                         <attributes>
@@ -33360,11 +33360,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>130</id>
+                        <id>62</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>131</id>
+                        <id>63</id>
                         <text>она</text>
                         <lexeme>она</lexeme>
                         <attributes>
@@ -33391,11 +33391,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>132</id>
+                        <id>64</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>133</id>
+                        <id>65</id>
                         <text>может</text>
                         <lexeme>мочь</lexeme>
                         <attributes>
@@ -33434,11 +33434,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>134</id>
+                        <id>66</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>135</id>
+                        <id>67</id>
                         <text>возглавить</text>
                         <lexeme>возглавлять</lexeme>
                         <attributes>
@@ -33453,11 +33453,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>136</id>
+                        <id>68</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>137</id>
+                        <id>69</id>
                         <text>один</text>
                         <lexeme>один</lexeme>
                         <attributes>
@@ -33476,11 +33476,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>138</id>
+                        <id>70</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>139</id>
+                        <id>71</id>
                         <text>из</text>
                         <lexeme>из</lexeme>
                         <attributes>
@@ -33491,11 +33491,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>140</id>
+                        <id>72</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>141</id>
+                        <id>73</id>
                         <text>телеканалов</text>
                         <lexeme>телеканал</lexeme>
                         <attributes>
@@ -33522,11 +33522,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>142</id>
+                        <id>74</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>143</id>
+                        <id>75</id>
                         <text>например</text>
                         <lexeme>например</lexeme>
                         <attributes>
@@ -33541,11 +33541,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>144</id>
+                        <id>76</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>145</id>
+                        <id>77</id>
                         <text>RT</text>
                         <attributes>
                             <attribute>
@@ -33555,7 +33555,7 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>146</id>
+                        <id>78</id>
                         <text>.</text>
                     </token>
                 </tokens>

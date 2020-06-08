@@ -13,12 +13,12 @@
         <v-col cols="4">
           <v-radio-group
             v-model="searchLanguage"
-            label="Язык поиска"
+            label="Язык поиска:"
             row
             @change="resetInput()"
           >
-            <v-radio label="Русский" value="RUSSIAN" />
-            <v-radio label="Японский" value="JAPANESE" />
+            <v-radio label="русский" value="RUSSIAN" />
+            <v-radio label="японский" value="JAPANESE" />
           </v-radio-group>
         </v-col>
         <v-col v-if="searchMode === 0" cols="4"><v-switch v-model="regex" label="Regex" /></v-col>
@@ -35,7 +35,7 @@
                   offset-y
           >
             <template v-slot:activator="{ on }">
-              <v-btn v-on="on">
+              <v-btn v-on="on" :disabled="results.length < 1">
                 Результатов на странице: {{itemsPerPage}}
               </v-btn>
             </template>
