@@ -122,14 +122,26 @@
               ></v-autocomplete>
             </v-col>
             <v-col>
-              <v-autocomplete
+              <v-autocomplete v-if="attributePlaceholderName !== 'intransitive_form' &&
+                attributePlaceholderName !== 'derivation_source' &&
+                attributePlaceholderName !== 'non_potential_form' &&
+                attributePlaceholderName !== 'non_causative_form'"
                 v-model="attributePlaceholderValue"
                 :items="attributeListMapJa.get(attributePlaceholderName)"
                 outlined
                 dense
                 label="Значение параметра"
               ></v-autocomplete
-            ></v-col>
+            >
+              <v-text-field v-else
+                              v-model="attributePlaceholderValue"
+                              :items="attributeListMapJa.get(attributePlaceholderName)"
+                              outlined
+                              dense
+                              label="Значение параметра"
+              ></v-text-field
+              >
+            </v-col>
             <v-col cols="1">
               <v-btn
                 :disabled="
@@ -317,8 +329,23 @@ export default class extends Vue {
   private searchQuery: string = "";
   private regex: boolean = false;
   private attributeList: Attribute[] = [];
-  private attributeListNamesJa: string[] = ["pos", "type", 'stem_type', 'row', 'form', 'adj_type', 'transitivity',
-    'attachment_form', 'form', 'form1', 'form2', 'derivation_type', 'reading_type'];
+  private attributeListNamesJa: string[] = ["pos",
+    "type",
+    'stem_type',
+    'row',
+    'form',
+    'adj_type',
+    'transitivity',
+    'attachment_form',
+    'form',
+    'form1',
+    'form2',
+    'derivation_type',
+    'reading_type',
+    'intransitive_form',
+    'derivation_source',
+    'non_potential_form',
+    'non_causative_form'];
   private attributeListMapJa: Map<string, string[]> = new Map<string, string[]>(
     [
       ['pos', ['Verb', 'Noun', 'Adjective', 'Judgemental', 'Suffix', 'Particle', 'Prefix', 'Demonstrative', 'Adverb',
