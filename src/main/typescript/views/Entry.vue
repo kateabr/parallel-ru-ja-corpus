@@ -1,26 +1,32 @@
 <template>
   <div>
     <v-card-text v-if="entry !== null">
-        <v-row>
-          <v-col cols="10">
-            <div>
-              <a target="_blank" :href="entry.url.russian">
-                {{ entry.title.russian }}
-              </a>
-            </div>
-            <div>
-              <a target="_blank" :href="entry.url.japanese">
-                {{ entry.title.japanese }}
-              </a>
-            </div>
-          </v-col>
-          <v-col align-self="center">
-            <v-btn block color="primary" :loading="loading" :disabled="loading" @click="downloadEntry(entry.id)">
-              <v-icon left>mdi-download</v-icon>
-              Скачать
-            </v-btn>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col cols="10">
+          <div>
+            <a target="_blank" :href="entry.url.russian">
+              {{ entry.title.russian }}
+            </a>
+          </div>
+          <div>
+            <a target="_blank" :href="entry.url.japanese">
+              {{ entry.title.japanese }}
+            </a>
+          </div>
+        </v-col>
+        <v-col align-self="center">
+          <v-btn
+            block
+            color="primary"
+            :loading="loading"
+            :disabled="loading"
+            @click="downloadEntry(entry.id)"
+          >
+            <v-icon left>mdi-download</v-icon>
+            Скачать
+          </v-btn>
+        </v-col>
+      </v-row>
       <br />
       <div v-for="sp in entry.sentencePairs" :key="sp.id">
         <russian-token
@@ -72,7 +78,7 @@ export default class extends Vue {
   }
 
   downloadEntry(id: string) {
-    let url = api.loadEntryUrl(id);
+    const url = api.loadEntryUrl(id);
     window.open(url);
   }
 }

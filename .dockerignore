@@ -6,6 +6,7 @@ bin/
 
 .git/
 src/main/texts/
+basex/.basex
 
 # IntelliJ
 .idea
