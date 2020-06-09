@@ -18,6 +18,7 @@
             </v-chip>
             {{ token.lexeme }}
             <v-chip class="ma-1" outlined color="secondary" small>
+              <v-avatar left class="mdi mdi-note-text"></v-avatar>
               {{ renderMainAttributes() }}
             </v-chip>
           </v-list-item-title>
