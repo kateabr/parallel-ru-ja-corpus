@@ -48,7 +48,7 @@
               color="secondary"
               small
             >
-              <v-avatar left class="mdi mdi-tag"></v-avatar>
+              <v-avatar left class="mdi mdi-tag-text"></v-avatar>
               {{ item }}
             </v-chip>
           </v-list-item-subtitle>
@@ -64,7 +64,7 @@
               color="secondary"
               small
             >
-              <v-avatar left class="mdi mdi-tag-outline"></v-avatar>
+              <v-avatar left class="mdi mdi-tag-text-outline"></v-avatar>
               {{ item }}
             </v-chip>
           </v-list-item-subtitle>

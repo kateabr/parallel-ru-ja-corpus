@@ -8929,7 +8929,7 @@
         <sentencePair>
             <id>6</id>
             <russian>
-                <sentence>Сообщение передано во время визита министра иностранных дел РФ в КНДР.</sentence>
+                <sentence>Сообщение передано во время визита министра иностранных дел РФ в КНДР. Первый вице-спикер нижней палаты парламента России, господин Мельников, 4 июня сообщил, что президент Путин пригласил председателя Трудовой партии Кореи, Ким Чен Ына, на Восточный экономический форум, который состоится в сентябре во Владивостоке, расположенном на Дальнем Востоке.</sentence>
                 <tokens>
                     <token>
                         <id>1</id>
@@ -9246,250 +9246,10 @@
                     </token>
                     <token>
                         <id>22</id>
-                        <text>.</text>
-                    </token>
-                </tokens>
-            </russian>
-            <japanese>
-                <sentence>6/4（月）17:55配信</sentence>
-                <tokens>
-                    <token>
-                        <id>1</id>
-                        <text>6</text>
-                        <lexeme>六</lexeme>
-                        <reading>ろく</reading>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>Numeral</value>
-                            </attribute>
-                            <attribute>
-                                <name>category</name>
-                                <value>['Quantity']</value>
-                            </attribute>
-                            <attribute>
-                                <name>romaji_reading</name>
-                                <value>roku</value>
-                            </attribute>
-                            <attribute>
-                                <name>lexeme_reading</name>
-                                <value>ろく</value>
-                            </attribute>
-                            <attribute>
-                                <name>romanized_lexeme_reading</name>
-                                <value>roku</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>Digits</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
-                        </extraAttributes>
+                        <text>. </text>
                     </token>
                     <token>
-                        <id>2</id>
-                        <text>/</text>
-                    </token>
-                    <token>
-                        <id>3</id>
-                        <text>4</text>
-                        <lexeme>四</lexeme>
-                        <reading>よん</reading>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>Numeral</value>
-                            </attribute>
-                            <attribute>
-                                <name>category</name>
-                                <value>['Quantity']</value>
-                            </attribute>
-                            <attribute>
-                                <name>romaji_reading</name>
-                                <value>yon</value>
-                            </attribute>
-                            <attribute>
-                                <name>lexeme_reading</name>
-                                <value>よん</value>
-                            </attribute>
-                            <attribute>
-                                <name>romanized_lexeme_reading</name>
-                                <value>yon</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>Digits</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
-                        </extraAttributes>
-                    </token>
-                    <token>
-                        <id>4</id>
-                        <text>（</text>
-                    </token>
-                    <token>
-                        <id>5</id>
-                        <text>月</text>
-                        <lexeme>月</lexeme>
-                        <reading>げつ</reading>
-                        <translation>&lt;b&gt;Месяц&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;сокр. &lt;/i&gt;понедельник(от "getsuyo:bi")</translation>
-                        <attributes>
-                            <attribute>
-                                <name>type</name>
-                                <value>Temporal</value>
-                            </attribute>
-                            <attribute>
-                                <name>pos</name>
-                                <value>Noun</value>
-                            </attribute>
-                            <attribute>
-                                <name>category</name>
-                                <value>['Time']</value>
-                            </attribute>
-                            <attribute>
-                                <name>romaji_reading</name>
-                                <value>getsu</value>
-                            </attribute>
-                            <attribute>
-                                <name>reading_type</name>
-                                <value>On</value>
-                            </attribute>
-                            <attribute>
-                                <name>lexeme_reading</name>
-                                <value>げつ</value>
-                            </attribute>
-                            <attribute>
-                                <name>romanized_lexeme_reading</name>
-                                <value>getsu</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>Kanji</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
-                        </extraAttributes>
-                    </token>
-                    <token>
-                        <id>6</id>
-                        <text>）</text>
-                    </token>
-                    <token>
-                        <id>7</id>
-                        <text>17</text>
-                        <lexeme>十七</lexeme>
-                        <reading>じゅうなな</reading>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>Numeral</value>
-                            </attribute>
-                            <attribute>
-                                <name>category</name>
-                                <value>['Quantity']</value>
-                            </attribute>
-                            <attribute>
-                                <name>romaji_reading</name>
-                                <value>juunana</value>
-                            </attribute>
-                            <attribute>
-                                <name>lexeme_reading</name>
-                                <value>じゅうなな</value>
-                            </attribute>
-                            <attribute>
-                                <name>romanized_lexeme_reading</name>
-                                <value>juunana</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>Digits</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
-                        </extraAttributes>
-                    </token>
-                    <token>
-                        <id>8</id>
-                        <text>:</text>
-                    </token>
-                    <token>
-                        <id>9</id>
-                        <text>55</text>
-                        <lexeme>五十五</lexeme>
-                        <reading>ごじゅうご</reading>
-                        <attributes>
-                            <attribute>
-                                <name>pos</name>
-                                <value>Numeral</value>
-                            </attribute>
-                            <attribute>
-                                <name>category</name>
-                                <value>['Quantity']</value>
-                            </attribute>
-                            <attribute>
-                                <name>romaji_reading</name>
-                                <value>gojuugo</value>
-                            </attribute>
-                            <attribute>
-                                <name>lexeme_reading</name>
-                                <value>ごじゅうご</value>
-                            </attribute>
-                            <attribute>
-                                <name>romanized_lexeme_reading</name>
-                                <value>gojuugo</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>Digits</extraAttribute>
-                            <extraAttribute>unrecognized_symbols</extraAttribute>
-                        </extraAttributes>
-                    </token>
-                    <token>
-                        <id>10</id>
-                        <text>配信</text>
-                        <lexeme>配信</lexeme>
-                        <reading>はいしん</reading>
-                        <translation>измена, вероломство</translation>
-                        <attributes>
-                            <attribute>
-                                <name>type</name>
-                                <value>Suru</value>
-                            </attribute>
-                            <attribute>
-                                <name>pos</name>
-                                <value>Noun</value>
-                            </attribute>
-                            <attribute>
-                                <name>domain</name>
-                                <value>['Media']</value>
-                            </attribute>
-                            <attribute>
-                                <name>category</name>
-                                <value>['Abstract']</value>
-                            </attribute>
-                            <attribute>
-                                <name>romaji_reading</name>
-                                <value>haishin</value>
-                            </attribute>
-                            <attribute>
-                                <name>lexeme_reading</name>
-                                <value>はいしん</value>
-                            </attribute>
-                            <attribute>
-                                <name>romanized_lexeme_reading</name>
-                                <value>haishin</value>
-                            </attribute>
-                        </attributes>
-                        <extraAttributes>
-                            <extraAttribute>Kanji</extraAttribute>
-                            <extraAttribute>Content_word</extraAttribute>
-                        </extraAttributes>
-                    </token>
-                </tokens>
-            </japanese>
-        </sentencePair>
-        <sentencePair>
-            <id>7</id>
-            <russian>
-                <sentence>Первый вице-спикер нижней палаты парламента России, господин Мельников, 4 июня сообщил, что президент Путин пригласил председателя Трудовой партии Кореи, Ким Чен Ына, на Восточный экономический форум, который состоится в сентябре во Владивостоке, расположенном на Дальнем Востоке.</sentence>
-                <tokens>
-                    <token>
-                        <id>1</id>
+                        <id>23</id>
                         <text>Первый</text>
                         <lexeme>первый</lexeme>
                         <attributes>
@@ -9520,11 +9280,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>2</id>
+                        <id>24</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>3</id>
+                        <id>25</id>
                         <text>вице-спикер</text>
                         <lexeme>вице-спикер</lexeme>
                         <attributes>
@@ -9551,11 +9311,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>4</id>
+                        <id>26</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>5</id>
+                        <id>27</id>
                         <text>нижней</text>
                         <lexeme>нижний</lexeme>
                         <attributes>
@@ -9586,11 +9346,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>6</id>
+                        <id>28</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>7</id>
+                        <id>29</id>
                         <text>палаты</text>
                         <lexeme>палата</lexeme>
                         <attributes>
@@ -9617,11 +9377,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>8</id>
+                        <id>30</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>9</id>
+                        <id>31</id>
                         <text>парламента</text>
                         <lexeme>парламент</lexeme>
                         <attributes>
@@ -9648,11 +9408,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>10</id>
+                        <id>32</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>11</id>
+                        <id>33</id>
                         <text>России</text>
                         <lexeme>россия</lexeme>
                         <attributes>
@@ -9682,11 +9442,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>12</id>
+                        <id>34</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>13</id>
+                        <id>35</id>
                         <text>господин</text>
                         <lexeme>господин</lexeme>
                         <attributes>
@@ -9713,11 +9473,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>14</id>
+                        <id>36</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>15</id>
+                        <id>37</id>
                         <text>Мельников</text>
                         <lexeme>мельников</lexeme>
                         <attributes>
@@ -9747,19 +9507,19 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>16</id>
+                        <id>38</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>17</id>
+                        <id>39</id>
                         <text>4</text>
                     </token>
                     <token>
-                        <id>18</id>
+                        <id>40</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>19</id>
+                        <id>41</id>
                         <text>июня</text>
                         <lexeme>июнь</lexeme>
                         <attributes>
@@ -9786,11 +9546,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>20</id>
+                        <id>42</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>21</id>
+                        <id>43</id>
                         <text>сообщил</text>
                         <lexeme>сообщать</lexeme>
                         <attributes>
@@ -9829,11 +9589,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>22</id>
+                        <id>44</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>23</id>
+                        <id>45</id>
                         <text>что</text>
                         <lexeme>что</lexeme>
                         <attributes>
@@ -9844,11 +9604,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>24</id>
+                        <id>46</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>25</id>
+                        <id>47</id>
                         <text>президент</text>
                         <lexeme>президент</lexeme>
                         <attributes>
@@ -9875,11 +9635,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>26</id>
+                        <id>48</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>27</id>
+                        <id>49</id>
                         <text>Путин</text>
                         <lexeme>путин</lexeme>
                         <attributes>
@@ -9909,11 +9669,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>28</id>
+                        <id>50</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>29</id>
+                        <id>51</id>
                         <text>пригласил</text>
                         <lexeme>приглашать</lexeme>
                         <attributes>
@@ -9952,11 +9712,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>30</id>
+                        <id>52</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>31</id>
+                        <id>53</id>
                         <text>председателя</text>
                         <lexeme>председатель</lexeme>
                         <attributes>
@@ -9983,11 +9743,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>32</id>
+                        <id>54</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>33</id>
+                        <id>55</id>
                         <text>Трудовой</text>
                         <lexeme>трудовой</lexeme>
                         <attributes>
@@ -10018,11 +9778,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>34</id>
+                        <id>56</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>35</id>
+                        <id>57</id>
                         <text>партии</text>
                         <lexeme>партия</lexeme>
                         <attributes>
@@ -10049,11 +9809,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>36</id>
+                        <id>58</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>37</id>
+                        <id>59</id>
                         <text>Кореи</text>
                         <lexeme>корея</lexeme>
                         <attributes>
@@ -10083,11 +9843,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>38</id>
+                        <id>60</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>39</id>
+                        <id>61</id>
                         <text>Ким</text>
                         <lexeme>ким</lexeme>
                         <attributes>
@@ -10117,11 +9877,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>40</id>
+                        <id>62</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>41</id>
+                        <id>63</id>
                         <text>Чен</text>
                         <lexeme>чен</lexeme>
                         <attributes>
@@ -10151,11 +9911,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>42</id>
+                        <id>64</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>43</id>
+                        <id>65</id>
                         <text>Ына</text>
                         <lexeme>ына</lexeme>
                         <attributes>
@@ -10185,11 +9945,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>44</id>
+                        <id>66</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>45</id>
+                        <id>67</id>
                         <text>на</text>
                         <lexeme>на</lexeme>
                         <attributes>
@@ -10200,11 +9960,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>46</id>
+                        <id>68</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>47</id>
+                        <id>69</id>
                         <text>Восточный</text>
                         <lexeme>восточный</lexeme>
                         <attributes>
@@ -10235,11 +9995,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>48</id>
+                        <id>70</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>49</id>
+                        <id>71</id>
                         <text>экономический</text>
                         <lexeme>экономический</lexeme>
                         <attributes>
@@ -10270,11 +10030,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>50</id>
+                        <id>72</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>51</id>
+                        <id>73</id>
                         <text>форум</text>
                         <lexeme>форум</lexeme>
                         <attributes>
@@ -10301,11 +10061,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>52</id>
+                        <id>74</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>53</id>
+                        <id>75</id>
                         <text>который</text>
                         <lexeme>который</lexeme>
                         <attributes>
@@ -10328,11 +10088,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>54</id>
+                        <id>76</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>55</id>
+                        <id>77</id>
                         <text>состоится</text>
                         <lexeme>состояться</lexeme>
                         <attributes>
@@ -10371,11 +10131,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>56</id>
+                        <id>78</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>57</id>
+                        <id>79</id>
                         <text>в</text>
                         <lexeme>в</lexeme>
                         <attributes>
@@ -10386,11 +10146,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>58</id>
+                        <id>80</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>59</id>
+                        <id>81</id>
                         <text>сентябре</text>
                         <lexeme>сентябрь</lexeme>
                         <attributes>
@@ -10417,11 +10177,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>60</id>
+                        <id>82</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>61</id>
+                        <id>83</id>
                         <text>во</text>
                         <lexeme>во</lexeme>
                         <attributes>
@@ -10432,11 +10192,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>62</id>
+                        <id>84</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>63</id>
+                        <id>85</id>
                         <text>Владивостоке</text>
                         <lexeme>владивосток</lexeme>
                         <attributes>
@@ -10466,11 +10226,11 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>64</id>
+                        <id>86</id>
                         <text>, </text>
                     </token>
                     <token>
-                        <id>65</id>
+                        <id>87</id>
                         <text>расположенном</text>
                         <lexeme>располагать</lexeme>
                         <attributes>
@@ -10501,11 +10261,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>66</id>
+                        <id>88</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>67</id>
+                        <id>89</id>
                         <text>на</text>
                         <lexeme>на</lexeme>
                         <attributes>
@@ -10516,11 +10276,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>68</id>
+                        <id>90</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>69</id>
+                        <id>91</id>
                         <text>Дальнем</text>
                         <lexeme>дальний</lexeme>
                         <attributes>
@@ -10551,11 +10311,11 @@
                         </attributes>
                     </token>
                     <token>
-                        <id>70</id>
+                        <id>92</id>
                         <text> </text>
                     </token>
                     <token>
-                        <id>71</id>
+                        <id>93</id>
                         <text>Востоке</text>
                         <lexeme>восток</lexeme>
                         <attributes>
@@ -10585,7 +10345,7 @@
                         </extraAttributes>
                     </token>
                     <token>
-                        <id>72</id>
+                        <id>94</id>
                         <text>.</text>
                     </token>
                 </tokens>
@@ -12791,7 +12551,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>8</id>
+            <id>7</id>
             <russian>
                 <sentence>Сообщается, что «Восточный экономический форум» пройдет с 11 по 13 сентября.</sentence>
                 <tokens>
@@ -13657,7 +13417,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>9</id>
+            <id>8</id>
             <russian>
                 <sentence>Премьер-министр Абэ тоже планирует принять в нем участие, поэтому, возможно, будут проведены «переговоры в верхах между Японией и КНДР».</sentence>
                 <tokens>
@@ -14971,7 +14731,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>10</id>
+            <id>9</id>
             <russian>
                 <sentence>Но что же намеревается сказать Путин на встрече с Кимом?</sentence>
                 <tokens>
@@ -15710,7 +15470,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>11</id>
+            <id>10</id>
             <russian>
                 <sentence>Давайте разберемся с самого начала.</sentence>
                 <tokens>
@@ -16089,7 +15849,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>12</id>
+            <id>11</id>
             <russian>
                 <sentence>В основе путинской России лежит вера в следующее: «Америка — это источник зла!».</sentence>
                 <tokens>
@@ -17013,7 +16773,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>13</id>
+            <id>12</id>
             <russian>
                 <sentence>Почему же сформировалось такое убеждение?</sentence>
                 <tokens>
@@ -17513,7 +17273,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>14</id>
+            <id>13</id>
             <russian>
                 <sentence>Во-первых, так гласило «коммунистическое учение».</sentence>
                 <tokens>
@@ -18004,7 +17764,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>15</id>
+            <id>14</id>
             <russian>
                 <sentence>Согласно коммунистическому учению, «капитализм — это источник зла».</sentence>
                 <tokens>
@@ -18718,7 +18478,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>16</id>
+            <id>15</id>
             <russian>
                 <sentence>И центром этого «злого» капитализма являются США (и Великобритания).</sentence>
                 <tokens>
@@ -19477,7 +19237,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>17</id>
+            <id>16</id>
             <russian>
                 <sentence>Поэтому главным врагом СССР с 1917 по 1991 год были Соединенные Штаты и Великобритания.</sentence>
                 <tokens>
@@ -20386,7 +20146,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>18</id>
+            <id>17</id>
             <russian>
                 <sentence>Когда в конце 1991 года распался Советский Союз, отношения возрожденной России с США и Великобританией временно наладились.</sentence>
                 <tokens>
@@ -21639,7 +21399,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>19</id>
+            <id>18</id>
             <russian>
                 <sentence>Однако постепенно они стали ухудшаться.</sentence>
                 <tokens>
@@ -22086,7 +21846,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>20</id>
+            <id>19</id>
             <russian>
                 <sentence>Российская сторона утверждает, что причина этого состоит в том, что «Соединенные Штаты расширили НАТО».</sentence>
                 <tokens>
@@ -23187,7 +22947,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>21</id>
+            <id>20</id>
             <russian>
                 <sentence>Не стоит и говорить, что НАТО — это «антироссийский военный блок».</sentence>
                 <tokens>
@@ -23843,7 +23603,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>22</id>
+            <id>21</id>
             <russian>
                 <sentence>После распада СССР число его членов увеличилось на 13 стран.</sentence>
                 <tokens>
@@ -24473,7 +24233,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>23</id>
+            <id>22</id>
             <russian>
                 <sentence>Большинство из них — страны Восточной Европы, которые раньше находились в сфере влияния России (СССР).</sentence>
                 <tokens>
@@ -25438,7 +25198,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>24</id>
+            <id>23</id>
             <russian>
                 <sentence>Государства Прибалтики для бывшего СССР, то есть России, являются «странами, которые раньше были своей территорией».</sentence>
                 <tokens>
@@ -26559,7 +26319,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>25</id>
+            <id>24</id>
             <russian>
                 <sentence>Кроме того, США пытаются включить в НАТО Украину и Грузию, которые также входили в состав Советского Союза и сейчас являются соседями России.</sentence>
                 <tokens>
@@ -27899,7 +27659,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>26</id>
+            <id>25</id>
             <russian>
                 <sentence>«США все больше и больше расширяет антироссийский военный союз»</sentence>
                 <tokens>
@@ -28528,7 +28288,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>27</id>
+            <id>26</id>
             <russian>
                 <sentence>Вот причины, по которым Путин ненавидит США.</sentence>
                 <tokens>
@@ -29236,7 +28996,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>28</id>
+            <id>27</id>
             <russian>
                 <sentence>С западной частью России дело обстоит так, как я рассказал выше.</sentence>
                 <tokens>
@@ -29811,7 +29571,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>29</id>
+            <id>28</id>
             <russian>
                 <sentence>Но что же происходит с ее восточной частью?</sentence>
                 <tokens>
@@ -30240,7 +30000,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>30</id>
+            <id>29</id>
             <russian>
                 <sentence>Здесь находятся союзники Соединенных Штатов — Япония и Южная Корея.</sentence>
                 <tokens>
@@ -30955,7 +30715,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>31</id>
+            <id>30</id>
             <russian>
                 <sentence>Северная Корея позиционирует себя как «"буферное государство", которое предотвращает агрессию со стороны США».</sentence>
                 <tokens>
@@ -31794,7 +31554,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>32</id>
+            <id>31</id>
             <russian>
                 <sentence>Поэтому Путин ради государственной выгоды охраняет КНДР и Ким Чен Ына.</sentence>
                 <tokens>
@@ -32673,7 +32433,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>33</id>
+            <id>32</id>
             <russian>
                 <sentence>Но как же именно он охраняет Кима?</sentence>
                 <tokens>
@@ -33256,7 +33016,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>34</id>
+            <id>33</id>
             <russian>
                 <sentence>Здесь я не буду детально это описывать, так как текст получится чересчур длинным.</sentence>
                 <tokens>
@@ -34012,7 +33772,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>35</id>
+            <id>34</id>
             <russian>
                 <sentence>Если вам это интересно, пожалуйста, прочитайте здесь.</sentence>
                 <tokens>
@@ -34569,7 +34329,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>36</id>
+            <id>35</id>
             <russian>
                 <sentence>Проблема ядерного вооружения КНДР для Путина</sentence>
                 <tokens>
@@ -35030,7 +34790,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>37</id>
+            <id>36</id>
             <russian>
                 <sentence>Как же относится Путин к проблеме ядерного вооружения КНДР?</sentence>
                 <tokens>
@@ -35765,7 +35525,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>38</id>
+            <id>37</id>
             <russian>
                 <sentence>Его позиция состоит в следующем.</sentence>
                 <tokens>
@@ -36203,7 +35963,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>39</id>
+            <id>38</id>
             <russian>
                 <sentence>— поддерживать ядерное разоружение КНДР</sentence>
                 <tokens>
@@ -36597,7 +36357,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>40</id>
+            <id>39</id>
             <russian>
                 <sentence>— проблему следует решать посредством диалога (выступает против военных действий)</sentence>
                 <tokens>
@@ -37318,7 +37078,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>41</id>
+            <id>40</id>
             <russian>
                 <sentence>Почему же все обстоит именно так?</sentence>
                 <tokens>
@@ -37756,7 +37516,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>42</id>
+            <id>41</id>
             <russian>
                 <sentence>Россия, несомненно, поддерживает ядерное разоружение КНДР.</sentence>
                 <tokens>
@@ -38455,7 +38215,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>43</id>
+            <id>42</id>
             <russian>
                 <sentence>Однако причины этого отличаются от того, чем руководствуется Япония, США и Южная Корея.</sentence>
                 <tokens>
@@ -39218,7 +38978,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>44</id>
+            <id>43</id>
             <russian>
                 <sentence>Япония, Соединенные Штаты и Республика Корея выступают против ядерной программы Северной Кореи, «так как есть риск, что КНДР совершит на них ядерное нападение».</sentence>
                 <tokens>
@@ -40709,7 +40469,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>45</id>
+            <id>44</id>
             <russian>
                 <sentence>Очень напряженная ситуация, правда?</sentence>
                 <tokens>
@@ -40948,7 +40708,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>46</id>
+            <id>45</id>
             <russian>
                 <sentence>С другой стороны, перед Россией не стоит угроза «быть атакованной атомным оружием со стороны КНДР».</sentence>
                 <tokens>
@@ -42043,7 +41803,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>47</id>
+            <id>46</id>
             <russian>
                 <sentence>Но Россия хочет поддерживать состояние «ядерной олигополии», поэтому она выступает против ядерной программы КНДР.</sentence>
                 <tokens>
@@ -43237,7 +42997,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>48</id>
+            <id>47</id>
             <russian>
                 <sentence>Если будет высказано мнение, что «ядерная программа Северной Кореи — это норма», то исчезнут основания для того, чтобы препятствовать ядерному вооружению Японии или Южной Кореи.</sentence>
                 <tokens>
@@ -44840,7 +44600,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>49</id>
+            <id>48</id>
             <russian>
                 <sentence>Возникает также вопрос, почему Россия выступает против войны и за ведение диалога?</sentence>
                 <tokens>
@@ -45602,7 +45362,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>50</id>
+            <id>49</id>
             <russian>
                 <sentence>Это вполне понятно.</sentence>
                 <tokens>
@@ -45883,7 +45643,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>51</id>
+            <id>50</id>
             <russian>
                 <sentence>Если случится война, то точно выиграют США.</sentence>
                 <tokens>
@@ -46372,7 +46132,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>52</id>
+            <id>51</id>
             <russian>
                 <sentence>В этом случае «буферное государство» исчезнет, и велика вероятность, что после войны с Северной Кореей на границе России и КНДР будет создана американская база.</sentence>
                 <tokens>
@@ -47946,7 +47706,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>53</id>
+            <id>52</id>
             <russian>
                 <sentence>Это будет очень проблематично.</sentence>
                 <tokens>
@@ -48233,7 +47993,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>54</id>
+            <id>53</id>
             <russian>
                 <sentence>Что Путин скажет Киму?</sentence>
                 <tokens>
@@ -48670,7 +48430,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>55</id>
+            <id>54</id>
             <russian>
                 <sentence>Все зависит также и от результатов переговоров в верхах между США и КНДР 12 июня.</sentence>
                 <tokens>
@@ -49705,7 +49465,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>56</id>
+            <id>55</id>
             <russian>
                 <sentence>Но я думаю, что сообщение, которое Путин передаст Киму, останется тем же.</sentence>
                 <tokens>
@@ -50563,7 +50323,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>57</id>
+            <id>56</id>
             <russian>
                 <sentence>То есть оно будет звучать примерно так: «Ни в коем случае, ни в коем случае, ни в коем случае не верьте США!».</sentence>
                 <tokens>
@@ -51437,7 +51197,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>58</id>
+            <id>57</id>
             <russian>
                 <sentence>Путин выступил против войны в Ираке, которую вели Соединенные Штаты.</sentence>
                 <tokens>
@@ -52035,7 +51795,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>59</id>
+            <id>58</id>
             <russian>
                 <sentence>Однако Хусейна защитить не удалось, и он был убит.</sentence>
                 <tokens>
@@ -52624,7 +52384,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>60</id>
+            <id>59</id>
             <russian>
                 <sentence>Путин также был против нападения на Ливию со стороны США, Великобритании и Франции в 2011 году.</sentence>
                 <tokens>
@@ -53560,7 +53320,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>61</id>
+            <id>60</id>
             <russian>
                 <sentence>Но в то время он был премьер-министром, а президентом был Медведев, который очень хорошо относится к США.</sentence>
                 <tokens>
@@ -54537,7 +54297,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>62</id>
+            <id>61</id>
             <russian>
                 <sentence>Медведев, запутанный действиями США, бросил на произвол судьбы Каддафи.</sentence>
                 <tokens>
@@ -55233,7 +54993,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>63</id>
+            <id>62</id>
             <russian>
                 <sentence>В итоге Каддафи был убит.</sentence>
                 <tokens>
@@ -55633,7 +55393,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>64</id>
+            <id>63</id>
             <russian>
                 <sentence>И сейчас Путин охраняет Асада в Сирии.</sentence>
                 <tokens>
@@ -56245,7 +56005,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>65</id>
+            <id>64</id>
             <russian>
                 <sentence>Соединенные Штаты рьяно поддерживали «противников Асада», но спустя семь лет гражданской войны все еще не могут одержать верх над ним.</sentence>
                 <tokens>
@@ -57675,7 +57435,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>66</id>
+            <id>65</id>
             <russian>
                 <sentence>Вероятно, Россия будет и дальше, насколько возможно, охранять главу «буферного государства», Ким Чен Ына.</sentence>
                 <tokens>
@@ -58682,7 +58442,7 @@
             </japanese>
         </sentencePair>
         <sentencePair>
-            <id>67</id>
+            <id>66</id>
             <russian>
                 <sentence>Японии необходимо знать наверняка, «что выгодно России и как рассуждает Путин», хотя разобраться в этом непросто.</sentence>
                 <tokens>

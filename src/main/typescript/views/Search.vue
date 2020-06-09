@@ -268,7 +268,7 @@
             block
             color="primary"
             :disabled="loading || results.length < 1"
-            @click="downloadResults"
+            @click="downloadResults()"
           >
             <v-icon left>mdi-download</v-icon>
             Скачать результаты

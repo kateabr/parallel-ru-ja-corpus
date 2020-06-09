@@ -92,5 +92,8 @@ export const api = {
       })
       .then(value => value.data);
     /* eslint-enable @typescript-eslint/camelcase */
+  },
+  loadEntryUrl(id: string): string {
+    return `/api/v1/entry/${id}`;
   }
 };
